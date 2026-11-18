@@ -1,0 +1,8 @@
+concept,Prometheus/Grafana,Dynatrace,Datadog,New Relic,Splunk,AWS,Azure,GCP
+Thing being monitored,target / series labels,entity (HOST-/SERVICE-),host / service / container,entity (GUID),host / source / sourcetype,resource (ARN),resource (resource ID),monitored resource
+Service identity,label service=,SERVICE entity,tag service:,entity name / appName,field service / ITSI service,service name,cloud_RoleName,service.name
+Key-value context,label,attribute / dimension,tag,attribute,field,dimension,dimension / custom property,label
+One request end to end,trace (Jaeger),PurePath / distributed trace,distributed trace,distributed trace,trace_id / span_id,X-Ray trace,Application Insights operation_Id,Cloud Trace trace
+Query language,PromQL,DQL,Datadog query language,NRQL,SPL,Logs Insights / metric math,KQL (Kusto),PromQL
+Grouped incident,Alertmanager group,Problem,monitor alert / case,issue,ITSI episode,CloudWatch alarm,alert (smart groups),incident
+Saved view,dashboard,dashboard / notebook,dashboard,dashboard,dashboard,dashboard,workbook / dashboard,dashboard

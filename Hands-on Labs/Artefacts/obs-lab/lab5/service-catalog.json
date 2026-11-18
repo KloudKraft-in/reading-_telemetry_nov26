@@ -1,0 +1,76 @@
+[
+ {
+  "service": "frontend",
+  "team": "web-platform",
+  "tier": 1,
+  "oncall": "web-oncall",
+  "escalation": [
+   "web-oncall",
+   "web-lead",
+   "incident-commander"
+  ],
+  "runbook": "RB-WEB-001",
+  "depends_on": [
+   "checkout",
+   "inventory"
+  ]
+ },
+ {
+  "service": "checkout",
+  "team": "commerce",
+  "tier": 1,
+  "oncall": "commerce-oncall",
+  "escalation": [
+   "commerce-oncall",
+   "commerce-lead",
+   "incident-commander"
+  ],
+  "runbook": "RB-CHK-002",
+  "depends_on": [
+   "inventory",
+   "payment"
+  ]
+ },
+ {
+  "service": "inventory",
+  "team": "catalog",
+  "tier": 2,
+  "oncall": "catalog-oncall",
+  "escalation": [
+   "catalog-oncall",
+   "dba-oncall",
+   "catalog-lead"
+  ],
+  "runbook": "RB-INV-003",
+  "depends_on": [
+   "postgres"
+  ]
+ },
+ {
+  "service": "payment",
+  "team": "payments",
+  "tier": 1,
+  "oncall": "payments-oncall",
+  "escalation": [
+   "payments-oncall",
+   "psp-vendor-support",
+   "payments-lead"
+  ],
+  "runbook": "RB-PAY-004",
+  "depends_on": [
+   "psp-gateway (external)"
+  ]
+ },
+ {
+  "service": "postgres",
+  "team": "dba",
+  "tier": 1,
+  "oncall": "dba-oncall",
+  "escalation": [
+   "dba-oncall",
+   "dba-lead"
+  ],
+  "runbook": "RB-DB-005",
+  "depends_on": []
+ }
+]

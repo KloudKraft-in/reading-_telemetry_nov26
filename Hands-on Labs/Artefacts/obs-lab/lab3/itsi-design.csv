@@ -1,0 +1,6 @@
+service,depends_on,kpi,unit,normal,high,critical,importance
+Online Shop,Checkout;Catalog,Availability (successful requests),%,>= 99,< 99,< 95,11
+Checkout,Inventory;Payment,Error rate,%,< 2,>= 2,>= 10,10
+Checkout,Inventory;Payment,p95 response time,ms,< 500,>= 500,>= 2000,8
+Inventory,DB pool,DB pool utilisation,%,< 70,>= 90,= 100,9
+Payment,PSP gateway (external),PSP p95 response time,ms,< 800,>= 800,>= 3000,9

@@ -1,0 +1,1 @@
+{"log_gb_per_day": 15, "log_retention_days": 14, "spans_million_per_day": 30, "span_retention_days": 7, "active_series": 80000}
