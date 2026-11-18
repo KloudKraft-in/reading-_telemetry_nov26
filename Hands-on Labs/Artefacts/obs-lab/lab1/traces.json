@@ -1,0 +1,293 @@
+{
+ "resourceSpans": [
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "frontend"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "inc-7301"
+     },
+     "spans": [
+      {
+       "traceId": "dd2fc3bb31eaacae5c54376da33768c2",
+       "spanId": "e67c285d5375ef13",
+       "name": "POST /api/checkout",
+       "kind": 2,
+       "startTimeUnixNano": "1792730523000000000",
+       "endTimeUnixNano": "1792730523848840960",
+       "status": {
+        "code": 2,
+        "message": "HTTP 504"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "checkout"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "inc-7301"
+     },
+     "spans": [
+      {
+       "traceId": "dd2fc3bb31eaacae5c54376da33768c2",
+       "spanId": "d6d3f44277b5ded2",
+       "name": "POST /checkout",
+       "kind": 2,
+       "startTimeUnixNano": "1792730523003000064",
+       "endTimeUnixNano": "1792730523845840896",
+       "status": {
+        "code": 2,
+        "message": "payment timeout"
+       },
+       "parentSpanId": "e67c285d5375ef13"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "inventory"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "inc-7301"
+     },
+     "spans": [
+      {
+       "traceId": "dd2fc3bb31eaacae5c54376da33768c2",
+       "spanId": "6e16023795f1f666",
+       "name": "POST /inventory/reserve",
+       "kind": 2,
+       "startTimeUnixNano": "1792730523005000192",
+       "endTimeUnixNano": "1792730523025448960",
+       "status": {
+        "code": 1
+       },
+       "parentSpanId": "d6d3f44277b5ded2"
+      },
+      {
+       "traceId": "dd2fc3bb31eaacae5c54376da33768c2",
+       "spanId": "c7d16497fde12c45",
+       "name": "UPDATE stock",
+       "kind": 3,
+       "startTimeUnixNano": "1792730523007000064",
+       "endTimeUnixNano": "1792730523023448832",
+       "status": {
+        "code": 1
+       },
+       "parentSpanId": "6e16023795f1f666"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "payment"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "inc-7301"
+     },
+     "spans": [
+      {
+       "traceId": "dd2fc3bb31eaacae5c54376da33768c2",
+       "spanId": "e6bbf8ca9442746f",
+       "name": "POST psp.acme-pay.com/v2/charge",
+       "kind": 3,
+       "startTimeUnixNano": "1792730523030448896",
+       "endTimeUnixNano": "1792730523830449152",
+       "status": {
+        "code": 2,
+        "message": "PSP call timed out after 800 ms"
+       },
+       "parentSpanId": "d6d3f44277b5ded2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "frontend"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "inc-7301"
+     },
+     "spans": [
+      {
+       "traceId": "c940e86c2fa167c0673925c58081150c",
+       "spanId": "f541bdb14041b6e9",
+       "name": "POST /api/checkout",
+       "kind": 2,
+       "startTimeUnixNano": "1792730101000000000",
+       "endTimeUnixNano": "1792730101869195008",
+       "status": {
+        "code": 1
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "checkout"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "inc-7301"
+     },
+     "spans": [
+      {
+       "traceId": "c940e86c2fa167c0673925c58081150c",
+       "spanId": "c1439e1c983c2add",
+       "name": "POST /checkout",
+       "kind": 2,
+       "startTimeUnixNano": "1792730101003000064",
+       "endTimeUnixNano": "1792730101866194944",
+       "status": {
+        "code": 1
+       },
+       "parentSpanId": "f541bdb14041b6e9"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "inventory"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "inc-7301"
+     },
+     "spans": [
+      {
+       "traceId": "c940e86c2fa167c0673925c58081150c",
+       "spanId": "38a2bca0d599c474",
+       "name": "POST /inventory/reserve",
+       "kind": 2,
+       "startTimeUnixNano": "1792730101005000192",
+       "endTimeUnixNano": "1792730101028979968",
+       "status": {
+        "code": 1
+       },
+       "parentSpanId": "c1439e1c983c2add"
+      },
+      {
+       "traceId": "c940e86c2fa167c0673925c58081150c",
+       "spanId": "c6095d6a9b583129",
+       "name": "UPDATE stock",
+       "kind": 3,
+       "startTimeUnixNano": "1792730101007000064",
+       "endTimeUnixNano": "1792730101026979840",
+       "status": {
+        "code": 1
+       },
+       "parentSpanId": "38a2bca0d599c474"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "payment"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "inc-7301"
+     },
+     "spans": [
+      {
+       "traceId": "c940e86c2fa167c0673925c58081150c",
+       "spanId": "bbc9c03662fe40df",
+       "name": "POST psp.acme-pay.com/v2/charge",
+       "kind": 3,
+       "startTimeUnixNano": "1792730101033979904",
+       "endTimeUnixNano": "1792730101855812096",
+       "status": {
+        "code": 1
+       },
+       "parentSpanId": "c1439e1c983c2add"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
