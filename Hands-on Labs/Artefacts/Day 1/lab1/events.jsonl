@@ -1,0 +1,6 @@
+{"ts": "2026-10-23T09:55:00.000+05:30", "type": "deployment", "service": "inventory-service", "severity": "info", "message": "Deployed inventory-service v3.2.0 (CHG-2228)"}
+{"ts": "2026-10-23T10:12:00.000+05:30", "type": "config-change", "service": "payment-service", "severity": "info", "message": "psp.client.timeout_ms changed 5000 -> 800 (CHG-2231 'fail fast on slow PSP')"}
+{"ts": "2026-10-23T10:14:30.000+05:30", "type": "alert-opened", "service": "frontend", "severity": "critical", "message": "ALERT CheckoutErrorRate > 3% for 2m (severity=critical)"}
+{"ts": "2026-10-23T10:18:00.000+05:30", "type": "autoscaling", "service": "frontend", "severity": "info", "message": "HPA scaled frontend 3 -> 5 pods (cpu target 30%)"}
+{"ts": "2026-10-23T10:27:00.000+05:30", "type": "config-change", "service": "payment-service", "severity": "info", "message": "psp.client.timeout_ms changed 800 -> 5000 (rollback of CHG-2231, INC-7301)"}
+{"ts": "2026-10-23T10:30:00.000+05:30", "type": "alert-resolved", "service": "frontend", "severity": "info", "message": "RESOLVED CheckoutErrorRate"}
