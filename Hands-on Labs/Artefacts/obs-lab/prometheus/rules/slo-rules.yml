@@ -1,0 +1,36 @@
+# SLI and SLO recording rules — Day 6 Lab 2 (checkout availability 99.5 %, checkout latency 99 % < 0.5 s)
+# The lab uses a 24-hour SLO window as a stand-in for 28 days, so that lab faults visibly consume budget.
+groups:
+  - name: slo-checkout
+    interval: 15s
+    rules:
+      - record: sli:checkout_availability:ratio_rate1m
+        expr: sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout",status!~"5.."}[1m])) / sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout"}[1m]))
+      - record: sli:checkout_availability:ratio_rate5m
+        expr: sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout",status!~"5.."}[5m])) / sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout"}[5m]))
+      - record: sli:checkout_availability:ratio_rate30m
+        expr: sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout",status!~"5.."}[30m])) / sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout"}[30m]))
+      - record: sli:checkout_availability:ratio_rate1h
+        expr: sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout",status!~"5.."}[1h])) / sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout"}[1h]))
+      - record: sli:checkout_availability:ratio_rate24h
+        expr: sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout",status!~"5.."}[24h])) / sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout"}[24h]))
+      - record: sli:checkout_latency:ratio_rate5m
+        expr: sum(rate(http_server_request_duration_seconds_bucket{env="lab",service="frontend",route="/api/checkout",le="0.5"}[5m])) / sum(rate(http_server_request_duration_seconds_count{env="lab",service="frontend",route="/api/checkout"}[5m]))
+      - record: sli:checkout_latency:ratio_rate1h
+        expr: sum(rate(http_server_request_duration_seconds_bucket{env="lab",service="frontend",route="/api/checkout",le="0.5"}[1h])) / sum(rate(http_server_request_duration_seconds_count{env="lab",service="frontend",route="/api/checkout"}[1h]))
+      - record: sli:checkout_latency:ratio_rate24h
+        expr: sum(rate(http_server_request_duration_seconds_bucket{env="lab",service="frontend",route="/api/checkout",le="0.5"}[24h])) / sum(rate(http_server_request_duration_seconds_count{env="lab",service="frontend",route="/api/checkout"}[24h]))
+      - record: slo:checkout_availability:burnrate1m
+        expr: (1 - sli:checkout_availability:ratio_rate1m) / (1 - 0.995)
+      - record: slo:checkout_availability:burnrate5m
+        expr: (1 - sli:checkout_availability:ratio_rate5m) / (1 - 0.995)
+      - record: slo:checkout_availability:burnrate30m
+        expr: (1 - sli:checkout_availability:ratio_rate30m) / (1 - 0.995)
+      - record: slo:checkout_availability:burnrate1h
+        expr: (1 - sli:checkout_availability:ratio_rate1h) / (1 - 0.995)
+      - record: slo:checkout_availability:burnrate24h
+        expr: (1 - sli:checkout_availability:ratio_rate24h) / (1 - 0.995)
+      - record: slo:checkout_availability:error_budget_remaining
+        expr: 1 - (1 - sli:checkout_availability:ratio_rate24h) / (1 - 0.995)
+      - record: slo:checkout_latency:error_budget_remaining
+        expr: 1 - (1 - sli:checkout_latency:ratio_rate24h) / (1 - 0.99)

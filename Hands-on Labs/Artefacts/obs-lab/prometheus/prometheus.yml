@@ -1,0 +1,20 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+rule_files: ["rules/*.yml"]
+alerting:
+  alertmanagers:
+    - static_configs: [{targets: ["alertmanager:9093"]}]
+scrape_configs:
+  - job_name: shopsim
+    static_configs: [{targets: ["shopsim:8000"], labels: {env: lab}}]
+  - job_name: node
+    static_configs: [{targets: ["node-exporter:9100"], labels: {env: lab}}]
+  - job_name: prometheus
+    static_configs: [{targets: ["localhost:9090"]}]
+  - job_name: otel-collector
+    static_configs: [{targets: ["otel-collector:8888"], labels: {env: lab}}]
+  - job_name: log-metrics
+    static_configs: [{targets: ["otel-collector:8889"], labels: {env: lab}}]
+  - job_name: catalog
+    static_configs: [{targets: ["catalog-exporter:8002"], labels: {env: lab}}]

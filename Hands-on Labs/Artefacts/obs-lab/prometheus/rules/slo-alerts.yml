@@ -1,0 +1,30 @@
+groups:
+  - name: slo-checkout-alerts
+    rules:
+      - alert: CheckoutErrorBudgetFastBurn
+        expr: slo:checkout_availability:burnrate5m > 14.4 and slo:checkout_availability:burnrate1m > 14.4
+        for: 1m
+        labels:
+          severity: critical
+          service: checkout
+          team: commerce
+          slo: checkout-availability
+        annotations:
+          summary: 'Checkout is burning its error budget {{ $value | printf "%.0f" }}x faster than allowed'
+          description: 'More than 7.2 % of checkouts fail (5 m and 1 m windows). At this rate the 24 h budget is gone in under 2 hours.'
+          runbook_url: "http://localhost:9095/runbooks/RB-CHK-002.html"
+          dashboard_url: "http://localhost:3000/d/shop-slo"
+
+      - alert: CheckoutErrorBudgetSlowBurn
+        expr: slo:checkout_availability:burnrate30m > 6 and slo:checkout_availability:burnrate5m > 6
+        for: 5m
+        labels:
+          severity: warning
+          service: checkout
+          team: commerce
+          slo: checkout-availability
+        annotations:
+          summary: 'Checkout is burning its error budget {{ $value | printf "%.0f" }}x faster than allowed (30 m)'
+          description: 'More than 3 % of checkouts fail over 30 minutes. Create a ticket; fix within the working day.'
+          runbook_url: "http://localhost:9095/runbooks/RB-CHK-002.html"
+          dashboard_url: "http://localhost:3000/d/shop-slo"

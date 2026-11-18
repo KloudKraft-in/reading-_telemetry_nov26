@@ -1,0 +1,26 @@
+# Grafana data sources — Day 6: Prometheus, Jaeger (with trace → logs)
+
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    uid: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    jsonData:
+      timeInterval: 30s
+
+  - name: Jaeger
+    type: jaeger
+    uid: jaeger
+    access: proxy
+    url: http://jaeger:16686
+    jsonData:
+      tracesToLogsV2:
+        datasourceUid: loki
+        spanStartTimeShift: "-2m"
+        spanEndTimeShift: "2m"
+        customQuery: true
+        query: '{service_name=~".+"} |= "$${__trace.traceId}"'
