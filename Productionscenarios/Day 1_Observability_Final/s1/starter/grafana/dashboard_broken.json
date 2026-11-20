@@ -1,0 +1,42 @@
+{
+  "uid": "red-checkout",
+  "title": "RED Checkout Dashboard",
+  "editable": true,
+  "schemaVersion": 39,
+  "version": 1,
+  "time": {"from": "now-15m", "to": "now"},
+  "refresh": "10s",
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "Request Rate (req/s)",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "targets": [
+        {"refId": "A", "expr": "sum(rate(http_requests_total{service=\"checkout-service\"}[5m]))"}
+      ]
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Payment Duration",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{"color": "green", "value": null}, {"color": "red", "value": 1}]
+          },
+          "custom": {"thresholdsStyle": {"mode": "line"}}
+        },
+        "overrides": []
+      },
+      "targets": [
+        {"refId": "A", "expr": "avg(payment_duration_seconds)"}
+      ]
+    }
+  ]
+}

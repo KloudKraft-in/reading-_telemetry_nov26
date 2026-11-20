@@ -1,0 +1,39 @@
+# TEL-D1-103 - Six Alerts at Shift Start, One Real Problem
+name: telemetry-d1
+services:
+  dbsim:
+    build: ../../shared/app
+    image: telemetry-d1-app
+    container_name: d1-dbsim
+    command: uvicorn s3_dbsim:app --host 0.0.0.0 --port 8083
+    ports: ["8083:8083"]
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    container_name: d1-prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --web.enable-lifecycle
+    volumes:
+      - ../starter/conf:/etc/prometheus:ro
+      - ../starter/alerts:/etc/prometheus-alerts:ro
+    ports: ["9090:9090"]
+    depends_on: [dbsim]
+
+  alertmanager:
+    image: prom/alertmanager:v0.27.0
+    container_name: d1-alertmanager
+    command: ["--config.file=/etc/alertmanager/alertmanager.yml"]
+    volumes:
+      - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+    ports: ["9093:9093"]
+
+  grafana:
+    image: grafana/grafana:11.3.0
+    container_name: d1-grafana
+    environment:
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/use-dashboard.json
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports: ["3000:3000"]

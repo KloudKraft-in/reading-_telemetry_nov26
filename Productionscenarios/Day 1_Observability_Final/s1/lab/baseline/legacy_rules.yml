@@ -1,0 +1,8 @@
+# Legacy recording rule created for the original RED dashboard.
+# It records the MEAN payment duration as "payment_duration_seconds",
+# which is the series the 'Payment Duration' panel averages.
+groups:
+  - name: legacy-dashboard
+    rules:
+      - record: payment_duration_seconds
+        expr: sum(rate(payment_duration_seconds_sum[1m])) / sum(rate(payment_duration_seconds_count[1m]))

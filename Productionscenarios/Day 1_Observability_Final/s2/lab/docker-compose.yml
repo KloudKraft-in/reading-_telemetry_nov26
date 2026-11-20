@@ -1,0 +1,63 @@
+# TEL-D1-102 - Orders Fail for One Product: Follow the Trace
+name: telemetry-d1
+x-app: &app
+  build: ../../shared/app
+  image: telemetry-d1-app
+  environment: &env
+    OTLP_ENDPOINT: http://jaeger:4318
+    LOKI_URL: http://loki:3100
+
+services:
+  frontend:
+    <<: *app
+    container_name: d1-frontend
+    command: uvicorn s2_frontend:app --host 0.0.0.0 --port 8080
+    ports: ["8080:8080"]
+    depends_on: [checkout]
+  checkout:
+    <<: *app
+    container_name: d1-checkout-service
+    command: uvicorn s2_checkout:app --host 0.0.0.0 --port 8081
+    ports: ["8081:8081"]
+    depends_on: [inventory, payment, jaeger, loki]
+  payment:
+    <<: *app
+    container_name: d1-payment-service
+    command: uvicorn s2_payment:app --host 0.0.0.0 --port 8082
+    ports: ["8082:8082"]
+    depends_on: [jaeger, loki]
+  inventory:
+    <<: *app
+    container_name: d1-inventory-service
+    command: uvicorn s2_inventory:app --host 0.0.0.0 --port 8083
+    ports: ["8083:8083"]
+    depends_on: [jaeger, loki]
+
+  loadgen:
+    <<: *app
+    container_name: d1-loadgen
+    command: python loadgen_s2.py
+    depends_on: [frontend]
+    restart: unless-stopped
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.62.0
+    container_name: d1-jaeger
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+    ports: ["16686:16686"]
+
+  loki:
+    image: grafana/loki:3.2.1
+    container_name: d1-loki
+    command: -config.file=/etc/loki/loki-config.yaml
+    volumes:
+      - ./loki/loki-config.yaml:/etc/loki/loki-config.yaml:ro
+    ports: ["3100:3100"]
+
+  grafana:
+    image: grafana/grafana:11.3.0
+    container_name: d1-grafana
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+    ports: ["3000:3000"]

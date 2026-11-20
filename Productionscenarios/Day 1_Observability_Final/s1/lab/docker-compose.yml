@@ -1,0 +1,37 @@
+# TEL-D1-101 - Checkout Is Slow but the Dashboard Looks Green
+name: telemetry-d1
+services:
+  checkout:
+    build: ../../shared/app
+    image: telemetry-d1-app
+    container_name: d1-checkout-service
+    command: uvicorn s1_checkout:app --host 0.0.0.0 --port 8081
+    ports: ["8081:8081"]
+
+  loadgen:
+    build: ../../shared/app
+    image: telemetry-d1-app
+    container_name: d1-loadgen
+    command: python loadgen_s1.py
+    depends_on: [checkout]
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    container_name: d1-prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --web.enable-lifecycle
+    volumes:
+      - ../starter/conf:/etc/prometheus:ro
+    ports: ["9090:9090"]
+
+  grafana:
+    image: grafana/grafana:11.3.0
+    container_name: d1-grafana
+    environment:
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/dashboard_broken.json
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ../starter/grafana:/var/lib/grafana/dashboards
+    ports: ["3000:3000"]

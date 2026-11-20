@@ -1,0 +1,35 @@
+groups:
+  - name: use-alerts
+    rules:
+      # ---- application-facing alerts ----
+      - alert: CheckoutSlow
+        expr: checkout_latency_p95_seconds > 3
+        for: 30s
+        labels: {severity: critical}
+        annotations: {summary: "Checkout p95 latency above 3s"}
+      - alert: PaymentTimeout
+        expr: payment_timeout_ratio > 0.05
+        for: 30s
+        labels: {severity: critical}
+        annotations: {summary: "More than 5% of payment calls time out"}
+      - alert: ProfileQueryDegraded
+        expr: profile_query_p95_seconds > 1.5
+        for: 30s
+        labels: {severity: warning}
+        annotations: {summary: "Customer profile query p95 above 1.5s"}
+      - alert: OrderHistory504
+        expr: order_history_http_504_ratio > 0.05
+        for: 30s
+        labels: {severity: warning}
+        annotations: {summary: "Order history returning 504s"}
+      # ---- infrastructure alerts ----
+      - alert: DiskIOWaitHigh
+        expr: db_disk_io_await_milliseconds > 250
+        for: 30s
+        labels: {severity: warning}
+        annotations: {summary: "Disk I/O await above 250ms"}
+      - alert: DatabaseQueueSaturation
+        expr: db_disk_queue_length > 35
+        for: 30s
+        labels: {severity: critical}
+        annotations: {summary: "Disk queue length above 35"}

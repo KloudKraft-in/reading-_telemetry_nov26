@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ['alertmanager:9093']
+rule_files:
+  - /etc/prometheus-alerts/use-alerts.yml
+scrape_configs:
+  - job_name: 'shopnow-db-and-apps'
+    static_configs:
+      - targets: ['dbsim:8083']

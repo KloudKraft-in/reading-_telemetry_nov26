@@ -1,0 +1,3 @@
+INSTRUCTOR-ONLY CONTENT NOTICE
+
+Instructor_Solution_Guide_day1.docx / .md and instructor/reference_answers/ contain solution guidance and worked evidence. Do not distribute these files to participants before or during the exercise. Provide participants with Participant_Guide_day1.docx and the scenario starter materials only.
