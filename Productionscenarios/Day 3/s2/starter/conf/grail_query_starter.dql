@@ -1,0 +1,7 @@
+// Fetch error logs from the easyTravel host (OneAgent) in the last 2 hours
+fetch logs, from: now() - 2h
+| filter loglevel == "ERROR"
+// TODO 1: add an error_type field, e.g.
+//   | fieldsAdd error_type = if(contains(content, "CreditCardCheckError500"), "CreditCardCheckError500", else: "other")
+// TODO 2: summarize ErrorCount by dt.process.name and error_type, sort descending
+// If loglevel returns nothing, run:  fetch logs, from: now() - 2h | limit 5   and use the field you find

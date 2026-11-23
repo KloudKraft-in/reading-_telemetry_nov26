@@ -1,0 +1,16 @@
+# INSTRUCTOR ONLY - UNTESTED. One shared simulator that reports to ONE New Relic account for the whole class.
+# Learners never see the licence key. Set it in .env (NEVER commit .env).
+name: day4-newrelic-sim
+services:
+  app:
+    build: .
+    command: newrelic-admin run-program gunicorn -w 2 --threads 8 -b 0.0.0.0:8080 app:app
+    environment:
+      NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY:?set NEW_RELIC_LICENSE_KEY in .env}
+      NEW_RELIC_APP_NAME: ShopNow-Production
+      NEW_RELIC_DISTRIBUTED_TRACING_ENABLED: "true"
+  load:
+    build: .
+    command: python loadgen.py
+    environment: { TARGET: "http://app:8080" }
+    depends_on: [app]

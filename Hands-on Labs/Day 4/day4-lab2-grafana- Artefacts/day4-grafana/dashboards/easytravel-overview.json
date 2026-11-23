@@ -1,0 +1,278 @@
+{
+  "uid": "easytravel-overview",
+  "title": "easyTravel Overview",
+  "tags": [
+    "easytravel",
+    "cohort"
+  ],
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "10s",
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "templating": {
+    "list": [
+      {
+        "name": "env",
+        "label": "Environment",
+        "type": "custom",
+        "query": "cohort,staging,prod",
+        "current": {
+          "text": "cohort",
+          "value": "cohort"
+        },
+        "options": [
+          {
+            "text": "cohort",
+            "value": "cohort",
+            "selected": true
+          },
+          {
+            "text": "staging",
+            "value": "staging",
+            "selected": false
+          }
+        ]
+      },
+      {
+        "name": "route",
+        "label": "Route",
+        "type": "query",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "query": "label_values(http_server_requests_total{env=\"$env\",service=\"easytravel-frontend\"}, route)",
+        "includeAll": true,
+        "multi": true,
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        }
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "title": "Requests / s (now)",
+      "type": "stat",
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqps"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum(rate(http_server_requests_total{env=\"$env\",service=\"easytravel-frontend\"}[$__rate_interval]))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        }
+      ],
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      }
+    },
+    {
+      "id": 2,
+      "title": "p95 latency (now)",
+      "type": "gauge",
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "min": 0,
+          "max": 2
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95, sum by (le) (rate(http_server_request_duration_seconds_bucket{env=\"$env\",service=\"easytravel-frontend\"}[$__rate_interval])))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        }
+      ],
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Request rate by route",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 5
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqps"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "legendFormat": "{{route}}",
+          "expr": "sum by (route) (rate(http_server_requests_total{env=\"$env\",service=\"easytravel-frontend\",route=~\"$route\"}[$__rate_interval]))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        }
+      ],
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      }
+    },
+    {
+      "id": 4,
+      "title": "p95 latency by route",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 5
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "legendFormat": "p95 {{route}}",
+          "expr": "histogram_quantile(0.95, sum by (le, route) (rate(http_server_request_duration_seconds_bucket{env=\"$env\",service=\"easytravel-frontend\",route=~\"$route\"}[$__rate_interval])))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        }
+      ],
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      }
+    },
+    {
+      "id": 5,
+      "title": "5xx error ratio by route",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 13
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "legendFormat": "5xx {{route}}",
+          "expr": "sum by (route) (rate(http_server_requests_total{env=\"$env\",service=\"easytravel-frontend\",route=~\"$route\",status=~\"5..\"}[$__rate_interval])) / sum by (route) (rate(http_server_requests_total{env=\"$env\",service=\"easytravel-frontend\",route=~\"$route\"}[$__rate_interval]))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        }
+      ],
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Route summary (selected time range)",
+      "type": "table",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 13
+      },
+      "transformations": [
+        {
+          "id": "merge",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "renameByName": {
+              "Value #A": "Requests",
+              "Value #B": "5xx errors",
+              "Value #C": "p95 (s)"
+            }
+          }
+        }
+      ],
+      "targets": [
+        {
+          "refId": "A",
+          "format": "table",
+          "instant": true,
+          "expr": "sum by (route) (increase(http_server_requests_total{env=\"$env\",service=\"easytravel-frontend\"}[$__range]))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        },
+        {
+          "refId": "B",
+          "format": "table",
+          "instant": true,
+          "expr": "sum by (route) (increase(http_server_requests_total{env=\"$env\",service=\"easytravel-frontend\",status=~\"5..\"}[$__range])) or sum by (route) (increase(http_server_requests_total{env=\"$env\",service=\"easytravel-frontend\"}[$__range])) * 0",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        },
+        {
+          "refId": "C",
+          "format": "table",
+          "instant": true,
+          "expr": "histogram_quantile(0.95, sum by (le, route) (rate(http_server_request_duration_seconds_bucket{env=\"$env\",service=\"easytravel-frontend\"}[$__rate_interval])))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          }
+        }
+      ],
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      }
+    }
+  ]
+}

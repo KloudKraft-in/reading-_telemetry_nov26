@@ -1,0 +1,1 @@
+{"name": "[SHARED][BROKEN] easyTravel Backend Errors (TEL-D3-303)", "type": "query alert", "query": "avg(last_5m):avg:trace.servlet.request.errors{env:staging,service:easytravel-backend} > 50", "message": "Shared demonstration monitor. Read only. No notifications.", "tags": ["shared:true", "scenario:tel-d3-303"]}

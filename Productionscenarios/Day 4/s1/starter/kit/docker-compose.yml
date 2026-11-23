@@ -1,0 +1,17 @@
+# TEL-D4-401 - self-contained: ShopNow simulator + Prometheus (the New Relic part uses the instructor's shared account)
+name: day4-s1
+services:
+  sim:
+    image: python:3.12-slim
+    command: ["python", "-u", "/app/shopnow_sim.py"]
+    volumes: ["./shopnow_sim.py:/app/shopnow_sim.py:ro"]
+    ports: ["${BIND:-127.0.0.1}:8095:8095"]
+    restart: unless-stopped
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus", "--storage.tsdb.retention.time=3d"]
+    volumes: ["./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro", "prom-data:/prometheus"]
+    ports: ["${BIND:-127.0.0.1}:9090:9090"]
+    depends_on: [sim]
+    restart: unless-stopped
+volumes: {prom-data: {}}
