@@ -1,0 +1,4 @@
+# HELP easytravel_service_info Metadata info metric for easyTravel services
+# TYPE easytravel_service_info gauge
+easytravel_service_info{service="easytravel-frontend",team="web-platform",tier="1"} 1
+easytravel_service_info{service="easytravel-backend",team="payments",tier="1"} 1

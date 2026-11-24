@@ -1,0 +1,12 @@
+groups:
+  - name: easytravel-recording
+    interval: 5s
+    rules:
+      - record: route:http_requests:rate5m
+        expr: sum by (service, route) (rate(http_server_requests_total{env="cohort"}[5m]))
+      - record: route:http_errors:ratio_rate5m
+        expr: sum by (service, route) (rate(http_server_requests_total{env="cohort",status=~"5.."}[5m])) / sum by (service, route) (rate(http_server_requests_total{env="cohort"}[5m]))
+      - record: route:http_latency_seconds:p95_5m
+        expr: histogram_quantile(0.95, sum by (le, service, route) (rate(http_server_request_duration_seconds_bucket{env="cohort"}[5m])))
+      - record: service:host_cpu:utilization
+        expr: 1 - avg(rate(node_cpu_seconds_total{mode="idle"}[5m]))
