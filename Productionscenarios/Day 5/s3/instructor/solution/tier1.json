@@ -1,0 +1,126 @@
+{
+ "widgets": [
+  {
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "width": 24,
+   "height": 2,
+   "properties": {
+    "markdown": "# ShopNow - is the business OK?  \n[Open ShopNow-Tier2-<SEAT>](https://<REGION>.console.aws.amazon.com/cloudwatch/home?region=<REGION>#dashboards/dashboard/ShopNow-Tier2-<SEAT>) for the drill-down"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 0,
+   "y": 2,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "Requests",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 60,
+    "title": "Requests per minute"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 6,
+   "y": 2,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      {
+       "expression": "100*m2/m1",
+       "label": "Error %",
+       "id": "e1"
+      }
+     ],
+     [
+      "ShopNow",
+      "Requests",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout",
+      {
+       "id": "m1",
+       "visible": false
+      }
+     ],
+     [
+      "ShopNow",
+      "Errors",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout",
+      {
+       "id": "m2",
+       "visible": false
+      }
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 60,
+    "title": "Error % per minute"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 12,
+   "y": 2,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "CPUUtilization",
+      "Seat",
+      "<SEAT>",
+      "Host",
+      "web-01"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Average",
+    "period": 60,
+    "title": "CPU average 1 min"
+   }
+  },
+  {
+   "type": "alarm",
+   "x": 18,
+   "y": 2,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "title": "Alarm status",
+    "alarms": [
+     "arn:aws:cloudwatch:<REGION>:<ACCOUNT_ID>:alarm:HostHighCPU-<SEAT>",
+     "arn:aws:cloudwatch:<REGION>:<ACCOUNT_ID>:alarm:CheckoutErrors-<SEAT>"
+    ]
+   }
+  }
+ ]
+}

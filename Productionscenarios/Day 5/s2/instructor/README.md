@@ -1,0 +1,9 @@
+# TEL-D5-502 — instructor notes
+1. Once per class (sandbox account, one region): CloudFormation -> create stack `shopnow-private-vpc` from `shared-vpc.yaml` with CreateS3Endpoint = false. Give participants the stack outputs SubnetIds and SecurityGroupId.
+2. Each participant creates `invoice-s2-<seat>` from `../starter/aws/invoice-stack.yaml`. A Lambda in these private subnets has no internet and no route to S3: PutObject hangs until the 30 s timeout.
+3. Expected telemetry after 3-4 minutes: one invocation per minute ends with "Task timed out after 30.00 seconds"; log lines show only "generating invoice"; the X-Ray trace shows `render-invoice` (~0.15 s) and `S3:PutObject` ≈ 29.7 s (fault) on bucket shopnow-invoices-archive-<seat>-<account>.
+4. The fix: update `shopnow-private-vpc` with CreateS3Endpoint = true (adds a gateway endpoint on the private route table). Wait for UPDATE_COMPLETE + 2 minutes; new invocations log "invoice stored" (≈ 350 ms) and S3:PutObject ≈ 0.1–0.3 s.
+5. No shared VPC possible? Create participant stacks with SubnetIds and SecurityGroupId empty: the function then runs outside a VPC with STALL_MODE=simulate (the S3 call is replaced by a sleep). The trace and the log lines look the same, but the root cause cannot be found in VPC settings — tell participants it is a simulation and give them the root cause after Step 3.
+6. Limits: 40 participants × 1 invocation/min × 30 s ≈ 20 concurrent executions — check the account concurrency quota (new accounts can be as low as 10; request an increase or split the class).
+7. Clean-up: empty every bucket `shopnow-invoices-archive-*` (objects exist after the fix), delete the participant stacks, then `shopnow-private-vpc` (Lambda network interfaces can take up to ~20 minutes to be released — delete participant stacks first and retry).
+8. Cost: Lambda ~1 440 invocations/day per participant at 30 s × 128 MB, plus negligible S3/X-Ray; delete the schedule or stack after class.

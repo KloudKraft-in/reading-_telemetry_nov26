@@ -1,0 +1,26 @@
+# TEL-D5-503 - reference solution (instructor only): the two alarms after tuning. Apply in the console or update the stack.
+# CPU alarm: sustained 10 minutes, warning
+  HostHighCPU:
+    Properties:
+      AlarmDescription: "severity=warning runbook_url=https://runbooks.shopnow.example/RB-CPU-001"
+      Statistic: Average
+      Period: 60
+      EvaluationPeriods: 10
+      DatapointsToAlarm: 10
+      Threshold: 80
+      TreatMissingData: notBreaching
+      Tags: [{Key: severity, Value: warning}]
+# Error alarm: ratio (metric math) above 5 % for 3 minutes, critical
+  CheckoutErrors:
+    Properties:
+      AlarmDescription: "severity=critical runbook_url=https://runbooks.shopnow.example/RB-CHK-002"
+      Metrics:
+        - {Id: m1, MetricStat: {Metric: {Namespace: ShopNow, MetricName: Requests, Dimensions: [{Name: Seat, Value: <SEAT>}, {Name: Service, Value: checkout}]}, Period: 60, Stat: Sum}, ReturnData: false}
+        - {Id: m2, MetricStat: {Metric: {Namespace: ShopNow, MetricName: Errors, Dimensions: [{Name: Seat, Value: <SEAT>}, {Name: Service, Value: checkout}]}, Period: 60, Stat: Sum}, ReturnData: false}
+        - {Id: e1, Expression: "100*m2/m1", Label: Error %, ReturnData: true}
+      EvaluationPeriods: 3
+      DatapointsToAlarm: 3
+      Threshold: 5
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+      Tags: [{Key: severity, Value: critical}]

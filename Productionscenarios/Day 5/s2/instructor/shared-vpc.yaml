@@ -1,0 +1,68 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+  TEL-D5-502 INSTRUCTOR - one shared private VPC for all participant stacks: two private subnets, NO internet route, NO NAT.
+  CreateS3Endpoint=false reproduces the incident; update the stack with CreateS3Endpoint=true to apply the fix. Sandbox accounts only.
+Parameters:
+  CreateS3Endpoint:
+    Type: String
+    Default: "false"
+    AllowedValues: ["false", "true"]
+    Description: false = incident (no route to S3). true = adds an S3 gateway endpoint to the private route table (the fix).
+Conditions:
+  WithEndpoint: !Equals [!Ref CreateS3Endpoint, "true"]
+Resources:
+  Vpc:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.50.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags: [{Key: Name, Value: shopnow-private-vpc}]
+  SubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref Vpc
+      CidrBlock: 10.50.1.0/24
+      AvailabilityZone: !Select [0, !GetAZs ""]
+      Tags: [{Key: Name, Value: shopnow-private-a}]
+  SubnetB:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref Vpc
+      CidrBlock: 10.50.2.0/24
+      AvailabilityZone: !Select [1, !GetAZs ""]
+      Tags: [{Key: Name, Value: shopnow-private-b}]
+  PrivateRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref Vpc
+      Tags: [{Key: Name, Value: shopnow-private-rt}]
+  AssocA:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties: {SubnetId: !Ref SubnetA, RouteTableId: !Ref PrivateRouteTable}
+  AssocB:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties: {SubnetId: !Ref SubnetB, RouteTableId: !Ref PrivateRouteTable}
+  FunctionSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: shopnow invoice functions (outbound only)
+      VpcId: !Ref Vpc
+      SecurityGroupEgress: [{IpProtocol: "-1", CidrIp: 0.0.0.0/0}]
+  S3Endpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Condition: WithEndpoint
+    Properties:
+      VpcId: !Ref Vpc
+      VpcEndpointType: Gateway
+      ServiceName: !Sub com.amazonaws.${AWS::Region}.s3
+      RouteTableIds: [!Ref PrivateRouteTable]
+Outputs:
+  SubnetIds:
+    Description: Give this to participants (parameter SubnetIds)
+    Value: !Join [",", [!Ref SubnetA, !Ref SubnetB]]
+  SecurityGroupId:
+    Description: Give this to participants (parameter SecurityGroupId)
+    Value: !Ref FunctionSecurityGroup
+  S3EndpointCreated:
+    Value: !Ref CreateS3Endpoint

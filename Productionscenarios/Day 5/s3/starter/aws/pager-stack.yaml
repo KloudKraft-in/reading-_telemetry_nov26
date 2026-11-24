@@ -1,0 +1,619 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+  TEL-D5-503 - Pager fatigue. One metric generator (1 Lambda, runs every minute) publishes 3 custom CloudWatch metrics for your seat,
+  two UN-TUNED alarms, an SNS topic with no subscribers, and one flat 16-widget dashboard. Delete the stack to remove everything. Sandbox accounts only.
+Parameters:
+  Seat:
+    Type: String
+    Default: u00
+    AllowedPattern: "^u[0-9]{2}$"
+    ConstraintDescription: Use your seat id, for example u07
+    Description: Your seat id (u01-u40); added to every resource name.
+Resources:
+  OnCallTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub shopnow-oncall-${Seat}
+  GeneratorLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/shopnow-metric-generator-${Seat}
+      RetentionInDays: 1
+  GeneratorRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - {Effect: Allow, Principal: {Service: lambda.amazonaws.com}, Action: "sts:AssumeRole"}
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: PutShopNowMetrics
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: cloudwatch:PutMetricData
+                Resource: "*"
+                Condition: {StringEquals: {"cloudwatch:namespace": ShopNow}}
+  GeneratorFunction:
+    Type: AWS::Lambda::Function
+    DependsOn: GeneratorLogGroup
+    Properties:
+      FunctionName: !Sub shopnow-metric-generator-${Seat}
+      Runtime: python3.13
+      Architectures: [x86_64]
+      Handler: index.handler
+      MemorySize: 128
+      Timeout: 60
+      Role: !GetAtt GeneratorRole.Arn
+      Environment:
+        Variables:
+          SEAT: !Ref Seat
+      Code:
+        ZipFile: |
+          # metric-generator - TEL-D5-503. boto3 + cfnresponse only (both in the Lambda runtime).
+          # Every minute it publishes 3 custom metrics for ONE seat (CloudWatch namespace ShopNow); at stack creation it back-fills 6 hours.
+          # The pattern repeats every hour (UTC): CPU incident :30-:44, error incident :50-:57, plus noise.
+          import os, datetime as dt
+          import boto3
+          cw = boto3.client("cloudwatch")
+          SEAT = os.environ["SEAT"]
+
+          def vals(t):
+              m = t.minute
+              cpu = 91.0 if 30 <= m <= 44 else 93.0 if m % 7 == 3 else 35.0 + (m * 7) % 10
+              req = 600 + (m * 13) % 80
+              err = round(req * 0.06) if 50 <= m <= 57 else (3 if m % 5 == 2 else 0)
+              return cpu, req, err
+
+          def points(t):
+              cpu, req, err = vals(t)
+              hd = [{"Name": "Seat", "Value": SEAT}, {"Name": "Host", "Value": "web-01"}]
+              sd = [{"Name": "Seat", "Value": SEAT}, {"Name": "Service", "Value": "checkout"}]
+              return [dict(MetricName="CPUUtilization", Dimensions=hd, Timestamp=t, Value=cpu, Unit="Percent"),
+                      dict(MetricName="Requests", Dimensions=sd, Timestamp=t, Value=req, Unit="Count"),
+                      dict(MetricName="Errors", Dimensions=sd, Timestamp=t, Value=err, Unit="Count")]
+
+          def put(items):
+              for i in range(0, len(items), 500):
+                  cw.put_metric_data(Namespace="ShopNow", MetricData=items[i:i + 500])
+
+          def now_min():
+              return dt.datetime.now(dt.timezone.utc).replace(second=0, microsecond=0)
+
+          def handler(event, context):
+              if "RequestType" in event:                       # CloudFormation custom resource
+                  import cfnresponse
+                  try:
+                      if event["RequestType"] == "Create":
+                          t0 = now_min()
+                          items = []
+                          for k in range(360, 0, -1):
+                              items += points(t0 - dt.timedelta(minutes=k))
+                          put(items)
+                      cfnresponse.send(event, context, cfnresponse.SUCCESS, {})
+                  except Exception as e:
+                      cfnresponse.send(event, context, cfnresponse.FAILED, {"Error": str(e)})
+                  return
+              put(points(now_min()))
+              return {"published": SEAT}
+  ScheduleRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Name: !Sub shopnow-metrics-every-minute-${Seat}
+      ScheduleExpression: rate(1 minute)
+      State: ENABLED
+      Targets:
+        - {Id: generator, Arn: !GetAtt GeneratorFunction.Arn}
+  SchedulePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref GeneratorFunction
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt ScheduleRule.Arn
+  Backfill:
+    Type: Custom::Backfill
+    DependsOn: GeneratorRole
+    Properties:
+      ServiceToken: !GetAtt GeneratorFunction.Arn
+  HostHighCPU:
+    Type: AWS::CloudWatch::Alarm
+    DependsOn: Backfill
+    Properties:
+      AlarmName: !Sub HostHighCPU-${Seat}
+      AlarmDescription: CPU of web-01 is high
+      Namespace: ShopNow
+      MetricName: CPUUtilization
+      Dimensions:
+        - {Name: Seat, Value: !Ref Seat}
+        - {Name: Host, Value: web-01}
+      Statistic: Average
+      Period: 60
+      EvaluationPeriods: 1
+      DatapointsToAlarm: 1
+      Threshold: 80
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: missing
+      AlarmActions: [!Ref OnCallTopic]
+  CheckoutErrors:
+    Type: AWS::CloudWatch::Alarm
+    DependsOn: Backfill
+    Properties:
+      AlarmName: !Sub CheckoutErrors-${Seat}
+      AlarmDescription: Checkout returned errors
+      Namespace: ShopNow
+      MetricName: Errors
+      Dimensions:
+        - {Name: Seat, Value: !Ref Seat}
+        - {Name: Service, Value: checkout}
+      Statistic: Sum
+      Period: 60
+      EvaluationPeriods: 1
+      DatapointsToAlarm: 1
+      Threshold: 0
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: missing
+      AlarmActions: [!Ref OnCallTopic]
+  FlatDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    DependsOn: Backfill
+    Properties:
+      DashboardName: !Sub ShopNow-Flat-${Seat}
+      DashboardBody: !Sub |
+        {
+         "widgets": [
+          {
+           "type": "metric",
+           "x": 0,
+           "y": 0,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "CPUUtilization",
+              "Seat",
+              "${Seat}",
+              "Host",
+              "web-01"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Average",
+            "period": 60,
+            "title": "CPU average 1 min"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 6,
+           "y": 0,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "CPUUtilization",
+              "Seat",
+              "${Seat}",
+              "Host",
+              "web-01"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Maximum",
+            "period": 60,
+            "title": "CPU maximum 1 min"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 12,
+           "y": 0,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "CPUUtilization",
+              "Seat",
+              "${Seat}",
+              "Host",
+              "web-01"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "p95",
+            "period": 300,
+            "title": "CPU p95 5 min"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 18,
+           "y": 0,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "CPUUtilization",
+              "Seat",
+              "${Seat}",
+              "Host",
+              "web-01"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Minimum",
+            "period": 60,
+            "title": "CPU minimum 1 min"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 0,
+           "y": 6,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "Requests",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Sum",
+            "period": 60,
+            "title": "Requests per minute"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 6,
+           "y": 6,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "Requests",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Sum",
+            "period": 300,
+            "title": "Requests per 5 min"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 12,
+           "y": 6,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "Requests",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Average",
+            "period": 60,
+            "title": "Requests average per minute"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 18,
+           "y": 6,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "Errors",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Sum",
+            "period": 60,
+            "title": "Errors per minute"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 0,
+           "y": 12,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "Errors",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Sum",
+            "period": 300,
+            "title": "Errors per 5 min"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 6,
+           "y": 12,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "Errors",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Maximum",
+            "period": 60,
+            "title": "Errors maximum per minute"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 12,
+           "y": 12,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              {
+               "expression": "100*m2/m1",
+               "label": "Error %",
+               "id": "e1"
+              }
+             ],
+             [
+              "ShopNow",
+              "Requests",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout",
+              {
+               "id": "m1",
+               "visible": false
+              }
+             ],
+             [
+              "ShopNow",
+              "Errors",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout",
+              {
+               "id": "m2",
+               "visible": false
+              }
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Sum",
+            "period": 60,
+            "title": "Error % per minute"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 18,
+           "y": 12,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              {
+               "expression": "100*m2/m1",
+               "label": "Error %",
+               "id": "e1"
+              }
+             ],
+             [
+              "ShopNow",
+              "Requests",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout",
+              {
+               "id": "m1",
+               "visible": false
+              }
+             ],
+             [
+              "ShopNow",
+              "Errors",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout",
+              {
+               "id": "m2",
+               "visible": false
+              }
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Sum",
+            "period": 300,
+            "title": "Error % per 5 min"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 0,
+           "y": 18,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "Requests",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout"
+             ],
+             [
+              "ShopNow",
+              "Errors",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout"
+             ]
+            ],
+            "view": "timeSeries",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Sum",
+            "period": 60,
+            "title": "Requests and errors"
+           }
+          },
+          {
+           "type": "alarm",
+           "x": 0,
+           "y": 24,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "title": "Alarm status",
+            "alarms": [
+             "arn:aws:cloudwatch:${AWS::Region}:${AWS::AccountId}:alarm:HostHighCPU-${Seat}",
+             "arn:aws:cloudwatch:${AWS::Region}:${AWS::AccountId}:alarm:CheckoutErrors-${Seat}"
+            ]
+           }
+          },
+          {
+           "type": "metric",
+           "x": 6,
+           "y": 24,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "CPUUtilization",
+              "Seat",
+              "${Seat}",
+              "Host",
+              "web-01"
+             ]
+            ],
+            "view": "singleValue",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Average",
+            "period": 60,
+            "title": "CPU now"
+           }
+          },
+          {
+           "type": "metric",
+           "x": 12,
+           "y": 24,
+           "width": 6,
+           "height": 6,
+           "properties": {
+            "metrics": [
+             [
+              "ShopNow",
+              "Errors",
+              "Seat",
+              "${Seat}",
+              "Service",
+              "checkout"
+             ]
+            ],
+            "view": "singleValue",
+            "stacked": false,
+            "region": "${AWS::Region}",
+            "stat": "Sum",
+            "period": 60,
+            "title": "Errors now"
+           }
+          }
+         ]
+        }
+Outputs:
+  GeneratorFunction:
+    Value: !Ref GeneratorFunction
+  FlatDashboardName:
+    Value: !Sub ShopNow-Flat-${Seat}
+  SnsTopicArn:
+    Value: !Ref OnCallTopic

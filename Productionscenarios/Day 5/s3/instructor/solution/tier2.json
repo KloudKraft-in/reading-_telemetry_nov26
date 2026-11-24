@@ -1,0 +1,457 @@
+{
+ "widgets": [
+  {
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "width": 24,
+   "height": 2,
+   "properties": {
+    "markdown": "# ShopNow - why?  \n[Open ShopNow-Tier1-<SEAT>](https://<REGION>.console.aws.amazon.com/cloudwatch/home?region=<REGION>#dashboards/dashboard/ShopNow-Tier1-<SEAT>) back to the overview"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 0,
+   "y": 2,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "CPUUtilization",
+      "Seat",
+      "<SEAT>",
+      "Host",
+      "web-01"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Average",
+    "period": 60,
+    "title": "CPU average 1 min"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 6,
+   "y": 2,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "CPUUtilization",
+      "Seat",
+      "<SEAT>",
+      "Host",
+      "web-01"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Maximum",
+    "period": 60,
+    "title": "CPU maximum 1 min"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 12,
+   "y": 2,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "CPUUtilization",
+      "Seat",
+      "<SEAT>",
+      "Host",
+      "web-01"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "p95",
+    "period": 300,
+    "title": "CPU p95 5 min"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 18,
+   "y": 2,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "CPUUtilization",
+      "Seat",
+      "<SEAT>",
+      "Host",
+      "web-01"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Minimum",
+    "period": 60,
+    "title": "CPU minimum 1 min"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 0,
+   "y": 8,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "Requests",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 60,
+    "title": "Requests per minute"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 6,
+   "y": 8,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "Requests",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 300,
+    "title": "Requests per 5 min"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 12,
+   "y": 8,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "Requests",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Average",
+    "period": 60,
+    "title": "Requests average per minute"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 18,
+   "y": 8,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "Errors",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 60,
+    "title": "Errors per minute"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 0,
+   "y": 14,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "Errors",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 300,
+    "title": "Errors per 5 min"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 6,
+   "y": 14,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "Errors",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Maximum",
+    "period": 60,
+    "title": "Errors maximum per minute"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 12,
+   "y": 14,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      {
+       "expression": "100*m2/m1",
+       "label": "Error %",
+       "id": "e1"
+      }
+     ],
+     [
+      "ShopNow",
+      "Requests",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout",
+      {
+       "id": "m1",
+       "visible": false
+      }
+     ],
+     [
+      "ShopNow",
+      "Errors",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout",
+      {
+       "id": "m2",
+       "visible": false
+      }
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 60,
+    "title": "Error % per minute"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 18,
+   "y": 14,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      {
+       "expression": "100*m2/m1",
+       "label": "Error %",
+       "id": "e1"
+      }
+     ],
+     [
+      "ShopNow",
+      "Requests",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout",
+      {
+       "id": "m1",
+       "visible": false
+      }
+     ],
+     [
+      "ShopNow",
+      "Errors",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout",
+      {
+       "id": "m2",
+       "visible": false
+      }
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 300,
+    "title": "Error % per 5 min"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 0,
+   "y": 20,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "Requests",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ],
+     [
+      "ShopNow",
+      "Errors",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "timeSeries",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 60,
+    "title": "Requests and errors"
+   }
+  },
+  {
+   "type": "alarm",
+   "x": 0,
+   "y": 26,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "title": "Alarm status",
+    "alarms": [
+     "arn:aws:cloudwatch:<REGION>:<ACCOUNT_ID>:alarm:HostHighCPU-<SEAT>",
+     "arn:aws:cloudwatch:<REGION>:<ACCOUNT_ID>:alarm:CheckoutErrors-<SEAT>"
+    ]
+   }
+  },
+  {
+   "type": "metric",
+   "x": 6,
+   "y": 26,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "CPUUtilization",
+      "Seat",
+      "<SEAT>",
+      "Host",
+      "web-01"
+     ]
+    ],
+    "view": "singleValue",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Average",
+    "period": 60,
+    "title": "CPU now"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 12,
+   "y": 26,
+   "width": 6,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopNow",
+      "Errors",
+      "Seat",
+      "<SEAT>",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "singleValue",
+    "stacked": false,
+    "region": "<REGION>",
+    "stat": "Sum",
+    "period": 60,
+    "title": "Errors now"
+   }
+  }
+ ]
+}

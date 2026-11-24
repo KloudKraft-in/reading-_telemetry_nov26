@@ -1,0 +1,31 @@
+// TEL-D5-501 — instructor reference. Time range: Last 4 hours. "success" may be text in some schemas: tostring(success) =~ "false".
+// 0. data arrived once
+union requests, dependencies, exceptions | summarize rows = count() by itemType      // request 1500 | dependency 2858 | exception 215
+
+// 1. ranking (expected: api.external-fraud.io 500 / 212 / 42.4 ; inventory-svc 300 / 31 / 10.33 ; paymentgw 288 / 3 / 1.04 ; shiprates 285 / 2 / 0.7 ; sql 885 / 0 ; redis 600 / 0)
+dependencies
+| where timestamp > ago(4h)
+| summarize TotalCalls = count(), FailedCalls = countif(tostring(success) =~ "false") by target
+| extend FailureRate = round(100.0 * FailedCalls / TotalCalls, 2)
+| sort by FailedCalls desc
+
+// 2. result codes (212 x 504 fraud ; 31 x 404 inventory ; 3 x 503 paymentgw ; 2 x 500 shiprates)
+dependencies | where timestamp > ago(4h) and tostring(success) =~ "false" | summarize failed = count() by target, resultCode | sort by failed desc
+
+// 3. join with exceptions (212 rows, all System.Threading.Tasks.TaskCanceledException, 10 s HttpClient timeout)
+dependencies
+| where timestamp > ago(4h) and tostring(success) =~ "false" and target == "api.external-fraud.io"
+| join kind=inner (exceptions | where timestamp > ago(4h)) on operation_Id
+| project timestamp, operation_Id, target, resultCode, type, innermostMessage
+| summarize count() by type, resultCode
+
+// 4. window: first failure = 15 min after the start of the hour, last ~ 1 min before its end
+dependencies | where target == "api.external-fraud.io" and tostring(success) =~ "false"
+| summarize first_failure = min(timestamp), last_failure = max(timestamp), failures = count()
+dependencies | where target == "api.external-fraud.io" and tostring(success) =~ "false" | summarize failures = count() by bin(timestamp, 5m) | render timechart
+
+// 5. impact: checkout requests 504 = 212, 502 = 3 (payment gateway), 201 = 285
+requests | where name == "POST /api/checkout" | summarize count() by resultCode
+
+// 6. benign: inventory-svc 404 (unknown product ids) = 31 requests GET /api/products/{id} 404
+requests | where name == "GET /api/products/{id}" | summarize count() by resultCode
