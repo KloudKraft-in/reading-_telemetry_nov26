@@ -1,0 +1,34 @@
+# Day 5 Lab 4 — Operational Dashboard Design: self-contained stack (ShopSim + Prometheus + Grafana + runbook server)
+# Start: ./scripts/setup.sh      Stop: docker compose down -v
+name: day5-lab4
+services:
+  shopsim:
+    image: python:3.12-slim
+    command: ["python", "-u", "/app/shopsim.py"]
+    environment: {LOG_DIR: /logs, CONTROL_DIR: /control}
+    volumes: ["./shopsim.py:/app/shopsim.py:ro", "./control:/control", "shop-logs:/logs"]
+    restart: unless-stopped
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus", "--storage.tsdb.retention.time=6h", "--web.enable-lifecycle"]
+    volumes: ["./prometheus:/etc/prometheus:ro", "prom-data:/prometheus"]
+    ports: ["${BIND:-127.0.0.1}:9090:9090"]
+    restart: unless-stopped
+  grafana:
+    image: grafana/grafana:12.0.2
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      GF_USERS_DEFAULT_THEME: light
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+    volumes: ["./grafana/provisioning:/etc/grafana/provisioning:ro", "./grafana/dashboards:/var/lib/grafana/dashboards:ro", "grafana-data:/var/lib/grafana"]
+    ports: ["${BIND:-127.0.0.1}:3000:3000"]
+    depends_on: [prometheus]
+    restart: unless-stopped
+  runbooks:
+    image: python:3.12-slim
+    command: ["python", "-u", "/app/runbook-server.py"]
+    working_dir: /app
+    volumes: ["./runbook-server.py:/app/runbook-server.py:ro", "./runbooks:/app/runbooks:ro"]
+    ports: ["${BIND:-127.0.0.1}:9095:9095"]
+    restart: unless-stopped
+volumes: {prom-data: {}, grafana-data: {}, shop-logs: {}}

@@ -1,0 +1,520 @@
+{
+ "dashboard": {
+  "uid": "shop-golden",
+  "title": "Shop \u2014 Golden Signals",
+  "tags": [
+   "shop",
+   "L3-service",
+   "golden-signals"
+  ],
+  "description": "L3 service view: latency, traffic, errors and saturation of ONE service. Pick the service at the top.",
+  "time": {
+   "from": "now-30m",
+   "to": "now"
+  },
+  "refresh": "30s",
+  "schemaVersion": 41,
+  "links": [
+   {
+    "title": "Up: Shop Operations",
+    "type": "dashboards",
+    "tags": [
+     "L2-operations"
+    ],
+    "asDropdown": false,
+    "includeVars": true,
+    "keepTime": true
+   },
+   {
+    "title": "Runbook: checkout",
+    "type": "link",
+    "url": "http://localhost:9095/runbooks/RB-CHK-002.html",
+    "targetBlank": true
+   }
+  ],
+  "templating": {
+   "list": [
+    {
+     "name": "env",
+     "label": "Environment",
+     "type": "custom",
+     "query": "lab,prod",
+     "current": {
+      "text": "lab",
+      "value": "lab"
+     }
+    },
+    {
+     "name": "service",
+     "label": "Service",
+     "type": "query",
+     "datasource": {
+      "type": "prometheus",
+      "uid": "prometheus"
+     },
+     "refresh": 2,
+     "sort": 1,
+     "query": {
+      "query": "label_values(http_server_requests_total{env=\"$env\"}, service)",
+      "refId": "service"
+     },
+     "definition": "label_values(http_server_requests_total{env=\"$env\"}, service)",
+     "current": {
+      "text": "checkout",
+      "value": "checkout"
+     }
+    },
+    {
+     "name": "route",
+     "label": "Route",
+     "type": "query",
+     "datasource": {
+      "type": "prometheus",
+      "uid": "prometheus"
+     },
+     "refresh": 2,
+     "includeAll": true,
+     "multi": true,
+     "allValue": ".*",
+     "query": {
+      "query": "label_values(http_server_requests_total{env=\"$env\",service=\"$service\"}, route)",
+      "refId": "route"
+     },
+     "definition": "label_values(http_server_requests_total{env=\"$env\",service=\"$service\"}, route)",
+     "current": {
+      "text": "All",
+      "value": "$__all"
+     }
+    }
+   ]
+  },
+  "panels": [
+   {
+    "id": 1,
+    "type": "row",
+    "title": "Golden signals \u2014 $service (now)",
+    "collapsed": false,
+    "gridPos": {
+     "x": 0,
+     "y": 0,
+     "w": 24,
+     "h": 1
+    },
+    "panels": []
+   },
+   {
+    "id": 2,
+    "type": "stat",
+    "title": "Latency p95",
+    "description": "95 % of requests to $service were faster than this. Orange > 0.5 s, red > 1 s.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 0,
+     "y": 1,
+     "w": 6,
+     "h": 4
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "histogram_quantile(0.95, sum by (le) (rate(http_server_request_duration_seconds_bucket{env=\"$env\",service=\"$service\",route=~\"$route\"}[$__rate_interval])))",
+      "legendFormat": "__auto"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "s",
+      "thresholds": {
+       "mode": "absolute",
+       "steps": [
+        {
+         "color": "green",
+         "value": null
+        },
+        {
+         "color": "orange",
+         "value": 0.5
+        },
+        {
+         "color": "red",
+         "value": 1
+        }
+       ]
+      }
+     },
+     "overrides": []
+    },
+    "options": {
+     "colorMode": "background",
+     "graphMode": "area",
+     "reduceOptions": {
+      "calcs": [
+       "lastNotNull"
+      ]
+     }
+    }
+   },
+   {
+    "id": 3,
+    "type": "stat",
+    "title": "Traffic",
+    "description": "Requests per second handled by $service.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 6,
+     "y": 1,
+     "w": 6,
+     "h": 4
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "sum(rate(http_server_requests_total{env=\"$env\",service=\"$service\",route=~\"$route\"}[$__rate_interval]))",
+      "legendFormat": "__auto"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "reqps"
+     },
+     "overrides": []
+    },
+    "options": {
+     "colorMode": "background",
+     "graphMode": "area",
+     "reduceOptions": {
+      "calcs": [
+       "lastNotNull"
+      ]
+     }
+    }
+   },
+   {
+    "id": 4,
+    "type": "stat",
+    "title": "Errors (5xx %)",
+    "description": "Share of requests answered with HTTP 5xx. Orange > 1 %, red > 5 %.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 12,
+     "y": 1,
+     "w": 6,
+     "h": 4
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "(sum(rate(http_server_requests_total{env=\"$env\",service=\"$service\",route=~\"$route\",status=~\"5..\"}[$__rate_interval])) or vector(0)) / sum(rate(http_server_requests_total{env=\"$env\",service=\"$service\",route=~\"$route\"}[$__rate_interval]))",
+      "legendFormat": "__auto"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "percentunit",
+      "thresholds": {
+       "mode": "absolute",
+       "steps": [
+        {
+         "color": "green",
+         "value": null
+        },
+        {
+         "color": "orange",
+         "value": 0.01
+        },
+        {
+         "color": "red",
+         "value": 0.05
+        }
+       ]
+      }
+     },
+     "overrides": []
+    },
+    "options": {
+     "colorMode": "background",
+     "graphMode": "area",
+     "reduceOptions": {
+      "calcs": [
+       "lastNotNull"
+      ]
+     }
+    }
+   },
+   {
+    "id": 5,
+    "type": "text",
+    "title": "Saturation \u2014 build me",
+    "description": "Placeholder for the saturation stat (Task 2).",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 18,
+     "y": 1,
+     "w": 6,
+     "h": 4
+    },
+    "targets": [],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "none"
+     },
+     "overrides": []
+    },
+    "options": {
+     "mode": "markdown",
+     "content": "**Task 2:** replace this panel with a *Saturation* stat (CPU of `$service`)."
+    }
+   },
+   {
+    "id": 6,
+    "type": "row",
+    "title": "Latency & traffic \u2014 trends",
+    "collapsed": false,
+    "gridPos": {
+     "x": 0,
+     "y": 5,
+     "w": 24,
+     "h": 1
+    },
+    "panels": []
+   },
+   {
+    "id": 7,
+    "type": "timeseries",
+    "title": "Latency p50 / p95 / p99",
+    "description": "Percentiles of request duration. A gap between p50 and p99 means a slow minority.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 0,
+     "y": 6,
+     "w": 12,
+     "h": 8
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "histogram_quantile(0.5, sum by (le) (rate(http_server_request_duration_seconds_bucket{env=\"$env\",service=\"$service\",route=~\"$route\"}[$__rate_interval])))",
+      "legendFormat": "p50"
+     },
+     {
+      "refId": "B",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "histogram_quantile(0.95, sum by (le) (rate(http_server_request_duration_seconds_bucket{env=\"$env\",service=\"$service\",route=~\"$route\"}[$__rate_interval])))",
+      "legendFormat": "p95"
+     },
+     {
+      "refId": "C",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "histogram_quantile(0.99, sum by (le) (rate(http_server_request_duration_seconds_bucket{env=\"$env\",service=\"$service\",route=~\"$route\"}[$__rate_interval])))",
+      "legendFormat": "p99"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "s",
+      "thresholds": {
+       "mode": "absolute",
+       "steps": [
+        {
+         "color": "green",
+         "value": null
+        },
+        {
+         "color": "orange",
+         "value": 0.5
+        },
+        {
+         "color": "red",
+         "value": 1
+        }
+       ]
+      },
+      "custom": {
+       "thresholdsStyle": {
+        "mode": "line+area"
+       }
+      }
+     },
+     "overrides": []
+    },
+    "options": {}
+   },
+   {
+    "id": 8,
+    "type": "timeseries",
+    "title": "Traffic by route",
+    "description": "Requests per second per route of $service.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 12,
+     "y": 6,
+     "w": 12,
+     "h": 8
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "sum by (route) (rate(http_server_requests_total{env=\"$env\",service=\"$service\",route=~\"$route\"}[$__rate_interval]))",
+      "legendFormat": "{{route}}"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "reqps"
+     },
+     "overrides": []
+    },
+    "options": {}
+   },
+   {
+    "id": 9,
+    "type": "row",
+    "title": "Errors \u2014 trends",
+    "collapsed": false,
+    "gridPos": {
+     "x": 0,
+     "y": 14,
+     "w": 24,
+     "h": 1
+    },
+    "panels": []
+   },
+   {
+    "id": 10,
+    "type": "timeseries",
+    "title": "Error ratio (5xx)",
+    "description": "Share of 5xx responses over time.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 0,
+     "y": 15,
+     "w": 12,
+     "h": 8
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "(sum(rate(http_server_requests_total{env=\"$env\",service=\"$service\",route=~\"$route\",status=~\"5..\"}[$__rate_interval])) or vector(0)) / sum(rate(http_server_requests_total{env=\"$env\",service=\"$service\",route=~\"$route\"}[$__rate_interval]))",
+      "legendFormat": "5xx ratio"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "percentunit",
+      "thresholds": {
+       "mode": "absolute",
+       "steps": [
+        {
+         "color": "green",
+         "value": null
+        },
+        {
+         "color": "orange",
+         "value": 0.01
+        },
+        {
+         "color": "red",
+         "value": 0.05
+        }
+       ]
+      },
+      "custom": {
+       "thresholdsStyle": {
+        "mode": "line+area"
+       }
+      }
+     },
+     "overrides": []
+    },
+    "options": {}
+   },
+   {
+    "id": 11,
+    "type": "timeseries",
+    "title": "Non-2xx responses by status",
+    "description": "Which status codes are returned, per second.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 12,
+     "y": 15,
+     "w": 12,
+     "h": 8
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "sum by (status) (rate(http_server_requests_total{env=\"$env\",service=\"$service\",route=~\"$route\",status!~\"2..\"}[$__rate_interval]))",
+      "legendFormat": "{{status}}"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "reqps"
+     },
+     "overrides": []
+    },
+    "options": {}
+   }
+  ]
+ },
+ "folderUid": "shop-l3",
+ "overwrite": true
+}

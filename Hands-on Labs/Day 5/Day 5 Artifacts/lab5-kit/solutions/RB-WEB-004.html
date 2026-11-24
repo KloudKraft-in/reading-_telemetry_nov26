@@ -1,0 +1,8 @@
+<h1>RB-WEB-004 — Shop traffic anomaly</h1>
+<p><b>Owner:</b> team web-platform · <b>Dashboard:</b> Shop — Golden Signals (service = frontend)</p>
+<ol>
+<li>Open Golden Signals for frontend: is traffic up or down compared with the same time yesterday?</li>
+<li>A sudden drop: check the front door (load balancer, DNS, certificate) and whether ShopSim/frontend is up.</li>
+<li>A sudden rise: check for a campaign, a crawler or an attack; look at the busiest routes.</li>
+<li>Tell team commerce if checkout traffic is affected; update the incident every 15 minutes.</li>
+</ol>

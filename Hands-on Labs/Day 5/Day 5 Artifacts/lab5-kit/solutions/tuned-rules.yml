@@ -1,0 +1,41 @@
+# Tuned alert rules — symptom-based, with durations, severities, owners and runbooks (Day 5 Lab 5)
+groups:
+  - name: shop-tuned
+    rules:
+      - alert: CheckoutErrorRateHigh
+        expr: |
+          (sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout",status=~"5.."}[5m])) or vector(0))
+            / sum(rate(http_server_requests_total{env="lab",service="frontend",route="/api/checkout"}[5m])) > 0.05
+        for: 2m
+        labels: {severity: critical, service: checkout, team: commerce}
+        annotations:
+          summary: "Checkout error rate {{ $value | humanizePercentage }} (> 5 % for 2 min)"
+          runbook_url: "http://localhost:9095/runbooks/RB-CHK-002.html"
+      - alert: CheckoutLatencyHigh
+        expr: |
+          histogram_quantile(0.95, sum by (le) (rate(http_server_request_duration_seconds_bucket{env="lab",service="frontend",route="/api/checkout"}[5m]))) > 1
+        for: 5m
+        labels: {severity: warning, service: checkout, team: commerce}
+        annotations:
+          summary: "Checkout p95 {{ $value | humanizeDuration }} (> 1 s for 5 min)"
+          runbook_url: "http://localhost:9095/runbooks/RB-CHK-002.html"
+      - alert: InventoryDbPoolSaturated
+        expr: max by (service) (db_pool_connections_active{env="lab"} / db_pool_connections_max{env="lab"}) >= 1 and max by (service) (db_pool_pending_threads{env="lab"}) > 5
+        for: 1m
+        labels: {severity: critical, team: catalog}
+        annotations:
+          summary: "DB pool of {{ $labels.service }} exhausted"
+          runbook_url: "http://localhost:9095/runbooks/RB-DB-003.html"
+      - alert: ShopTrafficAnomaly
+        # z-score: how many standard deviations the current rate is away from the hour before the last 15 minutes
+        expr: |
+          abs(
+            (sum(rate(http_server_requests_total{env="lab",service="frontend"}[5m]))
+              - avg_over_time(sum(rate(http_server_requests_total{env="lab",service="frontend"}[5m]))[1h:1m] offset 15m))
+            / stddev_over_time(sum(rate(http_server_requests_total{env="lab",service="frontend"}[5m]))[1h:1m] offset 15m)
+          ) > 3
+        for: 5m
+        labels: {severity: warning, service: frontend, team: web-platform}
+        annotations:
+          summary: "Shop traffic is {{ $value | printf \"%.1f\" }} standard deviations away from its normal level"
+          runbook_url: "http://localhost:9095/runbooks/RB-WEB-004.html"

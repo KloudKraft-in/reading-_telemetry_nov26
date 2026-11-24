@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {"description": "Day 5 Lab 3 (instructor option) — Log Analytics workspace and workspace-based Application Insights resource for one learner seat. Portal: Deploy a custom template → Build your own template in the editor → paste → choose the resource group of the seat."},
+  "parameters": {
+    "seat": {"type": "string", "metadata": {"description": "Seat id, for example u07"}},
+    "location": {"type": "string", "defaultValue": "[resourceGroup().location]"}
+  },
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "apiVersion": "2022-10-01",
+      "name": "[concat('law-shop-', parameters('seat'))]",
+      "location": "[parameters('location')]",
+      "properties": {"sku": {"name": "PerGB2018"}, "retentionInDays": 30, "workspaceCapping": {"dailyQuotaGb": 1}}
+    },
+    {
+      "type": "Microsoft.Insights/components",
+      "apiVersion": "2020-02-02",
+      "name": "[concat('appi-shop-', parameters('seat'))]",
+      "location": "[parameters('location')]",
+      "kind": "web",
+      "dependsOn": ["[resourceId('Microsoft.OperationalInsights/workspaces', concat('law-shop-', parameters('seat')))]"],
+      "properties": {
+        "Application_Type": "web",
+        "WorkspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', concat('law-shop-', parameters('seat')))]",
+        "IngestionMode": "LogAnalytics"
+      }
+    }
+  ],
+  "outputs": {
+    "connectionString": {"type": "string", "value": "[reference(resourceId('Microsoft.Insights/components', concat('appi-shop-', parameters('seat')))).ConnectionString]"}
+  }
+}

@@ -1,0 +1,32 @@
+# Day 5 Lab 1 — CloudWatch Logs Insights queries (Logs Insights → select log group /aws/lambda/shop-checkout-<seat> → time range 1h)
+
+# Step 1: recent application events
+fields @timestamp, level, order_id, status, payment_result
+| filter ispresent(level)
+| sort @timestamp desc
+| limit 5
+
+# Step 2a: events per level
+filter ispresent(level)
+| stats count(*) as events by level
+
+# Step 2b: failures broken down
+filter ispresent(level) and level != "INFO"
+| stats count(*) as orders by level, status, payment_result
+
+# Step 3: duration statistics and cold starts from REPORT lines
+filter @type = "REPORT"
+| stats count(*) as invocations, avg(@duration) as avg_ms, pct(@duration, 95) as p95_ms, max(@duration) as max_ms, count(@initDuration) as cold_starts
+
+# Step 4: slowest invocations with their X-Ray trace id
+filter @type = "REPORT"
+| parse @message /XRAY TraceId: (?<xray_trace>[0-9a-f-]+)/
+| sort @duration desc
+| limit 5
+| fields @requestId, @duration, xray_trace
+
+# Task 4: log line -> trace
+filter level = "ERROR"
+| fields @timestamp, order_id, trace_id
+| sort @timestamp asc
+| limit 1

@@ -1,0 +1,9 @@
+# Alertmanager — STARTING configuration (the "before" state): everything goes to one receiver that drops it
+route:
+  receiver: lab-null
+  group_by: [alertname]
+  group_wait: 10s
+  group_interval: 1m
+  repeat_interval: 1h
+receivers:
+  - name: lab-null

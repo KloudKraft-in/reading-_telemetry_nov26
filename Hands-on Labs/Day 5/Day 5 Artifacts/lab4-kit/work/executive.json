@@ -1,0 +1,329 @@
+{
+ "dashboard": {
+  "uid": "shop-exec",
+  "title": "Shop \u2014 Executive Summary",
+  "tags": [
+   "shop",
+   "L1-executive"
+  ],
+  "description": "L1 business view for the time range in the picker. Availability objective: 99.5 % of requests without a server error.",
+  "time": {
+   "from": "now-1h",
+   "to": "now"
+  },
+  "refresh": "1m",
+  "schemaVersion": 41,
+  "links": [
+   {
+    "title": "Down: Shop Operations",
+    "type": "dashboards",
+    "tags": [
+     "L2-operations"
+    ],
+    "asDropdown": false,
+    "includeVars": true,
+    "keepTime": true
+   }
+  ],
+  "templating": {
+   "list": [
+    {
+     "name": "env",
+     "label": "Environment",
+     "type": "custom",
+     "query": "lab,prod",
+     "current": {
+      "text": "lab",
+      "value": "lab"
+     }
+    }
+   ]
+  },
+  "panels": [
+   {
+    "id": 1,
+    "type": "stat",
+    "title": "Availability (objective 99.5 %)",
+    "description": "Share of shop requests without a server error in the selected range.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 0,
+     "y": 0,
+     "w": 6,
+     "h": 5
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "1 - (sum(increase(http_server_requests_total{env=\"$env\",service=\"frontend\",status=~\"5..\"}[$__range])) or vector(0)) / sum(increase(http_server_requests_total{env=\"$env\",service=\"frontend\"}[$__range]))",
+      "legendFormat": "__auto"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "percentunit",
+      "thresholds": {
+       "mode": "absolute",
+       "steps": [
+        {
+         "color": "red",
+         "value": null
+        },
+        {
+         "color": "green",
+         "value": 0.995
+        }
+       ]
+      }
+     },
+     "overrides": []
+    },
+    "options": {
+     "colorMode": "background",
+     "graphMode": "none",
+     "reduceOptions": {
+      "calcs": [
+       "lastNotNull"
+      ]
+     }
+    }
+   },
+   {
+    "id": 2,
+    "type": "stat",
+    "title": "Error budget left",
+    "description": "How much of the 0.5 % allowed failures is still unused (100 % = no failures, below 0 = objective missed).",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 6,
+     "y": 0,
+     "w": 6,
+     "h": 5
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "1 - (1 - (1 - (sum(increase(http_server_requests_total{env=\"$env\",service=\"frontend\",status=~\"5..\"}[$__range])) or vector(0)) / sum(increase(http_server_requests_total{env=\"$env\",service=\"frontend\"}[$__range])))) / 0.005",
+      "legendFormat": "__auto"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "percentunit",
+      "thresholds": {
+       "mode": "absolute",
+       "steps": [
+        {
+         "color": "red",
+         "value": null
+        },
+        {
+         "color": "orange",
+         "value": 0.25
+        },
+        {
+         "color": "green",
+         "value": 0.5
+        }
+       ]
+      }
+     },
+     "overrides": []
+    },
+    "options": {
+     "colorMode": "background",
+     "graphMode": "none",
+     "reduceOptions": {
+      "calcs": [
+       "lastNotNull"
+      ]
+     }
+    }
+   },
+   {
+    "id": 3,
+    "type": "stat",
+    "title": "Orders completed",
+    "description": "Successful checkouts (HTTP 201) in the selected range.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 12,
+     "y": 0,
+     "w": 6,
+     "h": 5
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "sum(increase(http_server_requests_total{env=\"$env\",service=\"frontend\",route=\"/api/checkout\",status=\"201\"}[$__range]))",
+      "legendFormat": "__auto"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "short",
+      "decimals": 0
+     },
+     "overrides": []
+    },
+    "options": {
+     "colorMode": "none",
+     "graphMode": "none",
+     "reduceOptions": {
+      "calcs": [
+       "lastNotNull"
+      ]
+     }
+    }
+   },
+   {
+    "id": 4,
+    "type": "stat",
+    "title": "Checkout p95 (target 1 s)",
+    "description": "95 % of checkouts in the selected range were faster than this.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 18,
+     "y": 0,
+     "w": 6,
+     "h": 5
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "histogram_quantile(0.95, sum by (le) (increase(http_server_request_duration_seconds_bucket{env=\"$env\",service=\"frontend\",route=\"/api/checkout\"}[$__range])))",
+      "legendFormat": "__auto"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "s",
+      "thresholds": {
+       "mode": "absolute",
+       "steps": [
+        {
+         "color": "green",
+         "value": null
+        },
+        {
+         "color": "red",
+         "value": 1
+        }
+       ]
+      }
+     },
+     "overrides": []
+    },
+    "options": {
+     "colorMode": "background",
+     "graphMode": "none",
+     "reduceOptions": {
+      "calcs": [
+       "lastNotNull"
+      ]
+     }
+    }
+   },
+   {
+    "id": 5,
+    "type": "timeseries",
+    "title": "Orders per minute \u2014 completed vs failed",
+    "description": "Completed and failed checkouts per minute.",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 0,
+     "y": 5,
+     "w": 16,
+     "h": 8
+    },
+    "targets": [
+     {
+      "refId": "A",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "sum(rate(http_server_requests_total{env=\"$env\",service=\"frontend\",route=\"/api/checkout\",status=\"201\"}[$__rate_interval])) * 60",
+      "legendFormat": "completed"
+     },
+     {
+      "refId": "B",
+      "datasource": {
+       "type": "prometheus",
+       "uid": "prometheus"
+      },
+      "expr": "(sum(rate(http_server_requests_total{env=\"$env\",service=\"frontend\",route=\"/api/checkout\",status=~\"5..\"}[$__rate_interval])) or vector(0)) * 60",
+      "legendFormat": "failed"
+     }
+    ],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "short"
+     },
+     "overrides": []
+    },
+    "options": {}
+   },
+   {
+    "id": 6,
+    "type": "text",
+    "title": "How to read this page",
+    "description": "",
+    "datasource": {
+     "type": "prometheus",
+     "uid": "prometheus"
+    },
+    "gridPos": {
+     "x": 16,
+     "y": 5,
+     "w": 8,
+     "h": 8
+    },
+    "targets": [],
+    "fieldConfig": {
+     "defaults": {
+      "unit": "none"
+     },
+     "overrides": []
+    },
+    "options": {
+     "mode": "markdown",
+     "content": "**Green** = objective met. **Red** = objective missed in the selected range.\n\n* Availability below 99.5 % or error budget below 0 \u2192 ask the operations team for the incident summary.\n* Follow **Down: Shop Operations** (top right) for details."
+    }
+   }
+  ]
+ },
+ "folderUid": "shop-l1",
+ "overwrite": true
+}

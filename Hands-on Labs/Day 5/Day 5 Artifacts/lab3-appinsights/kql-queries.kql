@@ -1,0 +1,82 @@
+// Day 5 Lab 3 — KQL queries (Application Insights → Logs). Run each query separately; time range: Last 3 hours.
+// "success" is stored as text in some Application Insights schemas, so the lab uses tostring(success) =~ "false".
+
+// ---- Task 1: check that the telemetry arrived
+union requests, dependencies, exceptions
+| summarize rows = count() by itemType
+
+// ---- Task 2, Step 1: what does a failed request look like?
+requests
+| where tostring(success) =~ "false"
+| project timestamp, name, resultCode, duration, operation_Id
+| take 5
+
+// ---- Task 2, Step 2: RED view per operation
+requests
+| summarize calls = count(), failed = countif(tostring(success) =~ "false"), p50_ms = percentile(duration, 50), p95_ms = percentile(duration, 95) by name
+| extend failed_pct = round(100.0 * failed / calls, 1)
+| order by failed desc
+
+// ---- Task 2, Step 3: checkout before / during / after the incident (t0 = first request of the hour)
+let t0 = toscalar(requests | summarize min(timestamp));
+requests
+| where name == "POST /api/checkout"
+| extend period = case(timestamp < t0 + 20m, "1-before", timestamp < t0 + 35m, "2-during", "3-after")
+| summarize calls = count(), failed = countif(tostring(success) =~ "false"), avg_ms = round(avg(duration), 1), p95_ms = round(percentile(duration, 95), 0) by period
+| order by period asc
+| render columnchart with (ycolumns = failed)
+
+// ---- Task 3, Step 1: top failing dependencies by target, type and result code
+dependencies
+| where tostring(success) =~ "false"
+| summarize failed = count() by target, type, resultCode
+| top 5 by failed desc
+
+// ---- Task 3, Step 2: failure % and average duration per target
+dependencies
+| summarize total = count(), failed = countif(tostring(success) =~ "false"), avg_ms = round(avg(duration), 1) by target
+| extend failure_pct = round(100.0 * failed / total, 1)
+| order by failed desc
+
+// ---- Task 3, Step 3: when did the payment provider fail?
+dependencies
+| where target == "psp.example.com" and tostring(success) =~ "false"
+| summarize failures = count() by bin(timestamp, 1m)
+| render timechart
+
+// ---- Task 3, Step 4: first and last failure
+dependencies
+| where target == "psp.example.com" and tostring(success) =~ "false"
+| summarize first_failure = min(timestamp), last_failure = max(timestamp), failures = count()
+
+// ---- Task 4, Step 1: failed requests -> failed dependencies in the same operation (inner join)
+requests
+| where tostring(success) =~ "false"
+| project operation_Id, name, resultCode
+| join kind=inner (dependencies | where tostring(success) =~ "false" | project operation_Id, target, dep_code = resultCode) on operation_Id
+| summarize count() by name, resultCode, target, dep_code
+
+// ---- Task 4, Step 2: failed requests -> exceptions (left outer: keep requests without an exception)
+requests
+| where tostring(success) =~ "false"
+| project operation_Id, name, resultCode
+| join kind=leftouter (exceptions | project operation_Id, type) on operation_Id
+| summarize count() by name, resultCode, type
+
+// ---- Task 4, Step 3: the first failed checkout, end to end
+let op = toscalar(requests | where resultCode == "502" | top 1 by timestamp asc | project operation_Id);
+union withsource=Table requests, dependencies, exceptions
+| where operation_Id == op
+| project timestamp, Table, name, target, resultCode, success, duration, type, outerMessage
+| order by timestamp asc
+
+// ---- Extension A: dependency latency over time
+dependencies
+| where target == "psp.example.com"
+| summarize p95_ms = percentile(duration, 95), avg_ms = avg(duration) by bin(timestamp, 1m)
+| render timechart
+
+// ---- Extension B: failure rate alert query (use in Alerts → Create → Custom log search)
+dependencies
+| where target == "psp.example.com"
+| summarize failure_pct = 100.0 * countif(tostring(success) =~ "false") / count() by bin(timestamp, 5m)

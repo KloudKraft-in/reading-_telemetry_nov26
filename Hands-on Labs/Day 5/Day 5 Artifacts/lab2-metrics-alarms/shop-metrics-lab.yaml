@@ -1,0 +1,116 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+  Day 5 Lab 2 (AWS) - a simulated shop that writes CloudWatch Embedded Metric Format (EMF) logs once a minute (EventBridge schedule),
+  a FAULT switch (Lambda environment variable) and an SNS topic for alarm notifications. One stack per learner seat. Sandbox accounts only.
+Parameters:
+  Seat:
+    Type: String
+    Default: u00
+    AllowedPattern: "^u[0-9]{2}$"
+    ConstraintDescription: Use your seat id, for example u07
+    Description: Your seat id (u01-u40). It is part of every resource name and of the metric namespace ShopLab/<seat>.
+  AlertEmail:
+    Type: String
+    Default: ""
+    Description: Optional. E-mail address for alarm notifications (you must confirm the subscription e-mail). Leave empty to skip.
+Conditions:
+  HasEmail: !Not [!Equals [!Ref AlertEmail, ""]]
+Resources:
+  GeneratorLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/shop-orders-${Seat}
+      RetentionInDays: 1
+  GeneratorRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - {Effect: Allow, Principal: {Service: lambda.amazonaws.com}, Action: "sts:AssumeRole"}
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+  GeneratorFunction:
+    Type: AWS::Lambda::Function
+    DependsOn: GeneratorLogGroup
+    Properties:
+      FunctionName: !Sub shop-orders-${Seat}
+      Runtime: python3.13
+      Architectures: [x86_64]
+      Handler: index.handler
+      MemorySize: 128
+      Timeout: 10
+      Role: !GetAtt GeneratorRole.Arn
+      Environment:
+        Variables:
+          NAMESPACE: !Sub ShopLab/${Seat}
+          FAULT: none
+      Code:
+        ZipFile: |
+          # shop-orders-generator — Day 5 Lab 2: once a minute (EventBridge) it simulates 30 orders and writes
+          # CloudWatch Embedded Metric Format (EMF) log lines; CloudWatch turns them into custom metrics. Standard library only.
+          import json, os, random, time
+
+          NAMESPACE = os.environ.get("NAMESPACE", "ShopLab/u00")
+          ORDERS = 30
+
+          def emf(service, requests, errors, latencies, fault):
+              return {"_aws": {"Timestamp": int(time.time() * 1000),
+                               "CloudWatchMetrics": [{"Namespace": NAMESPACE, "Dimensions": [["Service"]],
+                                                      "Metrics": [{"Name": "Requests", "Unit": "Count"},
+                                                                  {"Name": "Errors", "Unit": "Count"},
+                                                                  {"Name": "LatencyMs", "Unit": "Milliseconds"}]}]},
+                      "Service": service, "Requests": requests, "Errors": errors, "LatencyMs": latencies, "fault": fault}
+
+          def handler(event, context):
+              fault = os.environ.get("FAULT", "none").strip()          # none | payment-errors | payment-slow
+              rnd = random.Random(int(time.time() // 60))             # same minute -> same numbers for everyone
+              pay_lat, pay_err, chk_lat, chk_err = [], 0, [], 0
+              for _ in range(ORDERS):
+                  p = rnd.uniform(90, 220)
+                  failed = rnd.random() < 0.01
+                  if fault == "payment-errors" and rnd.random() < 0.40:
+                      failed = True
+                  if fault == "payment-slow":
+                      p = rnd.uniform(900, 1600)
+                  inv = rnd.uniform(25, 60)
+                  pay_lat.append(round(p, 1)); chk_lat.append(round(inv + p + rnd.uniform(5, 20), 1))
+                  pay_err += failed; chk_err += failed
+              print(json.dumps(emf("payment", ORDERS, pay_err, pay_lat, fault)))
+              print(json.dumps(emf("checkout", ORDERS, chk_err, chk_lat, fault)))
+              return {"fault": fault, "errors": chk_err}
+
+  EveryMinute:
+    Type: AWS::Events::Rule
+    Properties:
+      Name: !Sub shop-orders-every-minute-${Seat}
+      ScheduleExpression: rate(1 minute)
+      State: ENABLED
+      Targets:
+        - Id: generator
+          Arn: !GetAtt GeneratorFunction.Arn
+  AllowEventBridge:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref GeneratorFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt EveryMinute.Arn
+  AlertTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub shop-alerts-${Seat}
+  AlertSubscription:
+    Type: AWS::SNS::Subscription
+    Condition: HasEmail
+    Properties:
+      TopicArn: !Ref AlertTopic
+      Protocol: email
+      Endpoint: !Ref AlertEmail
+Outputs:
+  GeneratorFunctionName:
+    Value: !Ref GeneratorFunction
+  Namespace:
+    Value: !Sub ShopLab/${Seat}
+  AlertTopicName:
+    Value: !GetAtt AlertTopic.TopicName

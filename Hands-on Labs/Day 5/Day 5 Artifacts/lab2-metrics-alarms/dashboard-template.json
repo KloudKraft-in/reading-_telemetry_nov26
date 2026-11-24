@@ -1,0 +1,231 @@
+{
+ "widgets": [
+  {
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "width": 24,
+   "height": 2,
+   "properties": {
+    "markdown": "# Shop \u2014 Checkout health\nThis dashboard tells the on-call engineer whether customers can check out. **Red = act.** Error rate is the share of failed orders (target < 5 %), p95 latency the time 95 % of checkouts stay under (target < 800 ms). Runbook: ask your instructor."
+   }
+  },
+  {
+   "type": "metric",
+   "x": 0,
+   "y": 2,
+   "width": 6,
+   "height": 4,
+   "properties": {
+    "metrics": [
+     [
+      {
+       "expression": "100*m1/m2",
+       "label": "Error rate (%)",
+       "id": "e1"
+      }
+     ],
+     [
+      "ShopLab/__SEAT__",
+      "Errors",
+      "Service",
+      "checkout",
+      {
+       "id": "m1",
+       "visible": false
+      }
+     ],
+     [
+      "ShopLab/__SEAT__",
+      "Requests",
+      "Service",
+      "checkout",
+      {
+       "id": "m2",
+       "visible": false
+      }
+     ]
+    ],
+    "view": "singleValue",
+    "region": "__REGION__",
+    "period": 300,
+    "stat": "Sum",
+    "title": "Error rate % (last 5 min)"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 6,
+   "y": 2,
+   "width": 6,
+   "height": 4,
+   "properties": {
+    "metrics": [
+     [
+      "ShopLab/__SEAT__",
+      "LatencyMs",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "singleValue",
+    "region": "__REGION__",
+    "period": 300,
+    "stat": "p95",
+    "title": "Checkout p95 latency (ms)"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 12,
+   "y": 2,
+   "width": 6,
+   "height": 4,
+   "properties": {
+    "metrics": [
+     [
+      "ShopLab/__SEAT__",
+      "Requests",
+      "Service",
+      "checkout"
+     ]
+    ],
+    "view": "singleValue",
+    "region": "__REGION__",
+    "period": 300,
+    "stat": "Sum",
+    "title": "Orders / 5 min"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 18,
+   "y": 2,
+   "width": 6,
+   "height": 4,
+   "properties": {
+    "metrics": [
+     [
+      "ShopLab/__SEAT__",
+      "LatencyMs",
+      "Service",
+      "payment"
+     ]
+    ],
+    "view": "singleValue",
+    "region": "__REGION__",
+    "period": 300,
+    "stat": "p95",
+    "title": "Payment p95 latency (ms)"
+   }
+  },
+  {
+   "type": "metric",
+   "x": 0,
+   "y": 6,
+   "width": 12,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      {
+       "expression": "100*m1/m2",
+       "label": "Error rate (%)",
+       "id": "e1"
+      }
+     ],
+     [
+      "ShopLab/__SEAT__",
+      "Errors",
+      "Service",
+      "checkout",
+      {
+       "id": "m1",
+       "visible": false
+      }
+     ],
+     [
+      "ShopLab/__SEAT__",
+      "Requests",
+      "Service",
+      "checkout",
+      {
+       "id": "m2",
+       "visible": false
+      }
+     ]
+    ],
+    "view": "timeSeries",
+    "region": "__REGION__",
+    "period": 60,
+    "stat": "Sum",
+    "title": "Checkout error rate (%)",
+    "yAxis": {
+     "left": {
+      "min": 0,
+      "label": "%"
+     }
+    },
+    "annotations": {
+     "horizontal": [
+      {
+       "label": "Alarm 5 %",
+       "value": 5,
+       "color": "#d62728"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "metric",
+   "x": 12,
+   "y": 6,
+   "width": 12,
+   "height": 6,
+   "properties": {
+    "metrics": [
+     [
+      "ShopLab/__SEAT__",
+      "LatencyMs",
+      "Service",
+      "checkout",
+      {
+       "stat": "p50",
+       "label": "p50"
+      }
+     ],
+     [
+      "ShopLab/__SEAT__",
+      "LatencyMs",
+      "Service",
+      "checkout",
+      {
+       "stat": "p95",
+       "label": "p95"
+      }
+     ]
+    ],
+    "view": "timeSeries",
+    "region": "__REGION__",
+    "period": 60,
+    "title": "Checkout latency (ms)",
+    "yAxis": {
+     "left": {
+      "min": 0,
+      "label": "ms"
+     }
+    },
+    "annotations": {
+     "horizontal": [
+      {
+       "label": "Alarm 800 ms",
+       "value": 800,
+       "color": "#d62728"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

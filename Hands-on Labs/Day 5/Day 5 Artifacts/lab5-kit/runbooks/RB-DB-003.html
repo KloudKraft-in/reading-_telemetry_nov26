@@ -1,0 +1,8 @@
+<h1>RB-DB-003 — Inventory DB pool exhausted</h1>
+<p><b>Owner:</b> team catalog · <b>Dashboard:</b> Shop Operations → Saturation (USE)</p>
+<ol>
+<li>Confirm: db_pool_connections_active = max and db_pool_pending_threads &gt; 5.</li>
+<li>Check slow queries and long transactions in the inventory service logs.</li>
+<li>Scale or restart inventory only after recording the evidence; never raise the pool size blindly.</li>
+<li>Expect checkout errors (RB-CHK-002) as a consequence — tell team commerce.</li>
+</ol>

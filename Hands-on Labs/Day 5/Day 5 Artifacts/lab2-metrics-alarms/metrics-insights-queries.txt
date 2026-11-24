@@ -1,0 +1,14 @@
+# Day 5 Lab 2 — CloudWatch Metrics Insights queries (Metrics → All metrics → Query tab → Editor). Replace u07 with your seat id.
+
+# 1. Failed orders per service
+SELECT SUM(Errors) FROM SCHEMA("ShopLab/u07", Service) GROUP BY Service
+
+# 2. Which service has the highest p95 latency right now
+SELECT MAX(LatencyMs) FROM SCHEMA("ShopLab/u07", Service) GROUP BY Service ORDER BY MAX() DESC
+
+# 3. Only the checkout service
+SELECT SUM(Requests) FROM SCHEMA("ShopLab/u07", Service) WHERE Service = 'checkout'
+
+# Metric math (Graphed metrics → Add math → Start with empty expression)
+# m1 = Errors (checkout, Sum, 1 min)   m2 = Requests (checkout, Sum, 1 min)
+100 * m1 / m2          # error rate in percent

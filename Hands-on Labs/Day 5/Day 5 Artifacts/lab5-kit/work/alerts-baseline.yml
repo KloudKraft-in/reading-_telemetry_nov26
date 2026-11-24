@@ -1,0 +1,14 @@
+# Baseline alert rules of the shop (the "before" state next to noisy-rules.yml). Retired in Task 2.
+groups:
+  - name: shop-baseline
+    rules:
+      - alert: DbPoolSaturated
+        expr: max by (service) (db_pool_connections_active{env="lab"} / db_pool_connections_max{env="lab"}) >= 1
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "DB pool of {{ $labels.service }} exhausted"}
+      - alert: ShopSimDown
+        expr: up{job="shopsim"} == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "ShopSim target is down"}

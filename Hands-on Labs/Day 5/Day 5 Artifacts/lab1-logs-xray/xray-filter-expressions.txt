@@ -1,0 +1,7 @@
+# Day 5 Lab 1 — X-Ray filter expressions (CloudWatch → X-Ray traces → Traces → filter box; time range 1h)
+# Replace u07 with your seat id.
+service("shop-checkout-u07")                                        # expected 60 traces
+service("shop-checkout-u07") AND fault                              # expected 3  (unhandled timeouts)
+service("shop-checkout-u07") AND responsetime > 1                   # expected 4  (slow payment, 1.2 s)
+service("shop-checkout-u07") AND annotation.payment_result = "declined"   # expected 6
+service("shop-checkout-u07") AND annotation.payment_result = "timeout"    # expected 3

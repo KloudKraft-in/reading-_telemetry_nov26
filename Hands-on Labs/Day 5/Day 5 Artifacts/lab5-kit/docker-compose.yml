@@ -1,0 +1,31 @@
+# Day 5 Lab 5 — Alert Hygiene & Correlation: self-contained stack (ShopSim + Prometheus + Alertmanager + webhook sink)
+# Start: ./scripts/setup.sh      Stop: docker compose down -v
+name: day5-lab5
+services:
+  shopsim:
+    image: python:3.12-slim
+    command: ["python", "-u", "/app/shopsim.py"]
+    environment: {LOG_DIR: /logs, CONTROL_DIR: /control}
+    volumes: ["./shopsim.py:/app/shopsim.py:ro", "./control:/control", "shop-logs:/logs"]
+    restart: unless-stopped
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus", "--storage.tsdb.retention.time=6h", "--web.enable-lifecycle"]
+    volumes: ["./prometheus:/etc/prometheus:ro", "prom-data:/prometheus"]
+    ports: ["${BIND:-127.0.0.1}:9090:9090"]
+    depends_on: [alertmanager]
+    restart: unless-stopped
+  alertmanager:
+    image: prom/alertmanager:v0.28.1
+    command: ["--config.file=/etc/alertmanager/alertmanager.yml", "--storage.path=/alertmanager"]
+    volumes: ["./alertmanager:/etc/alertmanager:ro", "am-data:/alertmanager"]
+    ports: ["${BIND:-127.0.0.1}:9093:9093"]
+    restart: unless-stopped
+  webhook-sink:
+    image: python:3.12-slim
+    command: ["python", "-u", "/app/webhook-sink.py"]
+    working_dir: /app
+    volumes: ["./webhook-sink.py:/app/webhook-sink.py:ro", "./runbooks:/app/runbooks:ro"]
+    ports: ["${BIND:-127.0.0.1}:9095:9095"]
+    restart: unless-stopped
+volumes: {prom-data: {}, am-data: {}, shop-logs: {}}

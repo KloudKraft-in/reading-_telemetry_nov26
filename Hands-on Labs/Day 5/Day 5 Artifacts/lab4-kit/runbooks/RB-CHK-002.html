@@ -1,0 +1,9 @@
+<h1>RB-CHK-002 — Checkout errors or latency high</h1>
+<p><b>Owner:</b> team commerce · <b>Dashboard:</b> Shop — Golden Signals (service = checkout)</p>
+<ol>
+<li>Open the Golden Signals dashboard for checkout: which signal is red, since when?</li>
+<li>Check the dependencies: DB pool of inventory saturated? Payment latency high? (Shop Operations, Saturation row)</li>
+<li>Open three slow or failed checkout requests in the service logs and note the failing dependency (ShopSim logs: <code>docker compose logs --since 10m shopsim</code>).</li>
+<li>Check recent changes: the fault switch file <code>control/fault</code> and the deployment history of the team.</li>
+<li>Escalate to the owner of the failing dependency with the evidence; update the incident every 15 minutes.</li>
+</ol>

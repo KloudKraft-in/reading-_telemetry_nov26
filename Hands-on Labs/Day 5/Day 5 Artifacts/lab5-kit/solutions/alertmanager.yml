@@ -1,0 +1,21 @@
+# Alertmanager — Day 5 Lab 5: grouping, de-duplication, routing by severity, inhibition, runbook links
+route:
+  receiver: oncall-page
+  group_by: [team, service]          # one notification per team and service, however many alerts fire
+  group_wait: 20s                    # wait for related alerts before the first notification
+  group_interval: 2m                 # new alerts in an existing group are sent at most every 2 minutes
+  repeat_interval: 4h                # a still-firing group is re-sent after 4 hours, not every few minutes
+  routes:
+    - matchers: [severity="warning"]
+      receiver: team-ticket          # warnings create a ticket, they do not page
+receivers:
+  - name: oncall-page
+    webhook_configs: [{url: "http://webhook-sink:9095/page", send_resolved: true}]
+  - name: team-ticket
+    webhook_configs: [{url: "http://webhook-sink:9095/ticket", send_resolved: false}]
+inhibit_rules:
+  - source_matchers: [severity="critical"]          # a critical alert mutes warnings of the same service
+    target_matchers: [severity="warning"]
+    equal: [service]
+  - source_matchers: [alertname="InventoryDbPoolSaturated"]   # the known cause mutes its latency symptom
+    target_matchers: [alertname="CheckoutLatencyHigh"]
