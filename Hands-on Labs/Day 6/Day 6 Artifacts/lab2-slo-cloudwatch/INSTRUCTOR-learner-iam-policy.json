@@ -1,0 +1,115 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ConsoleReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics",
+        "cloudwatch:ListMetrics",
+        "cloudwatch:DescribeAlarms",
+        "cloudwatch:DescribeAlarmHistory",
+        "ec2:DescribeInstances",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeVolumeStatus",
+        "ec2:DescribeInstanceStatus",
+        "logs:DescribeLogGroups",
+        "logs:GetQueryResults",
+        "logs:DescribeQueries",
+        "cloudformation:Describe*",
+        "cloudformation:List*",
+        "cloudformation:GetTemplate"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "OwnAlarms",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:PutMetricAlarm",
+        "cloudwatch:PutCompositeAlarm",
+        "cloudwatch:DeleteAlarms"
+      ],
+      "Resource": "arn:aws:cloudwatch:REGION:ACCOUNT_ID:alarm:${aws:username}-*"
+    },
+    {
+      "Sid": "OwnLogGroups",
+      "Effect": "Allow",
+      "Action": [
+        "logs:StartQuery",
+        "logs:FilterLogEvents",
+        "logs:GetLogEvents",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": [
+        "arn:aws:logs:REGION:ACCOUNT_ID:log-group:/shop/${aws:username}/*",
+        "arn:aws:logs:REGION:ACCOUNT_ID:log-group:/shop/${aws:username}/*:*"
+      ]
+    },
+    {
+      "Sid": "OwnStacks",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:UpdateStack"
+      ],
+      "Resource": "arn:aws:cloudformation:REGION:ACCOUNT_ID:stack/${aws:username}-*/*"
+    },
+    {
+      "Sid": "StackResources",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:RunInstances",
+        "ec2:CreateTags",
+        "ec2:TerminateInstances",
+        "ec2:DescribeImages",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSecurityGroups",
+        "ssm:GetParameters",
+        "logs:CreateLogGroup",
+        "logs:DeleteLogGroup",
+        "logs:PutRetentionPolicy",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:AttachRolePolicy",
+        "iam:DetachRolePolicy",
+        "iam:PassRole",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:GetRole",
+        "iam:GetInstanceProfile"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "REGION"
+        }
+      }
+    },
+    {
+      "Sid": "DenyOtherRegions",
+      "Effect": "Deny",
+      "NotAction": [
+        "iam:*",
+        "sts:*",
+        "support:*",
+        "health:*",
+        "budgets:*",
+        "ce:*",
+        "cloudformation:Describe*",
+        "cloudformation:List*"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:RequestedRegion": "REGION"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Day 6 Lab 2 - Cost-effective, zero-harm SLO lab stack with unique resource names per deployment.
+Parameters:
+  Seat:
+    Type: String
+    AllowedPattern: "u[0-9][0-9]"
+    Description: Your seat id, for example u07
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: Select your existing VPC in eu-west-1
+  SubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: Select a public subnet inside the selected VPC
+  InstanceType:
+    Type: String
+    Default: t3.micro
+    AllowedValues:
+      - t3.micro
+      - t2.micro
+    Description: Free-tier eligible micro instance only (~$0.01/hr)
+  AmiId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64
+Resources:
+  AppLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub
+        - "/shop/${Seat}/lab2/app-${StackGuid}"
+        - StackGuid: !Select [2, !Split ["/", !Ref "AWS::StackId"]]
+      RetentionInDays: 1
+  SystemLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub
+        - "/shop/${Seat}/lab2/system-${StackGuid}"
+        - StackGuid: !Select [2, !Split ["/", !Ref "AWS::StackId"]]
+      RetentionInDays: 1
+  InstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub
+        - "${Seat}-lab2-role-${StackGuid}"
+        - StackGuid: !Select [2, !Split ["/", !Ref "AWS::StackId"]]
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: !Join [".", ["ec2", "amazonaws", "com"]]
+            Action: "sts:AssumeRole"
+      ManagedPolicyArns:
+        - "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
+        - "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+      Tags:
+        - Key: Seat
+          Value: !Ref Seat
+  InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: !Sub
+        - "${Seat}-lab2-profile-${StackGuid}"
+        - StackGuid: !Select [2, !Split ["/", !Ref "AWS::StackId"]]
+      Roles:
+        - !Ref InstanceRole
+  LabSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "Zero-inbound egress-only SG for ${Seat} Lab 2"
+      VpcId: !Ref VpcId
+      SecurityGroupEgress:
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+          Description: Allow HTTPS outbound to CloudWatch and SSM endpoints
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+          Description: Allow HTTP outbound for OS package repository mirrors
+        - IpProtocol: udp
+          FromPort: 53
+          ToPort: 53
+          CidrIp: 0.0.0.0/0
+          Description: Allow DNS resolution
+      Tags:
+        - Key: Name
+          Value: !Sub "${Seat}-lab2-sg"
+        - Key: Seat
+          Value: !Ref Seat
+  ShopInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref AmiId
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !Ref InstanceProfile
+      NetworkInterfaces:
+        - DeviceIndex: 0
+          SubnetId: !Ref SubnetId
+          AssociatePublicIpAddress: true
+          DeleteOnTermination: true
+          GroupSet:
+            - !Ref LabSecurityGroup
+      BlockDeviceMappings:
+        - DeviceName: /dev/sdf
+          Ebs:
+            VolumeSize: 2
+            VolumeType: gp3
+            DeleteOnTermination: true
+      Tags:
+        - Key: Name
+          Value: !Sub "${Seat}-shop-lab2"
+        - Key: Seat
+          Value: !Ref Seat
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          dnf install -y amazon-cloudwatch-agent cronie
+          mkdir -p /opt/shop /var/log/shop && touch /var/log/shop/app.log /var/log/shop/system.log
+          cat > /opt/shop/shopmodel.py <<'EOF_MODEL'
+          """Deterministic model of the lab shop (used by shop_sim.py on the lab instance).
+          The incident repeats every 30 minutes: minutes :20-:24 and :50-:54 (UTC). The data volume fills up and checkout fails."""
+          def is_bad(m): return 20 <= (m % 30) < 25
+          def minute_stats(m):
+              """returns (requests, errors_5xx, latency_p95_ms, data_disk_used_pct) for minute-of-hour m"""
+              k = m % 30
+              req = 90 + (k * 7) % 13
+              disks = (90, 95, 98, 99, 100)
+              if is_bad(m): return req, int(req * 0.8), 2100 + (k * 13) % 90, disks[k - 20]
+              return req, (1 if k % 9 == 0 else 0), 380 + (k * 11) % 60, 60 + (k % 4)
+          def incident():
+              rows = [minute_stats(m) for m in range(20, 25)]
+              req = sum(r[0] for r in rows); err = sum(r[1] for r in rows)
+              return dict(requests=req, errors=err, error_pct=100.0 * err / req, burn=100.0 * err / req / 0.5, disk_peak=max(r[3] for r in rows))
+          if __name__ == "__main__": print(incident())
+          EOF_MODEL
+          cat > /opt/shop/shop_sim.py <<'EOF_SIM'
+          #!/usr/bin/env python3
+          """Shop simulator for Day 6 Labs 2 and 4 - runs every minute on the lab EC2 instance (cron).
+          Publishes CloudWatch custom metrics (namespace from NAMESPACE) and writes JSON app log lines and system log lines that the
+          CloudWatch agent ships to CloudWatch Logs. SYNTHETIC data. With --backfill it first creates the last 3 hours of history."""
+          import json, os, subprocess, sys, time
+          sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+          from shopmodel import minute_stats, is_bad
+          SEAT = os.environ.get("SEAT", "u00"); REGION = os.environ.get("AWS_DEFAULT_REGION", ""); NS = os.environ.get("NAMESPACE", "ShopLab")
+          def stamp(ts): return time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime(ts))
+          def metric(name, v, unit, ts):
+              return {"MetricName": name, "Dimensions": [{"Name": "Service", "Value": "checkout"}], "Timestamp": stamp(ts) + "Z", "Value": v, "Unit": unit}
+          def minute(ts, host):
+              m = time.gmtime(ts).tm_min; req, err, p95, disk = minute_stats(m); base = ts - ts % 60; app, sysl = [], []
+              for i in range(3): app.append(json.dumps({"ts": stamp(base + 5 + i * 15), "level": "INFO", "service": "checkout", "message": "Order completed"}))
+              for i in range(err):
+                  msg = "Order write failed: No space left on device (/data/orders)" if is_bad(m) else "Order write retry succeeded"
+                  app.append(json.dumps({"ts": stamp(base + min(59, int(i * 59 / max(err, 1)))), "level": "ERROR", "service": "checkout", "status": 503, "message": msg}))
+              sysl.append("%s %s systemd: Started shop-sim.service" % (stamp(base + 1), host))
+              if is_bad(m): sysl.append("%s %s kernel: XFS (nvme1n1): metadata I/O error: No space left on device (data volume at %d%%)" % (stamp(base + 10), host, disk))
+              md = [metric("RequestCount", req, "Count", base), metric("Errors5xx", err, "Count", base), metric("LatencyP95Ms", p95, "Milliseconds", base), metric("DataDiskUsedPercent", disk, "Percent", base)]
+              return md, app, sysl
+          def put(md):
+              for i in range(0, len(md), 80):
+                  subprocess.run(["aws", "cloudwatch", "put-metric-data", "--namespace", NS, "--metric-data", json.dumps(md[i:i + 80]), "--region", REGION], check=False)
+          os.makedirs("/var/log/shop", exist_ok=True); host = os.uname().nodename; now = time.time()
+          if "--backfill" in sys.argv:
+              allm, apps, syss = [], [], []
+              for k in range(180, 0, -1):
+                  md, a, s = minute(now - k * 60, host); allm += md; apps += a; syss += s
+              put(allm); open("/var/log/shop/app.log", "a").write("\n".join(apps) + "\n"); open("/var/log/shop/system.log", "a").write("\n".join(syss) + "\n")
+          md, a, s = minute(now, host); put(md)
+          open("/var/log/shop/app.log", "a").write("\n".join(a) + "\n"); open("/var/log/shop/system.log", "a").write("\n".join(s) + "\n")
+          EOF_SIM
+          cat > /opt/aws/amazon-cloudwatch-agent/etc/lab-agent.json <<'EOF_AGENT'
+          {
+           "agent": {
+            "run_as_user": "root"
+           },
+           "logs": {
+            "logs_collected": {
+             "files": {
+              "collect_list": [
+               {
+                "file_path": "/var/log/shop/app.log",
+                "log_group_name": "${AppLogs}",
+                "log_stream_name": "{instance_id}",
+                "timestamp_format": "%Y-%m-%dT%H:%M:%S",
+                "timezone": "UTC"
+               },
+               {
+                "file_path": "/var/log/shop/system.log",
+                "log_group_name": "${SystemLogs}",
+                "log_stream_name": "{instance_id}",
+                "timestamp_format": "%Y-%m-%dT%H:%M:%S",
+                "timezone": "UTC"
+               }
+              ]
+             }
+            }
+           }
+          }
+          EOF_AGENT
+          /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/etc/lab-agent.json
+          sleep 20
+          export AWS_DEFAULT_REGION=${AWS::Region} SEAT=${Seat} NAMESPACE=ShopLab2/${Seat}
+          /usr/bin/python3 /opt/shop/shop_sim.py --backfill
+          printf 'AWS_DEFAULT_REGION=${AWS::Region}\nSEAT=${Seat}\nNAMESPACE=ShopLab2/${Seat}\n* * * * * root /usr/bin/python3 /opt/shop/shop_sim.py\n' > /etc/cron.d/shop
+          systemctl enable --now crond
+Outputs:
+  InstanceId:
+    Value: !Ref ShopInstance
+  MetricNamespace:
+    Value: !Sub "ShopLab2/${Seat}"
+  AppLogGroup:
+    Value: !Ref AppLogs
+  SystemLogGroup:
+    Value: !Ref SystemLogs

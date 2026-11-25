@@ -1,0 +1,6 @@
+signal,item,monthly_volume,unit,price_per_unit_usd,unit_size
+traces,spans,51840000,spans,1.8,1000000
+logs,INFO lines,12,GB,0.5,1
+logs,WARN+ERROR lines,1.5,GB,0.5,1
+metrics,active series (base),3000,series,0.8,1000
+metrics,series from endpoint label,7000,series,0.8,1000

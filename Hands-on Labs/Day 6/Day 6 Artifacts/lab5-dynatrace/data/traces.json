@@ -1,0 +1,698 @@
+[
+ {
+  "trace_id": "22cf3ad6d80240a53c5c683361c5f453",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "137c2da2e1ec79d50496e95d855c6c3a",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "c5ebfc489d4eaa83b5f908472135f89e",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "a8a225bb101182885c7c5b15b4945ce0",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "a3d7a5592a2dcf5960f655f21e22ecd4",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "32e3aaf5cd7aac3719f915fb7a00356b",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "158d56adaf99ac1d76366603e874cb4d",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "60c5f571986cad3fb2bf9622fa0d3c33",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "3a577a33d1f6e8f21f00529d1af77bee",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "30dd7eb0e93e90e9d4f298332d71ecc2",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "48c8403fda04f0c0300b9ecb8d3a4b3d",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "fba9ef9780dd099476f90938bcab61f3",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 2180,
+    "status": "ERROR"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 2160,
+    "status": "ERROR"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 2000,
+    "status": "ERROR"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 0,
+    "status": "SKIPPED"
+   }
+  ]
+ },
+ {
+  "trace_id": "f35e8b52205e52cf2937833997ee621e",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "c89a057d876659171043ecefa4fe0c31",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "eac1d229bb4f13d0d2897997c36742f5",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "34a3df9ea1c25af21c891aae226afb35",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "d57eda4ef3eb96fbbd4adaa336ffcdc9",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "74916918b68abb5daeb030cea665ef8a",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "4393295ed7c890d9d4deecdeff93e06d",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "0132a5a3b50a01d038cdd70c66f98a81",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "7f58cb4f71788ac7f07596dbe8118d6a",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "975dd4ed3192efce6cf314a369144a3e",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "341ab4d0dde0007999f065566473a6bc",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ },
+ {
+  "trace_id": "097b7766e55f2c7a69496e9bc1f17ade",
+  "spans": [
+   {
+    "service": "frontend",
+    "operation": "POST /api/checkout",
+    "duration_ms": 400,
+    "status": "OK"
+   },
+   {
+    "service": "checkout",
+    "operation": "checkout.create",
+    "duration_ms": 370,
+    "status": "OK"
+   },
+   {
+    "service": "inventory",
+    "operation": "stock.reserve",
+    "duration_ms": 85,
+    "status": "OK"
+   },
+   {
+    "service": "payment",
+    "operation": "psp.charge",
+    "duration_ms": 240,
+    "status": "OK"
+   }
+  ]
+ }
+]

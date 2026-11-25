@@ -1,0 +1,20 @@
+// Errors per minute (checkout)
+fetch logs, timeframe: "2026-11-23T10:00:00Z/2026-11-23T10:40:00Z"
+| filter loglevel == "ERROR" and service.name == "checkout"
+| makeTimeseries count = count(), interval:1m
+
+// Errors per service
+fetch logs, timeframe: "2026-11-23T10:00:00Z/2026-11-23T10:40:00Z"
+| filter loglevel == "ERROR"
+| summarize count = count(), by:{service.name}
+| sort count desc
+
+// Top error
+fetch logs, timeframe: "2026-11-23T10:00:00Z/2026-11-23T10:40:00Z"
+| filter loglevel == "ERROR"
+| summarize count = count(), by:{service.name, content}
+| sort count desc
+
+// One trace_id
+fetch logs, timeframe: "2026-11-23T10:00:00Z/2026-11-23T10:40:00Z"
+| filter trace_id == "<id>"

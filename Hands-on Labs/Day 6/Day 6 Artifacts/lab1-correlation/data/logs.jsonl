@@ -1,0 +1,1225 @@
+{"ts": "09:30:08", "service": "inventory", "level": "INFO", "trace_id": "f00e9f691a2dcb927e8b35eb64b3710c", "message": "Request completed"}
+{"ts": "09:30:19", "service": "frontend", "level": "ERROR", "trace_id": "0718c1a4b17361dacdd173e9522aeca5", "message": "Upstream checkout returned 504"}
+{"ts": "09:30:19", "service": "frontend", "level": "INFO", "trace_id": "019e310fa1bd757455abe2002ae710d8", "message": "Request completed"}
+{"ts": "09:30:22", "service": "payment", "level": "INFO", "trace_id": "15f3f78d629d58d88a18f0e0039b3c5f", "message": "Request completed"}
+{"ts": "09:30:24", "service": "payment", "level": "INFO", "trace_id": "8a85d80e0ef555f32e4205fd216638cb", "message": "Request completed"}
+{"ts": "09:30:29", "service": "frontend", "level": "INFO", "trace_id": "76191b3867ced9d210abffe15bfe0688", "message": "Request completed"}
+{"ts": "09:30:29", "service": "inventory", "level": "INFO", "trace_id": "31e7c6ae65da9037e4761ba56c2b6c4b", "message": "Request completed"}
+{"ts": "09:30:37", "service": "checkout", "level": "INFO", "trace_id": "a0017265a0c380fdd1c87d81c2db2db3", "message": "Request completed"}
+{"ts": "09:30:37", "service": "inventory", "level": "INFO", "trace_id": "d39b1b8d0807f66e53f012469de91d7b", "message": "Request completed"}
+{"ts": "09:30:43", "service": "checkout", "level": "INFO", "trace_id": "bcfc90114ab15366e7dc68c44be57a77", "message": "Request completed"}
+{"ts": "09:30:50", "service": "payment", "level": "INFO", "trace_id": "2d8b68136c453d4101d0fee0ff9cd37e", "message": "Request completed"}
+{"ts": "09:30:53", "service": "frontend", "level": "INFO", "trace_id": "2c9defd8a280ebee177f4950b0561658", "message": "Request completed"}
+{"ts": "09:30:58", "service": "checkout", "level": "INFO", "trace_id": "5188ab72fa8da3e570ce885d57206ffc", "message": "Request completed"}
+{"ts": "09:31:09", "service": "frontend", "level": "INFO", "trace_id": "f8598773f02d3e5bf643c055c37fe68a", "message": "Request completed"}
+{"ts": "09:31:10", "service": "checkout", "level": "INFO", "trace_id": "65d3f876bcfbea0b060df6cd9bb380da", "message": "Request completed"}
+{"ts": "09:31:12", "service": "frontend", "level": "INFO", "trace_id": "e585f7e2e9a8bb44d33da9165f97168c", "message": "Request completed"}
+{"ts": "09:31:13", "service": "inventory", "level": "INFO", "trace_id": "ae5a801cee3472e7a4aa56c077546ef2", "message": "Request completed"}
+{"ts": "09:31:14", "service": "checkout", "level": "INFO", "trace_id": "c45b86c7d75966ec434e16c135124b68", "message": "Request completed"}
+{"ts": "09:31:24", "service": "payment", "level": "INFO", "trace_id": "eb84d8b7e59549745112345a258f0518", "message": "Request completed"}
+{"ts": "09:31:24", "service": "frontend", "level": "ERROR", "trace_id": "bc9efc985e65688adb77b560f4f0987f", "message": "Upstream checkout returned 504"}
+{"ts": "09:31:31", "service": "inventory", "level": "INFO", "trace_id": "ce5d0aea0ee1cba5c10f9aac1160334e", "message": "Request completed"}
+{"ts": "09:31:34", "service": "checkout", "level": "INFO", "trace_id": "13ea165b7c642e9851da33fb68e92bf7", "message": "Request completed"}
+{"ts": "09:31:34", "service": "inventory", "level": "INFO", "trace_id": "f8968f2db9afa137ecf9e462c84cf9bc", "message": "Request completed"}
+{"ts": "09:31:35", "service": "payment", "level": "INFO", "trace_id": "1b906ebf5f1cfdce245050cc27cbf6e6", "message": "Request completed"}
+{"ts": "09:31:51", "service": "frontend", "level": "INFO", "trace_id": "139b204f7339330ef1c3e24f77325fd8", "message": "Request completed"}
+{"ts": "09:31:57", "service": "payment", "level": "INFO", "trace_id": "d9cb59cb171c6e7946e6e7e79758aa81", "message": "Request completed"}
+{"ts": "09:32:06", "service": "payment", "level": "INFO", "trace_id": "248f42fec7e8f805e714a27782131df0", "message": "Request completed"}
+{"ts": "09:32:08", "service": "checkout", "level": "INFO", "trace_id": "89e8672fa6790ef347b43c0bd4f95b11", "message": "Request completed"}
+{"ts": "09:32:10", "service": "payment", "level": "INFO", "trace_id": "c42703846a8c9b9494feeb0bf18f9970", "message": "Request completed"}
+{"ts": "09:32:20", "service": "frontend", "level": "INFO", "trace_id": "52669fb3d2a2e3f1e0cead7d71c0d7ca", "message": "Request completed"}
+{"ts": "09:32:29", "service": "payment", "level": "INFO", "trace_id": "72b9d2dac476db94bd91b73144efb315", "message": "Request completed"}
+{"ts": "09:32:30", "service": "inventory", "level": "INFO", "trace_id": "5fabeaa13496442b3647082a47b9d95f", "message": "Request completed"}
+{"ts": "09:32:35", "service": "inventory", "level": "INFO", "trace_id": "773181c716c281fdd93181f3c49a17d6", "message": "Request completed"}
+{"ts": "09:32:36", "service": "checkout", "level": "INFO", "trace_id": "58a17742a1d33f9f2329511cfa6aec04", "message": "Request completed"}
+{"ts": "09:32:38", "service": "frontend", "level": "INFO", "trace_id": "7ce1dd770d94f1230a2e2e6c9b566a3d", "message": "Request completed"}
+{"ts": "09:32:49", "service": "inventory", "level": "INFO", "trace_id": "a55afabe48a72220200c2cd474f55f9a", "message": "Request completed"}
+{"ts": "09:32:55", "service": "frontend", "level": "INFO", "trace_id": "ae527a2f21b069ce812cd8cf3315c7bc", "message": "Request completed"}
+{"ts": "09:32:56", "service": "checkout", "level": "INFO", "trace_id": "ef533c8e49fcb661b106d5747866a33a", "message": "Request completed"}
+{"ts": "09:33:00", "service": "checkout", "level": "INFO", "trace_id": "4bfe22142baa1a4f4f7ebe3d802838c8", "message": "Request completed"}
+{"ts": "09:33:02", "service": "frontend", "level": "ERROR", "trace_id": "88c4c1db8f4f39a1174fa69cd522d871", "message": "Upstream checkout returned 504"}
+{"ts": "09:33:17", "service": "payment", "level": "INFO", "trace_id": "f2c991c65fa01b611d6d12c624600996", "message": "Request completed"}
+{"ts": "09:33:19", "service": "payment", "level": "INFO", "trace_id": "3629bb26faf62819994a7128f0937040", "message": "Request completed"}
+{"ts": "09:33:24", "service": "inventory", "level": "INFO", "trace_id": "138297c40702a168496cf63f16bec88b", "message": "Request completed"}
+{"ts": "09:33:26", "service": "inventory", "level": "INFO", "trace_id": "3ea778b3ebe625e7283d3891567116f4", "message": "Request completed"}
+{"ts": "09:33:27", "service": "frontend", "level": "INFO", "trace_id": "980d4ea85b4b6e8807eb23772b8e91ea", "message": "Request completed"}
+{"ts": "09:33:30", "service": "frontend", "level": "INFO", "trace_id": "2585cc4b47505608f11531e189816d19", "message": "Request completed"}
+{"ts": "09:33:35", "service": "frontend", "level": "INFO", "trace_id": "36e408a653001422eff068ce9c7a5a78", "message": "Request completed"}
+{"ts": "09:33:36", "service": "checkout", "level": "INFO", "trace_id": "50023e6b351ca51dad6a57d782cdae1a", "message": "Request completed"}
+{"ts": "09:33:36", "service": "payment", "level": "INFO", "trace_id": "cefa4d9ff841aa70bdfabd3a63e82c5e", "message": "Request completed"}
+{"ts": "09:33:47", "service": "inventory", "level": "INFO", "trace_id": "113436c0a2cb514e37e70e842e23aa8b", "message": "Request completed"}
+{"ts": "09:33:49", "service": "checkout", "level": "INFO", "trace_id": "9b56fdcd7104b79b55d987d59528068f", "message": "Request completed"}
+{"ts": "09:34:01", "service": "frontend", "level": "INFO", "trace_id": "063a229af24ec366e14eebb5d494990f", "message": "Request completed"}
+{"ts": "09:34:06", "service": "checkout", "level": "INFO", "trace_id": "bbdd4d1e0c9aff429da530a14f8106c5", "message": "Request completed"}
+{"ts": "09:34:09", "service": "payment", "level": "INFO", "trace_id": "0180476e173d49111888122cfce3202e", "message": "Request completed"}
+{"ts": "09:34:12", "service": "inventory", "level": "INFO", "trace_id": "b8dfbadf7ae9e0c76c1e7a0dd64a42db", "message": "Request completed"}
+{"ts": "09:34:13", "service": "frontend", "level": "INFO", "trace_id": "1ad73e1dff7ef020747eb014794f5906", "message": "Request completed"}
+{"ts": "09:34:14", "service": "payment", "level": "INFO", "trace_id": "580ef0aee4d9f53335aba32692873199", "message": "Request completed"}
+{"ts": "09:34:22", "service": "frontend", "level": "ERROR", "trace_id": "8c4bee88e5ee09e633c6bcfbcba49dff", "message": "Upstream checkout returned 504"}
+{"ts": "09:34:31", "service": "payment", "level": "INFO", "trace_id": "a32b4d3781be12fd9a6454353328d2c6", "message": "Request completed"}
+{"ts": "09:34:38", "service": "checkout", "level": "INFO", "trace_id": "7c9b3c7e990c87acf8475340b1c0e8e2", "message": "Request completed"}
+{"ts": "09:34:49", "service": "inventory", "level": "INFO", "trace_id": "c81199fae456db37113a3389b2f88025", "message": "Request completed"}
+{"ts": "09:34:50", "service": "checkout", "level": "INFO", "trace_id": "22669c9101a3115a4ce9ab6f090db439", "message": "Request completed"}
+{"ts": "09:34:55", "service": "inventory", "level": "INFO", "trace_id": "8f666b254007a61ae1b9b029a3499484", "message": "Request completed"}
+{"ts": "09:34:57", "service": "frontend", "level": "INFO", "trace_id": "257e6d938c7d6496c730998290323a10", "message": "Request completed"}
+{"ts": "09:35:03", "service": "checkout", "level": "INFO", "trace_id": "47d98fb3325d0f5c490123c18619a515", "message": "Request completed"}
+{"ts": "09:35:15", "service": "frontend", "level": "INFO", "trace_id": "7b1230925a34c3de9951a9844001f8c8", "message": "Request completed"}
+{"ts": "09:35:15", "service": "inventory", "level": "INFO", "trace_id": "bfa2bb8f321c46029b9d97aef379de15", "message": "Request completed"}
+{"ts": "09:35:18", "service": "inventory", "level": "INFO", "trace_id": "5d49e70b13518fd295d873c719ad27a1", "message": "Request completed"}
+{"ts": "09:35:26", "service": "inventory", "level": "INFO", "trace_id": "6ce5f3679d4b5db7ca4f0d1ff605b871", "message": "Request completed"}
+{"ts": "09:35:34", "service": "payment", "level": "INFO", "trace_id": "8be22ec171c3bd4bff992a2379010333", "message": "Request completed"}
+{"ts": "09:35:43", "service": "payment", "level": "INFO", "trace_id": "1c0b1b5bb50dc1013f032fbbb6e10b16", "message": "Request completed"}
+{"ts": "09:35:45", "service": "payment", "level": "INFO", "trace_id": "1e0dbc6837cb9f7b3b130baac5c0b78b", "message": "Request completed"}
+{"ts": "09:35:50", "service": "frontend", "level": "INFO", "trace_id": "b128d78563e87737e3687bb110fa3627", "message": "Request completed"}
+{"ts": "09:35:51", "service": "checkout", "level": "INFO", "trace_id": "c4b478e6da47384a59da35f5a2b1b4e8", "message": "Request completed"}
+{"ts": "09:35:52", "service": "checkout", "level": "INFO", "trace_id": "5665b548067f9dfbc78e30c0d03d03dc", "message": "Request completed"}
+{"ts": "09:35:53", "service": "frontend", "level": "INFO", "trace_id": "67a520cfa2223b759f5c0143248ef2e3", "message": "Request completed"}
+{"ts": "09:36:08", "service": "payment", "level": "INFO", "trace_id": "4b75b28800284c78cfb384341974280b", "message": "Request completed"}
+{"ts": "09:36:10", "service": "checkout", "level": "INFO", "trace_id": "07d1264bff470c29038bbee61e1fe656", "message": "Request completed"}
+{"ts": "09:36:13", "service": "payment", "level": "INFO", "trace_id": "3ff0a0556f232dde3c3d75c4cce779ee", "message": "Request completed"}
+{"ts": "09:36:15", "service": "inventory", "level": "INFO", "trace_id": "70cf82dd37f296c7074124a584ba4b33", "message": "Request completed"}
+{"ts": "09:36:15", "service": "inventory", "level": "INFO", "trace_id": "b5fd085a647124b8b6aaf25325f343e5", "message": "Request completed"}
+{"ts": "09:36:25", "service": "frontend", "level": "INFO", "trace_id": "15f3318ef14fb5f9a2c86228bad99c77", "message": "Request completed"}
+{"ts": "09:36:25", "service": "checkout", "level": "INFO", "trace_id": "06708603805be5e7e233918a0389385d", "message": "Request completed"}
+{"ts": "09:36:25", "service": "inventory", "level": "INFO", "trace_id": "c07a369dd5193c9eceace910192787d8", "message": "Request completed"}
+{"ts": "09:36:27", "service": "checkout", "level": "INFO", "trace_id": "9256052260655aad5576622fff4a1672", "message": "Request completed"}
+{"ts": "09:36:27", "service": "frontend", "level": "INFO", "trace_id": "ffa4561bec43d3cb61a07b6a7f1c9fb6", "message": "Request completed"}
+{"ts": "09:36:34", "service": "frontend", "level": "INFO", "trace_id": "ff48093be81b41ca3de6bc703f6f1b13", "message": "Request completed"}
+{"ts": "09:36:54", "service": "frontend", "level": "ERROR", "trace_id": "7f4d1adc615791b228229b01d643ec25", "message": "Upstream checkout returned 504"}
+{"ts": "09:36:59", "service": "payment", "level": "INFO", "trace_id": "9e0badfc3544f472e12a39fe344db36e", "message": "Request completed"}
+{"ts": "09:37:00", "service": "frontend", "level": "INFO", "trace_id": "a3cf514b568450b46fa162a1a3d534df", "message": "Request completed"}
+{"ts": "09:37:00", "service": "frontend", "level": "INFO", "trace_id": "200b476b6cfe25f0c3e87c81edb45db1", "message": "Request completed"}
+{"ts": "09:37:02", "service": "frontend", "level": "INFO", "trace_id": "1aaca4d63d568e279f791944fa48fb9b", "message": "Request completed"}
+{"ts": "09:37:03", "service": "checkout", "level": "INFO", "trace_id": "0dd3be8c9e5bdf72397eafc586c01dad", "message": "Request completed"}
+{"ts": "09:37:04", "service": "inventory", "level": "INFO", "trace_id": "aade283bb12f01cf7ce8e7cb2948f4a0", "message": "Request completed"}
+{"ts": "09:37:13", "service": "payment", "level": "INFO", "trace_id": "a96b646c3244d9eb3bb0b4f6210a0958", "message": "Request completed"}
+{"ts": "09:37:26", "service": "payment", "level": "INFO", "trace_id": "c946623be7ec4099d6d699a565d9b081", "message": "Request completed"}
+{"ts": "09:37:29", "service": "inventory", "level": "INFO", "trace_id": "9dddbb1d748889a198c2d35464170c2d", "message": "Request completed"}
+{"ts": "09:37:42", "service": "checkout", "level": "INFO", "trace_id": "736d5061eadc6c9851947a8d520741be", "message": "Request completed"}
+{"ts": "09:37:53", "service": "inventory", "level": "INFO", "trace_id": "907f72d98e415a82bdd49f2c264374c2", "message": "Request completed"}
+{"ts": "09:37:55", "service": "payment", "level": "INFO", "trace_id": "72271592feb020dfa007ffad2b8cd2bd", "message": "Request completed"}
+{"ts": "09:37:55", "service": "checkout", "level": "INFO", "trace_id": "0443d8a70d3416890eaf0c833f0761c2", "message": "Request completed"}
+{"ts": "09:38:03", "service": "checkout", "level": "INFO", "trace_id": "88a9c51e9f33662247f8a0e851da0152", "message": "Request completed"}
+{"ts": "09:38:07", "service": "frontend", "level": "INFO", "trace_id": "ef65ef77b925f4d3628e8c111b686775", "message": "Request completed"}
+{"ts": "09:38:10", "service": "payment", "level": "INFO", "trace_id": "6900cd704e7e8cd83cd420e9f418953e", "message": "Request completed"}
+{"ts": "09:38:11", "service": "frontend", "level": "INFO", "trace_id": "8061ad9162e113834dc58286bba477ee", "message": "Request completed"}
+{"ts": "09:38:22", "service": "inventory", "level": "INFO", "trace_id": "b7894217623a82d1e2b2a6543005fee6", "message": "Request completed"}
+{"ts": "09:38:24", "service": "frontend", "level": "INFO", "trace_id": "f3d17b62033b4efb124a62bf4ff4db08", "message": "Request completed"}
+{"ts": "09:38:29", "service": "payment", "level": "INFO", "trace_id": "4dd7613804cd3382f9c1344c78e34d34", "message": "Request completed"}
+{"ts": "09:38:36", "service": "inventory", "level": "INFO", "trace_id": "7f2cfa8144dcd5e0c60e9bedd5806240", "message": "Request completed"}
+{"ts": "09:38:36", "service": "checkout", "level": "INFO", "trace_id": "ec85bdc6e1bb3da3da82cb4f93102a62", "message": "Request completed"}
+{"ts": "09:38:51", "service": "inventory", "level": "INFO", "trace_id": "7355298cd57d3e5124882e8ab9d600b2", "message": "Request completed"}
+{"ts": "09:38:57", "service": "payment", "level": "INFO", "trace_id": "d6f0f4aa013161dc56c8239102e5f9a7", "message": "Request completed"}
+{"ts": "09:38:59", "service": "checkout", "level": "INFO", "trace_id": "c9a6be493b7960c9517e5e8beac99e7b", "message": "Request completed"}
+{"ts": "09:39:05", "service": "inventory", "level": "INFO", "trace_id": "d9fab5f768969d5fcd539b9c05229c4d", "message": "Request completed"}
+{"ts": "09:39:05", "service": "checkout", "level": "INFO", "trace_id": "e2495c33649a4e60d53358e8cf5dc7b4", "message": "Request completed"}
+{"ts": "09:39:10", "service": "frontend", "level": "ERROR", "trace_id": "5887788f773cb86f76b9eb33a1e6a3bc", "message": "Upstream checkout returned 504"}
+{"ts": "09:39:13", "service": "checkout", "level": "INFO", "trace_id": "f930926e2acf2187e4d3b250701ec537", "message": "Request completed"}
+{"ts": "09:39:13", "service": "payment", "level": "INFO", "trace_id": "4afc641c87ea28cf0d89a7ca6666bced", "message": "Request completed"}
+{"ts": "09:39:14", "service": "payment", "level": "INFO", "trace_id": "096f1639e47c1bc2de78cc79678b9048", "message": "Request completed"}
+{"ts": "09:39:14", "service": "frontend", "level": "INFO", "trace_id": "99a4f999b88efded024610b982a0fdfe", "message": "Request completed"}
+{"ts": "09:39:28", "service": "frontend", "level": "INFO", "trace_id": "07cda8e47eabd41ad2622de37f4c05a1", "message": "Request completed"}
+{"ts": "09:39:44", "service": "checkout", "level": "INFO", "trace_id": "39f770bad3dafb0c5b41be456a000870", "message": "Request completed"}
+{"ts": "09:39:51", "service": "payment", "level": "INFO", "trace_id": "5e1b30197d8958061dd37326198da018", "message": "Request completed"}
+{"ts": "09:39:53", "service": "inventory", "level": "INFO", "trace_id": "6a8b1cbafc101b31ce840ad2e754c555", "message": "Request completed"}
+{"ts": "09:39:54", "service": "inventory", "level": "INFO", "trace_id": "2e9691b6eeb41d05ac4f7f0684be4f26", "message": "Request completed"}
+{"ts": "09:39:56", "service": "frontend", "level": "INFO", "trace_id": "ae136ecfce04788e10eb22c3ac566988", "message": "Request completed"}
+{"ts": "09:40:00", "service": "inventory", "level": "INFO", "trace_id": "7ab6c4cd3c047f870c6ff178b65661a0", "message": "Request completed"}
+{"ts": "09:40:06", "service": "checkout", "level": "INFO", "trace_id": "eddc6b54d7dc290fee999fca29368e10", "message": "Request completed"}
+{"ts": "09:40:08", "service": "inventory", "level": "INFO", "trace_id": "044989b6d1bbae35a18f7134b57d0b36", "message": "Request completed"}
+{"ts": "09:40:11", "service": "checkout", "level": "INFO", "trace_id": "13927b27cd16f37d52d857a3e561654f", "message": "Request completed"}
+{"ts": "09:40:13", "service": "payment", "level": "INFO", "trace_id": "d164bafb2f347317c30cb6f99fbfaed9", "message": "Request completed"}
+{"ts": "09:40:13", "service": "frontend", "level": "INFO", "trace_id": "879bb21e69cf11fb52387e2bca0795fc", "message": "Request completed"}
+{"ts": "09:40:14", "service": "checkout", "level": "INFO", "trace_id": "d9cf86578dd3b1e5f13d538562abfd70", "message": "Request completed"}
+{"ts": "09:40:17", "service": "payment", "level": "INFO", "trace_id": "78ed038b6c7ace8708d462e58a21aca3", "message": "Request completed"}
+{"ts": "09:40:18", "service": "frontend", "level": "INFO", "trace_id": "24139f562f099045b98fc850be05de14", "message": "Request completed"}
+{"ts": "09:40:33", "service": "inventory", "level": "INFO", "trace_id": "5979dffb0dd81e757b91760d4d455e8a", "message": "Request completed"}
+{"ts": "09:40:43", "service": "payment", "level": "INFO", "trace_id": "961d9db6cdc3f262fc7183c1bfbbec02", "message": "Request completed"}
+{"ts": "09:40:44", "service": "frontend", "level": "INFO", "trace_id": "61965ed20e79eefc3b420f4f2ecbbf7b", "message": "Request completed"}
+{"ts": "09:40:45", "service": "frontend", "level": "ERROR", "trace_id": "1f417468d188cc01cbc6611e7e397f51", "message": "Upstream checkout returned 504"}
+{"ts": "09:41:03", "service": "inventory", "level": "INFO", "trace_id": "6e6a45dd3dfc62a62658eac7dee37633", "message": "Request completed"}
+{"ts": "09:41:08", "service": "checkout", "level": "INFO", "trace_id": "9a77c2798c225386b4dae63719013c1e", "message": "Request completed"}
+{"ts": "09:41:12", "service": "frontend", "level": "INFO", "trace_id": "edb0e9cdf30d62e12d70709363d56737", "message": "Request completed"}
+{"ts": "09:41:16", "service": "frontend", "level": "INFO", "trace_id": "3fbe9fd5d3bfc2280f52dcaf4a99e438", "message": "Request completed"}
+{"ts": "09:41:18", "service": "inventory", "level": "INFO", "trace_id": "02ef187a6e968cddca37c1c9e64907c3", "message": "Request completed"}
+{"ts": "09:41:35", "service": "inventory", "level": "INFO", "trace_id": "6aaa3a5579c1933f721671f20d075188", "message": "Request completed"}
+{"ts": "09:41:35", "service": "frontend", "level": "INFO", "trace_id": "7bde4d3bf04d509f77c9f822c43c7ce8", "message": "Request completed"}
+{"ts": "09:41:37", "service": "payment", "level": "INFO", "trace_id": "c793f4b8a62237195183bced67fe8452", "message": "Request completed"}
+{"ts": "09:41:38", "service": "payment", "level": "INFO", "trace_id": "d5d7d941e09b98697dc7c22db44c2e55", "message": "Request completed"}
+{"ts": "09:41:42", "service": "checkout", "level": "INFO", "trace_id": "b3e2e89ac1095159729c3600953db35b", "message": "Request completed"}
+{"ts": "09:41:47", "service": "payment", "level": "INFO", "trace_id": "f498329c50ff237a5a683f6798c37c72", "message": "Request completed"}
+{"ts": "09:41:51", "service": "frontend", "level": "ERROR", "trace_id": "b5c1996fb0d7a3e2fe9abdb977989cbc", "message": "Upstream checkout returned 504"}
+{"ts": "09:41:58", "service": "checkout", "level": "INFO", "trace_id": "484e612312bbdb396f993fdd98230be3", "message": "Request completed"}
+{"ts": "09:42:02", "service": "frontend", "level": "INFO", "trace_id": "ffb5b9d120e4064ba480456e0ea95d4f", "message": "Request completed"}
+{"ts": "09:42:04", "service": "inventory", "level": "INFO", "trace_id": "8b5736aa5670f5af7bb27d987a5b9b2c", "message": "Request completed"}
+{"ts": "09:42:15", "service": "inventory", "level": "INFO", "trace_id": "a6d8ce813b445df699b40cf7898b812b", "message": "Request completed"}
+{"ts": "09:42:26", "service": "checkout", "level": "INFO", "trace_id": "45faa5febd59f8b43a6d76b41906d8a7", "message": "Request completed"}
+{"ts": "09:42:27", "service": "payment", "level": "INFO", "trace_id": "a241e522be292030c8ef7ff9858b78fc", "message": "Request completed"}
+{"ts": "09:42:28", "service": "checkout", "level": "INFO", "trace_id": "1d8446501a35cad1e9e5e418d10efa7b", "message": "Request completed"}
+{"ts": "09:42:29", "service": "payment", "level": "INFO", "trace_id": "1f1a3d30483a825d61472fb76667cb37", "message": "Request completed"}
+{"ts": "09:42:31", "service": "inventory", "level": "INFO", "trace_id": "25f503a845a8fb764bb14ad32a214398", "message": "Request completed"}
+{"ts": "09:42:44", "service": "frontend", "level": "INFO", "trace_id": "35ffc77ca38de7cd7c5bf3eb7cf88136", "message": "Request completed"}
+{"ts": "09:42:44", "service": "frontend", "level": "INFO", "trace_id": "1273d82ce7bdf39f77a67bc7663c3916", "message": "Request completed"}
+{"ts": "09:42:50", "service": "payment", "level": "INFO", "trace_id": "9543c982a5274dd57bb41ecbf7d8c389", "message": "Request completed"}
+{"ts": "09:42:50", "service": "checkout", "level": "INFO", "trace_id": "0e60090f11c4c4baa51bd8451ec90fd7", "message": "Request completed"}
+{"ts": "09:43:03", "service": "inventory", "level": "INFO", "trace_id": "a024f2bda21b0924bb50554646cf7abe", "message": "Request completed"}
+{"ts": "09:43:05", "service": "frontend", "level": "INFO", "trace_id": "d92d1f54902500a2e0e484e0d5a26aa9", "message": "Request completed"}
+{"ts": "09:43:09", "service": "payment", "level": "INFO", "trace_id": "c891f96bf5716ed2be12125491f5d3e1", "message": "Request completed"}
+{"ts": "09:43:23", "service": "inventory", "level": "INFO", "trace_id": "9464177548d72c7653e7e974270234d1", "message": "Request completed"}
+{"ts": "09:43:25", "service": "frontend", "level": "INFO", "trace_id": "4e8e3a0bb18d8f6c0263b0a017f54c18", "message": "Request completed"}
+{"ts": "09:43:32", "service": "checkout", "level": "INFO", "trace_id": "dd373542a11fc802a6e4f6dd50f07a99", "message": "Request completed"}
+{"ts": "09:43:33", "service": "payment", "level": "INFO", "trace_id": "94803302e45b495f105a14544039460a", "message": "Request completed"}
+{"ts": "09:43:36", "service": "checkout", "level": "INFO", "trace_id": "40c9f04fd21d696cc404befc5b0ca500", "message": "Request completed"}
+{"ts": "09:43:41", "service": "checkout", "level": "INFO", "trace_id": "2eaf143ca97bd940d89a3d8ddcc29709", "message": "Request completed"}
+{"ts": "09:43:50", "service": "frontend", "level": "INFO", "trace_id": "fd428e031c769426a8d945763bbdd3cd", "message": "Request completed"}
+{"ts": "09:43:54", "service": "inventory", "level": "INFO", "trace_id": "55536e577d1bd9616b299f3301a389a2", "message": "Request completed"}
+{"ts": "09:43:57", "service": "payment", "level": "INFO", "trace_id": "bd2b8811ec43eac91ff977a77505560a", "message": "Request completed"}
+{"ts": "09:44:04", "service": "inventory", "level": "INFO", "trace_id": "fb2e9075e2aa6bf38d0c320742fd74ed", "message": "Request completed"}
+{"ts": "09:44:06", "service": "frontend", "level": "INFO", "trace_id": "149be4f7bc5d9fbbbb972e028eae0f61", "message": "Request completed"}
+{"ts": "09:44:08", "service": "inventory", "level": "INFO", "trace_id": "93fda5564119f35734d216408c2ed36f", "message": "Request completed"}
+{"ts": "09:44:19", "service": "frontend", "level": "INFO", "trace_id": "70a77f31f38e4551309db5a51f36d1e3", "message": "Request completed"}
+{"ts": "09:44:39", "service": "payment", "level": "INFO", "trace_id": "89ea3717d8bb5428d1fce3b8fb6aeb0c", "message": "Request completed"}
+{"ts": "09:44:42", "service": "payment", "level": "INFO", "trace_id": "fc2e020946200aa3f79aa5f50121ee3e", "message": "Request completed"}
+{"ts": "09:44:43", "service": "frontend", "level": "INFO", "trace_id": "30cf7cffc9b793b5dc2ff6cd8adfce6a", "message": "Request completed"}
+{"ts": "09:44:46", "service": "checkout", "level": "INFO", "trace_id": "dc05b9424773be45177592f51b8c572c", "message": "Request completed"}
+{"ts": "09:44:52", "service": "checkout", "level": "INFO", "trace_id": "4d0db32c799a52d9f6fc84aa27eac191", "message": "Request completed"}
+{"ts": "09:44:54", "service": "checkout", "level": "INFO", "trace_id": "f29f2687cd9c35b91420886f7cea0a44", "message": "Request completed"}
+{"ts": "09:44:56", "service": "payment", "level": "INFO", "trace_id": "4a3225d21766a745927a29ded8bfcf3e", "message": "Request completed"}
+{"ts": "09:44:58", "service": "inventory", "level": "INFO", "trace_id": "656c02747f7e485ea2cc6e22bef483fb", "message": "Request completed"}
+{"ts": "09:45:26", "service": "frontend", "level": "INFO", "trace_id": "bf930ce6ec11fdec9230820566011239", "message": "Request completed"}
+{"ts": "09:45:27", "service": "frontend", "level": "INFO", "trace_id": "66a4920b0da33183db51747b95d52f3e", "message": "Request completed"}
+{"ts": "09:45:32", "service": "inventory", "level": "INFO", "trace_id": "d0b0952b2ecd96df7133f8e4f5ba6ad4", "message": "Request completed"}
+{"ts": "09:45:33", "service": "inventory", "level": "INFO", "trace_id": "207b87c6be1b4768cc8d5d757595a56d", "message": "Request completed"}
+{"ts": "09:45:33", "service": "frontend", "level": "INFO", "trace_id": "a818e34539de52f081b1dd39403302ab", "message": "Request completed"}
+{"ts": "09:45:34", "service": "payment", "level": "INFO", "trace_id": "f3498da26cec6afc7d44bfc0ffc2f7c1", "message": "Request completed"}
+{"ts": "09:45:36", "service": "payment", "level": "INFO", "trace_id": "0bf48dff898710e9b5f592fc3e2bc111", "message": "Request completed"}
+{"ts": "09:45:44", "service": "inventory", "level": "INFO", "trace_id": "81b09ab6a5e5e284082216407e8bc4aa", "message": "Request completed"}
+{"ts": "09:45:45", "service": "checkout", "level": "INFO", "trace_id": "72a4e29a6228a486bcf8122998fb8f7f", "message": "Request completed"}
+{"ts": "09:45:48", "service": "frontend", "level": "ERROR", "trace_id": "8b3d01c37ba859b54f9dc605bc276c1a", "message": "Upstream checkout returned 504"}
+{"ts": "09:45:53", "service": "checkout", "level": "INFO", "trace_id": "e2d384f8f887564d6dfc821aa167a6c9", "message": "Request completed"}
+{"ts": "09:45:59", "service": "checkout", "level": "INFO", "trace_id": "f96977434638beaf5bbb840116fdfd0d", "message": "Request completed"}
+{"ts": "09:45:59", "service": "payment", "level": "INFO", "trace_id": "725b37d18961267df4ec56621b0d10d2", "message": "Request completed"}
+{"ts": "09:46:03", "service": "frontend", "level": "INFO", "trace_id": "8873db8c04bb00e83bef38b090afbd41", "message": "Request completed"}
+{"ts": "09:46:12", "service": "inventory", "level": "INFO", "trace_id": "3bc4d26b27dee9cc30226f7ec18b5d3d", "message": "Request completed"}
+{"ts": "09:46:19", "service": "checkout", "level": "INFO", "trace_id": "c7f1b51a2d19e41ba89968ca9a9c5d1f", "message": "Request completed"}
+{"ts": "09:46:22", "service": "checkout", "level": "INFO", "trace_id": "53f5c410e572e61252f6613d98747b23", "message": "Request completed"}
+{"ts": "09:46:23", "service": "inventory", "level": "INFO", "trace_id": "bbefd6c2f8a6ef7b5f54eb94914d8bd1", "message": "Request completed"}
+{"ts": "09:46:24", "service": "payment", "level": "INFO", "trace_id": "9496a87e258e84d5e0adca6049147192", "message": "Request completed"}
+{"ts": "09:46:31", "service": "frontend", "level": "INFO", "trace_id": "c2d99692a32e524aaf88fce0655e0911", "message": "Request completed"}
+{"ts": "09:46:34", "service": "checkout", "level": "INFO", "trace_id": "9d415873b45bf42136f4eb1e2624b2fc", "message": "Request completed"}
+{"ts": "09:46:40", "service": "payment", "level": "INFO", "trace_id": "096ccdd803d12db4adbb16bdcb9be8a6", "message": "Request completed"}
+{"ts": "09:46:48", "service": "inventory", "level": "INFO", "trace_id": "f0d66dc034d8e74f805cbd3e554ae84a", "message": "Request completed"}
+{"ts": "09:46:55", "service": "frontend", "level": "INFO", "trace_id": "a01016f71ac35784190c90b417495330", "message": "Request completed"}
+{"ts": "09:46:58", "service": "payment", "level": "INFO", "trace_id": "9b4c26983b25b3871b18d6ec262f2720", "message": "Request completed"}
+{"ts": "09:47:04", "service": "inventory", "level": "INFO", "trace_id": "5befc1e694153d3a002d2a0965380e71", "message": "Request completed"}
+{"ts": "09:47:04", "service": "payment", "level": "INFO", "trace_id": "be6a4fae450148dda5921d58137f7400", "message": "Request completed"}
+{"ts": "09:47:05", "service": "checkout", "level": "INFO", "trace_id": "8b97ba55ed9118db409e68b4b859923b", "message": "Request completed"}
+{"ts": "09:47:07", "service": "frontend", "level": "INFO", "trace_id": "84e12896afa490e4a7d2151aa62c1784", "message": "Request completed"}
+{"ts": "09:47:11", "service": "checkout", "level": "INFO", "trace_id": "ea820ee14808382f4a83c398ba619747", "message": "Request completed"}
+{"ts": "09:47:13", "service": "frontend", "level": "INFO", "trace_id": "522278e8df6449531cdf529ccd23e00d", "message": "Request completed"}
+{"ts": "09:47:13", "service": "inventory", "level": "INFO", "trace_id": "84ef9a3134f05f410395c96116b095ef", "message": "Request completed"}
+{"ts": "09:47:33", "service": "payment", "level": "INFO", "trace_id": "53f98a798acdbcf7cea4243fa136c286", "message": "Request completed"}
+{"ts": "09:47:35", "service": "checkout", "level": "INFO", "trace_id": "990f01e940f7b58ed9a166c0862b2256", "message": "Request completed"}
+{"ts": "09:47:47", "service": "inventory", "level": "INFO", "trace_id": "a442957a32377e53cb623e1c687a590a", "message": "Request completed"}
+{"ts": "09:47:49", "service": "frontend", "level": "INFO", "trace_id": "eda1900b14a3b9fe0fdcdcadaf4619cf", "message": "Request completed"}
+{"ts": "09:47:55", "service": "payment", "level": "INFO", "trace_id": "370299511ad03f00357afc8caa85bd82", "message": "Request completed"}
+{"ts": "09:48:08", "service": "checkout", "level": "INFO", "trace_id": "b5a0193a596d3098ca8dd0978d588097", "message": "Request completed"}
+{"ts": "09:48:12", "service": "payment", "level": "INFO", "trace_id": "546fcb8812a971a17259e4443f452b78", "message": "Request completed"}
+{"ts": "09:48:16", "service": "frontend", "level": "INFO", "trace_id": "0f72cdc141f79815a36ce46f4da2f0c5", "message": "Request completed"}
+{"ts": "09:48:18", "service": "checkout", "level": "INFO", "trace_id": "c80cea308fa0e3fb762121bf971d4716", "message": "Request completed"}
+{"ts": "09:48:19", "service": "payment", "level": "INFO", "trace_id": "c6e41a3b82fc18137a70f6553dfdcb97", "message": "Request completed"}
+{"ts": "09:48:23", "service": "inventory", "level": "INFO", "trace_id": "889935c6a2198d4a58ba39e43e54a2ce", "message": "Request completed"}
+{"ts": "09:48:34", "service": "frontend", "level": "INFO", "trace_id": "870e222cf15213561a7a3388bfbdad64", "message": "Request completed"}
+{"ts": "09:48:41", "service": "inventory", "level": "INFO", "trace_id": "08fcc7bc1bfa88e359655cc4f8e8f9b0", "message": "Request completed"}
+{"ts": "09:48:48", "service": "frontend", "level": "ERROR", "trace_id": "f7efc13cdcc1aa3d36a074a133e6536a", "message": "Upstream checkout returned 504"}
+{"ts": "09:48:51", "service": "frontend", "level": "INFO", "trace_id": "4628ff2b2a3d6966cb99e8c07f9cb66d", "message": "Request completed"}
+{"ts": "09:48:52", "service": "payment", "level": "INFO", "trace_id": "83a44fb0f7ad42d90e9e9eb5a8bd5048", "message": "Request completed"}
+{"ts": "09:48:52", "service": "inventory", "level": "INFO", "trace_id": "48e75a0fcd109202e4d5a96173c101d8", "message": "Request completed"}
+{"ts": "09:48:58", "service": "checkout", "level": "INFO", "trace_id": "291cdd3fa2f370559f756a86f4e72180", "message": "Request completed"}
+{"ts": "09:49:08", "service": "checkout", "level": "INFO", "trace_id": "f3e4ff7c8589d251538103a37e101534", "message": "Request completed"}
+{"ts": "09:49:16", "service": "inventory", "level": "INFO", "trace_id": "7d082a16ec173c795ff8912c646c5f03", "message": "Request completed"}
+{"ts": "09:49:17", "service": "payment", "level": "INFO", "trace_id": "db81f6ba0d74267b7b9a0911c413dfec", "message": "Request completed"}
+{"ts": "09:49:32", "service": "frontend", "level": "INFO", "trace_id": "97182a677d5d9c252da9b621f19185f8", "message": "Request completed"}
+{"ts": "09:49:36", "service": "frontend", "level": "INFO", "trace_id": "9422925eacf7d861c5f7f9651e015b64", "message": "Request completed"}
+{"ts": "09:49:40", "service": "payment", "level": "INFO", "trace_id": "e29c04d1adca373446828b03e66a0fc8", "message": "Request completed"}
+{"ts": "09:49:42", "service": "checkout", "level": "INFO", "trace_id": "46f15c7e621bd527345ea98d316e8321", "message": "Request completed"}
+{"ts": "09:49:47", "service": "inventory", "level": "INFO", "trace_id": "5315fe97bfde994ead366d95ad594ee3", "message": "Request completed"}
+{"ts": "09:49:54", "service": "payment", "level": "INFO", "trace_id": "16eaab9ddbb9513f7d86ca0ae9532355", "message": "Request completed"}
+{"ts": "09:49:54", "service": "frontend", "level": "INFO", "trace_id": "62e7758400224bb63619fedd775364dd", "message": "Request completed"}
+{"ts": "09:49:55", "service": "inventory", "level": "INFO", "trace_id": "98081cf51e77f1837fb6415304ac152c", "message": "Request completed"}
+{"ts": "09:49:56", "service": "checkout", "level": "INFO", "trace_id": "9a080d58462238f7c503870bd10c39d8", "message": "Request completed"}
+{"ts": "09:50:08", "service": "inventory", "level": "INFO", "trace_id": "9d3bfac013059c4a302bfbb57aacb84d", "message": "Request completed"}
+{"ts": "09:50:08", "service": "checkout", "level": "INFO", "trace_id": "a117b9b57a66eef61b3628fb1fd7117d", "message": "Request completed"}
+{"ts": "09:50:10", "service": "frontend", "level": "INFO", "trace_id": "4159afa6b09e28eb788942ac6907b542", "message": "Request completed"}
+{"ts": "09:50:10", "service": "frontend", "level": "INFO", "trace_id": "e77c7f06d6385fd6b65a17b1d9b3ac1c", "message": "Request completed"}
+{"ts": "09:50:13", "service": "inventory", "level": "INFO", "trace_id": "8000864fe8c0acc2b1c8d59bbd28708c", "message": "Request completed"}
+{"ts": "09:50:15", "service": "payment", "level": "INFO", "trace_id": "9f8b85497d0da5f979d891431e40aa4f", "message": "Request completed"}
+{"ts": "09:50:28", "service": "checkout", "level": "INFO", "trace_id": "d6718d0298b5e6b7ea94e8774a40ea02", "message": "Request completed"}
+{"ts": "09:50:42", "service": "payment", "level": "INFO", "trace_id": "78c8b6898a26550563baea3483794b83", "message": "Request completed"}
+{"ts": "09:50:44", "service": "inventory", "level": "INFO", "trace_id": "bed9911a270f1fd3fe243498f1f2d298", "message": "Request completed"}
+{"ts": "09:50:45", "service": "checkout", "level": "INFO", "trace_id": "e275e4f20db56b71dd95259ee02c38b6", "message": "Request completed"}
+{"ts": "09:50:50", "service": "payment", "level": "INFO", "trace_id": "0536cfebf77b51b0133985b90ea94d5d", "message": "Request completed"}
+{"ts": "09:50:50", "service": "frontend", "level": "INFO", "trace_id": "be0cc3d6233914359a9ecc4cc446ac28", "message": "Request completed"}
+{"ts": "09:51:02", "service": "frontend", "level": "INFO", "trace_id": "365a755501c93d5b3b7637689ea15f4a", "message": "Request completed"}
+{"ts": "09:51:08", "service": "frontend", "level": "INFO", "trace_id": "a7e54df00a0c15c31edf80bc6160244e", "message": "Request completed"}
+{"ts": "09:51:16", "service": "inventory", "level": "INFO", "trace_id": "cd2daf0f44ee32077d18f84e72e3b731", "message": "Request completed"}
+{"ts": "09:51:18", "service": "payment", "level": "INFO", "trace_id": "3aa4ee34743370a6274f1e58bbca7a59", "message": "Request completed"}
+{"ts": "09:51:22", "service": "inventory", "level": "INFO", "trace_id": "c25f027e6b5f7fa522e2e08908854427", "message": "Request completed"}
+{"ts": "09:51:24", "service": "frontend", "level": "INFO", "trace_id": "6f7202a6dfa716a30751a235252088e9", "message": "Request completed"}
+{"ts": "09:51:26", "service": "checkout", "level": "INFO", "trace_id": "ca770d3605ee0e0f686bce7c44287aac", "message": "Request completed"}
+{"ts": "09:51:33", "service": "payment", "level": "INFO", "trace_id": "8800fac53043d475eb5f48187265903f", "message": "Request completed"}
+{"ts": "09:51:37", "service": "checkout", "level": "INFO", "trace_id": "bfb081e15977f167ff47695bc95e9cde", "message": "Request completed"}
+{"ts": "09:51:50", "service": "checkout", "level": "INFO", "trace_id": "953c85feaca1bb3266a0218152da7fde", "message": "Request completed"}
+{"ts": "09:51:51", "service": "payment", "level": "INFO", "trace_id": "7914653cd67b84817f48af786c7f5f35", "message": "Request completed"}
+{"ts": "09:51:59", "service": "inventory", "level": "INFO", "trace_id": "5efb827baad644353af771f83ea9a489", "message": "Request completed"}
+{"ts": "09:52:13", "service": "checkout", "level": "INFO", "trace_id": "d0a8aac2994cc3e367f46c8da2e4c705", "message": "Request completed"}
+{"ts": "09:52:15", "service": "inventory", "level": "INFO", "trace_id": "10517b77a44d5c6031530a12cf3c9bfb", "message": "Request completed"}
+{"ts": "09:52:20", "service": "inventory", "level": "INFO", "trace_id": "815c763e558ecbb3b4200d2eb044ee2e", "message": "Request completed"}
+{"ts": "09:52:27", "service": "payment", "level": "INFO", "trace_id": "fe556c73f7e9ed308f158f4530ac96b5", "message": "Request completed"}
+{"ts": "09:52:39", "service": "checkout", "level": "INFO", "trace_id": "6669d6acec1251ca69d783ddb954b981", "message": "Request completed"}
+{"ts": "09:52:41", "service": "frontend", "level": "INFO", "trace_id": "3f652f9ee83b3b70bcb9bc787a4efe62", "message": "Request completed"}
+{"ts": "09:52:42", "service": "inventory", "level": "INFO", "trace_id": "80fbd46daea728d2250ab960eecfbd9b", "message": "Request completed"}
+{"ts": "09:52:45", "service": "frontend", "level": "INFO", "trace_id": "fcc98085fdb0105902bcdda428c54f71", "message": "Request completed"}
+{"ts": "09:52:46", "service": "checkout", "level": "INFO", "trace_id": "0fc655f945709b223c6490c966514561", "message": "Request completed"}
+{"ts": "09:52:47", "service": "frontend", "level": "INFO", "trace_id": "0754b8d50100baf4a8e1a9899f1d4a75", "message": "Request completed"}
+{"ts": "09:52:50", "service": "payment", "level": "INFO", "trace_id": "4925fba6f69fe86279748a3be718ff89", "message": "Request completed"}
+{"ts": "09:52:59", "service": "payment", "level": "INFO", "trace_id": "d85306b49f17d1d64f15fd1b34e918ec", "message": "Request completed"}
+{"ts": "09:53:09", "service": "frontend", "level": "INFO", "trace_id": "c7b3b2d31f06fb3d7c877cceb8aca3c4", "message": "Request completed"}
+{"ts": "09:53:12", "service": "payment", "level": "INFO", "trace_id": "61c07fce3bf5608e12a0a69a6a898d7b", "message": "Request completed"}
+{"ts": "09:53:20", "service": "frontend", "level": "INFO", "trace_id": "83aa69e689627514d8790ccdf1507f6f", "message": "Request completed"}
+{"ts": "09:53:22", "service": "inventory", "level": "INFO", "trace_id": "ffcb413a9d51565dbcedd04c245235d3", "message": "Request completed"}
+{"ts": "09:53:35", "service": "checkout", "level": "INFO", "trace_id": "688e0865a3a65b5c9a507f8434402572", "message": "Request completed"}
+{"ts": "09:53:38", "service": "inventory", "level": "INFO", "trace_id": "1aa6a9959c48003b1afc9549cff0eaf4", "message": "Request completed"}
+{"ts": "09:53:43", "service": "inventory", "level": "INFO", "trace_id": "204fc911ddfc2ab9101d1c092c0c3315", "message": "Request completed"}
+{"ts": "09:53:47", "service": "checkout", "level": "INFO", "trace_id": "1d16c8e60043bf055d8917b24ef5d8aa", "message": "Request completed"}
+{"ts": "09:53:54", "service": "checkout", "level": "INFO", "trace_id": "2d12611e2ed49f7141278340870d4565", "message": "Request completed"}
+{"ts": "09:53:56", "service": "payment", "level": "INFO", "trace_id": "110d7cac21252306ec376cfde24dd121", "message": "Request completed"}
+{"ts": "09:53:58", "service": "frontend", "level": "INFO", "trace_id": "fe10c4ab4b4716b869f03f806eb83047", "message": "Request completed"}
+{"ts": "09:53:59", "service": "payment", "level": "INFO", "trace_id": "e9574ea775a765ff3e76ea440e5a4ee7", "message": "Request completed"}
+{"ts": "09:54:03", "service": "checkout", "level": "INFO", "trace_id": "c20e39d8bd3d6543979cbc930393d0a9", "message": "Request completed"}
+{"ts": "09:54:19", "service": "inventory", "level": "INFO", "trace_id": "14f3ca9524ab78d83f006750ee484575", "message": "Request completed"}
+{"ts": "09:54:20", "service": "inventory", "level": "INFO", "trace_id": "bc9af13c3c1c02093e3edf05b9c1c11c", "message": "Request completed"}
+{"ts": "09:54:25", "service": "inventory", "level": "INFO", "trace_id": "b6a011049a0abc87fdb0c7d20ceb3754", "message": "Request completed"}
+{"ts": "09:54:29", "service": "checkout", "level": "INFO", "trace_id": "06a16ab797955910dc82ad5e2b1a7057", "message": "Request completed"}
+{"ts": "09:54:32", "service": "checkout", "level": "INFO", "trace_id": "304a3bfa138fdf659e7e1d2cc7e65582", "message": "Request completed"}
+{"ts": "09:54:33", "service": "frontend", "level": "INFO", "trace_id": "9bafab7a86855baca3969712d10a2c80", "message": "Request completed"}
+{"ts": "09:54:40", "service": "frontend", "level": "INFO", "trace_id": "38ef073e2db06d93c1d0d7ad0d481118", "message": "Request completed"}
+{"ts": "09:54:41", "service": "frontend", "level": "ERROR", "trace_id": "a3be09c1bb3625bcd9550b8e9bf16085", "message": "Upstream checkout returned 504"}
+{"ts": "09:54:42", "service": "frontend", "level": "INFO", "trace_id": "1b555f663c3c36ff19c8f4f7917e58b1", "message": "Request completed"}
+{"ts": "09:54:46", "service": "payment", "level": "INFO", "trace_id": "d3a78a53d0d69c596b9af227a0c46de7", "message": "Request completed"}
+{"ts": "09:54:51", "service": "payment", "level": "INFO", "trace_id": "2bde5eeb1f090865f428e9bb599dc629", "message": "Request completed"}
+{"ts": "09:54:53", "service": "payment", "level": "INFO", "trace_id": "5853b88e539c214ec9c74c4dfc14e981", "message": "Request completed"}
+{"ts": "09:55:03", "service": "frontend", "level": "INFO", "trace_id": "d48dd061fd99e808539961de3c929e19", "message": "Request completed"}
+{"ts": "09:55:04", "service": "inventory", "level": "INFO", "trace_id": "a9ada358b8de92a6a49e94ff7023be65", "message": "Request completed"}
+{"ts": "09:55:06", "service": "frontend", "level": "INFO", "trace_id": "0c02e83f11f7aba009ddab607f727cc0", "message": "Request completed"}
+{"ts": "09:55:15", "service": "checkout", "level": "INFO", "trace_id": "b2e6f96f3275f61ccf1646f80381d944", "message": "Request completed"}
+{"ts": "09:55:31", "service": "inventory", "level": "INFO", "trace_id": "9bafae99a38dbc1ef8c6e094a7a1a8ea", "message": "Request completed"}
+{"ts": "09:55:32", "service": "payment", "level": "INFO", "trace_id": "4ae559f2b33037a731120f64c53f2db5", "message": "Request completed"}
+{"ts": "09:55:37", "service": "inventory", "level": "INFO", "trace_id": "7c103d6e83866cf5bf202941ccca2246", "message": "Request completed"}
+{"ts": "09:55:44", "service": "payment", "level": "INFO", "trace_id": "3aa64c53fd0c3cbb20f5b8f3ada5b0cf", "message": "Request completed"}
+{"ts": "09:55:46", "service": "checkout", "level": "INFO", "trace_id": "ffbd78b05840b61a4a0519cad257456b", "message": "Request completed"}
+{"ts": "09:55:49", "service": "payment", "level": "INFO", "trace_id": "25dcba99b7534b16433a3478c7fd7ac0", "message": "Request completed"}
+{"ts": "09:55:51", "service": "frontend", "level": "INFO", "trace_id": "a63a0278111807e0b91f423f850befbe", "message": "Request completed"}
+{"ts": "09:55:58", "service": "checkout", "level": "INFO", "trace_id": "ad1d5f339eec4ac39852e3a4305c09cf", "message": "Request completed"}
+{"ts": "09:56:00", "service": "checkout", "level": "INFO", "trace_id": "9fc9abb610c5018d48ddf418b2c6564b", "message": "Request completed"}
+{"ts": "09:56:02", "service": "inventory", "level": "INFO", "trace_id": "d0325434120a52476a183a0779972f31", "message": "Request completed"}
+{"ts": "09:56:07", "service": "frontend", "level": "INFO", "trace_id": "9abf3b9b6dd0a60a8ef1a5fb37f702f9", "message": "Request completed"}
+{"ts": "09:56:19", "service": "payment", "level": "INFO", "trace_id": "24570fc8cd0ac88d92c01fd6a7f2f129", "message": "Request completed"}
+{"ts": "09:56:26", "service": "inventory", "level": "INFO", "trace_id": "c0961d09a6e8a08fbe0ece110997328a", "message": "Request completed"}
+{"ts": "09:56:29", "service": "payment", "level": "INFO", "trace_id": "4f366978d552ae9e24c9bd38b825fd92", "message": "Request completed"}
+{"ts": "09:56:30", "service": "frontend", "level": "INFO", "trace_id": "905fa3e4bd86e4f649a6acfb4805f811", "message": "Request completed"}
+{"ts": "09:56:32", "service": "inventory", "level": "INFO", "trace_id": "28d67b2de60e861eda5ed379c602bdac", "message": "Request completed"}
+{"ts": "09:56:32", "service": "checkout", "level": "INFO", "trace_id": "95f9d05d62ed9c8fe91fa0866e7594e7", "message": "Request completed"}
+{"ts": "09:56:38", "service": "frontend", "level": "INFO", "trace_id": "4a517f7d7908584676a1ef665eb39ffa", "message": "Request completed"}
+{"ts": "09:56:38", "service": "payment", "level": "INFO", "trace_id": "ebf9f8ed078617d4776f682443af0cda", "message": "Request completed"}
+{"ts": "09:56:50", "service": "checkout", "level": "INFO", "trace_id": "762cef9b2cbff7b2266f56adc516ce78", "message": "Request completed"}
+{"ts": "09:56:52", "service": "frontend", "level": "ERROR", "trace_id": "f5e0b7e81a051f50b029705ce057d337", "message": "Upstream checkout returned 504"}
+{"ts": "09:57:03", "service": "payment", "level": "INFO", "trace_id": "8267bccc07c7a3d9fbf9bde0207b1b80", "message": "Request completed"}
+{"ts": "09:57:06", "service": "inventory", "level": "INFO", "trace_id": "75411291932c838e9e9d4bf276b69170", "message": "Request completed"}
+{"ts": "09:57:13", "service": "inventory", "level": "INFO", "trace_id": "d2ec8f2901f49dc17619763622557ebb", "message": "Request completed"}
+{"ts": "09:57:14", "service": "checkout", "level": "INFO", "trace_id": "da836099b7c06d29c16add3badc303f3", "message": "Request completed"}
+{"ts": "09:57:16", "service": "frontend", "level": "INFO", "trace_id": "b05c3f8417e6720028bc278de202a8cf", "message": "Request completed"}
+{"ts": "09:57:21", "service": "inventory", "level": "INFO", "trace_id": "a63564e6c7482b1aac95e9de2b71fbee", "message": "Request completed"}
+{"ts": "09:57:26", "service": "checkout", "level": "INFO", "trace_id": "cd2f7a8e00a2f9027461be2154df25aa", "message": "Request completed"}
+{"ts": "09:57:29", "service": "checkout", "level": "INFO", "trace_id": "47343dcd4863f5645094deb82fe0780c", "message": "Request completed"}
+{"ts": "09:57:33", "service": "frontend", "level": "INFO", "trace_id": "8238398111def7e269c27a1414b7d82b", "message": "Request completed"}
+{"ts": "09:57:37", "service": "payment", "level": "INFO", "trace_id": "7c06f35f5f9740b685639c2b62b9c313", "message": "Request completed"}
+{"ts": "09:57:55", "service": "payment", "level": "INFO", "trace_id": "93f9275a0fb1b01aca845d2d6a53f84d", "message": "Request completed"}
+{"ts": "09:57:59", "service": "frontend", "level": "INFO", "trace_id": "d83f50b6c4e6ee07547c1c0141bb723d", "message": "Request completed"}
+{"ts": "09:58:01", "service": "payment", "level": "INFO", "trace_id": "081ea93ed2fb503290aaf3efa69dd251", "message": "Request completed"}
+{"ts": "09:58:04", "service": "checkout", "level": "INFO", "trace_id": "568c0aac1a8d2a2a5bc2863ac6e6c7a8", "message": "Request completed"}
+{"ts": "09:58:09", "service": "inventory", "level": "INFO", "trace_id": "6ce9934905ec043a72270ea9ab9669fd", "message": "Request completed"}
+{"ts": "09:58:15", "service": "inventory", "level": "INFO", "trace_id": "9e9d7aa105054ad8b6759fe3103d1033", "message": "Request completed"}
+{"ts": "09:58:27", "service": "payment", "level": "INFO", "trace_id": "65eb22db90290c4832b4ed488a72efa2", "message": "Request completed"}
+{"ts": "09:58:30", "service": "frontend", "level": "INFO", "trace_id": "40360d4b2cecdff541c418a4acd7eea0", "message": "Request completed"}
+{"ts": "09:58:32", "service": "frontend", "level": "ERROR", "trace_id": "0a25736c5df5e44e077d61bb52e397c5", "message": "Upstream checkout returned 504"}
+{"ts": "09:58:34", "service": "payment", "level": "INFO", "trace_id": "a734bf010010d5a7329a240f6612dd24", "message": "Request completed"}
+{"ts": "09:58:38", "service": "frontend", "level": "INFO", "trace_id": "7d5985887c8ef16f6eb317f3ee2240a4", "message": "Request completed"}
+{"ts": "09:58:40", "service": "checkout", "level": "INFO", "trace_id": "b8d02e218f21cd86812cd847920d2f93", "message": "Request completed"}
+{"ts": "09:58:50", "service": "inventory", "level": "INFO", "trace_id": "9c1258c50a780d571b237cd7712cb9c7", "message": "Request completed"}
+{"ts": "09:58:51", "service": "frontend", "level": "INFO", "trace_id": "e8a6b45262384a7aa02e020f6b7654e7", "message": "Request completed"}
+{"ts": "09:58:59", "service": "checkout", "level": "INFO", "trace_id": "0228a10af1f3eec2de7c756006f56c5c", "message": "Request completed"}
+{"ts": "09:59:05", "service": "frontend", "level": "INFO", "trace_id": "2049fd8c08f7c648198831a683af63df", "message": "Request completed"}
+{"ts": "09:59:06", "service": "inventory", "level": "INFO", "trace_id": "5de3e071b57ff03b73d72031494055d5", "message": "Request completed"}
+{"ts": "09:59:20", "service": "inventory", "level": "INFO", "trace_id": "6cf5a7242df981d9b543e5db2456b085", "message": "Request completed"}
+{"ts": "09:59:26", "service": "checkout", "level": "INFO", "trace_id": "2e1dd34f6881b80f833d32c34f4e5e5e", "message": "Request completed"}
+{"ts": "09:59:29", "service": "checkout", "level": "INFO", "trace_id": "7ba2877121659534f3b5034d157f140d", "message": "Request completed"}
+{"ts": "09:59:40", "service": "checkout", "level": "INFO", "trace_id": "1f95cad121ab5a8885d6398d63c21d50", "message": "Request completed"}
+{"ts": "09:59:41", "service": "frontend", "level": "INFO", "trace_id": "2ec8125e79ed2cc2caf5c590fde3cc99", "message": "Request completed"}
+{"ts": "09:59:42", "service": "frontend", "level": "INFO", "trace_id": "501a84fc46500e04bd92b6901e323814", "message": "Request completed"}
+{"ts": "09:59:46", "service": "inventory", "level": "INFO", "trace_id": "c7844375d16eb8a5ed9a08e8a9c3c305", "message": "Request completed"}
+{"ts": "09:59:49", "service": "payment", "level": "INFO", "trace_id": "7bd8a18be125bcf37ac8732a55b993f8", "message": "Request completed"}
+{"ts": "09:59:56", "service": "payment", "level": "INFO", "trace_id": "188b3dde74cf03217338960d8474241c", "message": "Request completed"}
+{"ts": "09:59:57", "service": "frontend", "level": "ERROR", "trace_id": "949df3c214f0f3a6e24befd61ce94168", "message": "Upstream checkout returned 504"}
+{"ts": "09:59:59", "service": "payment", "level": "INFO", "trace_id": "a8ddc8758252105128e9164dea87ab0e", "message": "Request completed"}
+{"ts": "10:00:01", "service": "payment", "level": "INFO", "trace_id": "2da2753cb421f57f23026d336fbfbce0", "message": "Request completed"}
+{"ts": "10:00:04", "service": "checkout", "level": "INFO", "trace_id": "0a744e2a705d069838d36eb1dd7f0d8c", "message": "Request completed"}
+{"ts": "10:00:17", "service": "frontend", "level": "INFO", "trace_id": "8e9b5e246a97bf496f816c24f3c8d671", "message": "Request completed"}
+{"ts": "10:00:17", "service": "payment", "level": "INFO", "trace_id": "12911ed5171be561b5fcaa211f843d75", "message": "Request completed"}
+{"ts": "10:00:25", "service": "inventory", "level": "INFO", "trace_id": "e5e331e5c83a3ca7186daf25ead4fdd4", "message": "Request completed"}
+{"ts": "10:00:27", "service": "frontend", "level": "INFO", "trace_id": "4888a475fca1bf553ccbecb7ccc311d6", "message": "Request completed"}
+{"ts": "10:00:33", "service": "checkout", "level": "INFO", "trace_id": "9d43f2f6c698d7f4a1007ed2eeb16e98", "message": "Request completed"}
+{"ts": "10:00:33", "service": "frontend", "level": "ERROR", "trace_id": "a1a400c1cf4505a9171e51deec6e272d", "message": "Upstream checkout returned 504"}
+{"ts": "10:00:36", "service": "payment", "level": "INFO", "trace_id": "9daf90f7380d25294a19c3821cd4619a", "message": "Request completed"}
+{"ts": "10:00:38", "service": "frontend", "level": "INFO", "trace_id": "ea99c9ed425b147cd46707dd95f4430a", "message": "Request completed"}
+{"ts": "10:00:40", "service": "checkout", "level": "INFO", "trace_id": "138f4f0aa305f7dfb159b4b6a1787014", "message": "Request completed"}
+{"ts": "10:00:46", "service": "inventory", "level": "INFO", "trace_id": "31e00bb403ea1da8cfae93090061514f", "message": "Request completed"}
+{"ts": "10:00:48", "service": "inventory", "level": "INFO", "trace_id": "4f08eba5a29d7c7206eab17a7dbecf66", "message": "Request completed"}
+{"ts": "10:01:00", "service": "inventory", "level": "INFO", "trace_id": "e920748972aed170035824083d4a9eb9", "message": "Request completed"}
+{"ts": "10:01:01", "service": "frontend", "level": "INFO", "trace_id": "2e323bdfdeffc24738a9fa8bc669f1ba", "message": "Request completed"}
+{"ts": "10:01:08", "service": "checkout", "level": "INFO", "trace_id": "5ec8c1453d3627e2408fae173f1b4e1b", "message": "Request completed"}
+{"ts": "10:01:18", "service": "inventory", "level": "INFO", "trace_id": "528b7ca92d77b4a3c0f9c50e37f9d0c9", "message": "Request completed"}
+{"ts": "10:01:28", "service": "inventory", "level": "INFO", "trace_id": "0e0fa1f96e23882d622e5c9152e9b495", "message": "Request completed"}
+{"ts": "10:01:31", "service": "frontend", "level": "INFO", "trace_id": "598831ce6c988ad66f83b382b9d6ae39", "message": "Request completed"}
+{"ts": "10:01:37", "service": "frontend", "level": "ERROR", "trace_id": "bb22df42a90fee98f2f60b7f4053494c", "message": "Upstream checkout returned 504"}
+{"ts": "10:01:47", "service": "checkout", "level": "INFO", "trace_id": "b3e39004e0100be9103c3769e86e128c", "message": "Request completed"}
+{"ts": "10:01:50", "service": "payment", "level": "INFO", "trace_id": "1547dd673011a4a198b1646165ec1c96", "message": "Request completed"}
+{"ts": "10:01:53", "service": "checkout", "level": "INFO", "trace_id": "40f1d1224a24949e561dda8a5cf8c213", "message": "Request completed"}
+{"ts": "10:01:54", "service": "frontend", "level": "INFO", "trace_id": "2cbbf2387f7d6aba595ce2324468a24e", "message": "Request completed"}
+{"ts": "10:01:58", "service": "payment", "level": "INFO", "trace_id": "86a0702ac10743d7a7313bba8e58704f", "message": "Request completed"}
+{"ts": "10:01:59", "service": "payment", "level": "INFO", "trace_id": "2f8e5985f379240a960855578a16f27e", "message": "Request completed"}
+{"ts": "10:02:01", "service": "frontend", "level": "INFO", "trace_id": "18b322c2f4a6b5ec02f34ad86544cefc", "message": "Request completed"}
+{"ts": "10:02:02", "service": "payment", "level": "INFO", "trace_id": "ce6d8897c31125315678b9c45852cb22", "message": "Request completed"}
+{"ts": "10:02:07", "service": "checkout", "level": "INFO", "trace_id": "6014802850bc30f428e78dba04fdd876", "message": "Request completed"}
+{"ts": "10:02:12", "service": "frontend", "level": "INFO", "trace_id": "8f320aec827bc3d0df72e30a3f98cd00", "message": "Request completed"}
+{"ts": "10:02:14", "service": "inventory", "level": "INFO", "trace_id": "327de91cdbc728a88a1ac66b13ffde8c", "message": "Request completed"}
+{"ts": "10:02:15", "service": "frontend", "level": "ERROR", "trace_id": "8f42042736737049bfc92a6ac4256bba", "message": "Upstream checkout returned 504"}
+{"ts": "10:02:17", "service": "checkout", "level": "INFO", "trace_id": "6013108bdc5746c1900f1cb6fcaf3959", "message": "Request completed"}
+{"ts": "10:02:22", "service": "payment", "level": "INFO", "trace_id": "09752066ce91713e7e0f5ec5f86c535c", "message": "Request completed"}
+{"ts": "10:02:34", "service": "checkout", "level": "INFO", "trace_id": "ff592e159d6f4d4eb16f953c32276aff", "message": "Request completed"}
+{"ts": "10:02:35", "service": "inventory", "level": "INFO", "trace_id": "50f8d0ec2b009b6df3ab9d4084c238b6", "message": "Request completed"}
+{"ts": "10:02:36", "service": "inventory", "level": "INFO", "trace_id": "ea7fa93fe9c31585231b16fc3271aa5c", "message": "Request completed"}
+{"ts": "10:02:43", "service": "payment", "level": "INFO", "trace_id": "3d753697554d7315de60d42fb88909ea", "message": "Request completed"}
+{"ts": "10:02:45", "service": "frontend", "level": "INFO", "trace_id": "6882333bca6a2cf36eedf2cff67f387c", "message": "Request completed"}
+{"ts": "10:03:02", "service": "payment", "level": "INFO", "trace_id": "7d2c1b5968a25921960e349347577f30", "message": "Request completed"}
+{"ts": "10:03:07", "service": "checkout", "level": "INFO", "trace_id": "d87ddc93885315387b73d67f6594db57", "message": "Request completed"}
+{"ts": "10:03:11", "service": "payment", "level": "INFO", "trace_id": "d253cbe6e79ca9f0d8cf7bb384652722", "message": "Request completed"}
+{"ts": "10:03:11", "service": "inventory", "level": "INFO", "trace_id": "ceebd4f4512a9268d137b0707c788e02", "message": "Request completed"}
+{"ts": "10:03:16", "service": "inventory", "level": "INFO", "trace_id": "52f2d25209d67bfd8d81f5de539e5ef5", "message": "Request completed"}
+{"ts": "10:03:18", "service": "frontend", "level": "INFO", "trace_id": "404f25c3e2fd8fa5426b90c7aa48265b", "message": "Request completed"}
+{"ts": "10:03:39", "service": "payment", "level": "INFO", "trace_id": "553553eb3fd8282997e281e74be81c48", "message": "Request completed"}
+{"ts": "10:03:41", "service": "frontend", "level": "INFO", "trace_id": "0305495874a70ada1b7386d7836ec053", "message": "Request completed"}
+{"ts": "10:03:41", "service": "checkout", "level": "INFO", "trace_id": "7c78f40f14f2b7b9613539f4fd6a73ee", "message": "Request completed"}
+{"ts": "10:03:49", "service": "frontend", "level": "INFO", "trace_id": "f20da26cad0d34bdc1ed43334942fa46", "message": "Request completed"}
+{"ts": "10:03:57", "service": "inventory", "level": "INFO", "trace_id": "5889c9285231aaea2a03e4c30622a885", "message": "Request completed"}
+{"ts": "10:03:58", "service": "checkout", "level": "INFO", "trace_id": "aae06d383cfba98afc221e4d6f0fd834", "message": "Request completed"}
+{"ts": "10:04:01", "service": "checkout", "level": "INFO", "trace_id": "f5d7391f65995cef61b6fc5a6d19e5fe", "message": "Request completed"}
+{"ts": "10:04:02", "service": "frontend", "level": "INFO", "trace_id": "e9fbf411331fa2733775c7d13721ecd9", "message": "Request completed"}
+{"ts": "10:04:11", "service": "inventory", "level": "INFO", "trace_id": "a0b796ab19f890c23af769a82ee326f2", "message": "Request completed"}
+{"ts": "10:04:15", "service": "inventory", "level": "INFO", "trace_id": "727d288bede9ce3362dd4a4a4d2acd57", "message": "Request completed"}
+{"ts": "10:04:15", "service": "payment", "level": "INFO", "trace_id": "d25f0e0bbb6b5878058a9d932c1f2ad2", "message": "Request completed"}
+{"ts": "10:04:17", "service": "frontend", "level": "INFO", "trace_id": "336d052e460db42b537f21a9fd7b7b1b", "message": "Request completed"}
+{"ts": "10:04:21", "service": "inventory", "level": "INFO", "trace_id": "18d0677d9c33baf6cc5690d1823c5aad", "message": "Request completed"}
+{"ts": "10:04:26", "service": "checkout", "level": "INFO", "trace_id": "a658bb561507f4dd56e4e4b13c004a9c", "message": "Request completed"}
+{"ts": "10:04:55", "service": "frontend", "level": "INFO", "trace_id": "3e1bd76a2c8b6f6a7a146fffc4b3146d", "message": "Request completed"}
+{"ts": "10:04:56", "service": "payment", "level": "INFO", "trace_id": "d71a3493b6d4218058bfb42faa7daf1c", "message": "Request completed"}
+{"ts": "10:04:59", "service": "payment", "level": "INFO", "trace_id": "215ef1a53bbe0f868e7bb6aada2a15b2", "message": "Request completed"}
+{"ts": "10:04:59", "service": "checkout", "level": "INFO", "trace_id": "8f9f60d9f1ad1455d74edc0ff93021f7", "message": "Request completed"}
+{"ts": "10:05:03", "service": "frontend", "level": "INFO", "trace_id": "03a3ae8b8b4d340cc0cbb58c60e28b23", "message": "Request completed"}
+{"ts": "10:05:04", "service": "payment", "level": "INFO", "trace_id": "47e3090492f2d8f71c8b197b3f6a4190", "message": "Request completed"}
+{"ts": "10:05:06", "service": "inventory", "level": "INFO", "trace_id": "3349fa97dab5c0d34432a11b94bcf533", "message": "Request completed"}
+{"ts": "10:05:07", "service": "payment", "level": "INFO", "trace_id": "887df620a728ee591dee5c47ab009f72", "message": "Request completed"}
+{"ts": "10:05:13", "service": "inventory", "level": "INFO", "trace_id": "7653ac70d879e77b3394fa9daafcdb51", "message": "Request completed"}
+{"ts": "10:05:25", "service": "frontend", "level": "INFO", "trace_id": "2dd01a12a4db97b3b834c8983ae1b357", "message": "Request completed"}
+{"ts": "10:05:28", "service": "checkout", "level": "INFO", "trace_id": "97d0814b341212400ab03d5ed5888417", "message": "Request completed"}
+{"ts": "10:05:33", "service": "frontend", "level": "INFO", "trace_id": "d555cac05df06cbff6c3723e1aa76df5", "message": "Request completed"}
+{"ts": "10:05:47", "service": "checkout", "level": "INFO", "trace_id": "b10cb867d3816afa6b2a9f9172df5dde", "message": "Request completed"}
+{"ts": "10:05:47", "service": "payment", "level": "INFO", "trace_id": "308c2a6d6057477f99c02e7c20f135b8", "message": "Request completed"}
+{"ts": "10:05:51", "service": "checkout", "level": "INFO", "trace_id": "3a0f7ec4f5a360f03d56612366216982", "message": "Request completed"}
+{"ts": "10:05:58", "service": "inventory", "level": "INFO", "trace_id": "59a8b889814daff6222781e026410081", "message": "Request completed"}
+{"ts": "10:05:58", "service": "frontend", "level": "ERROR", "trace_id": "aab6cf02eafc9bb87964489196a0e6e6", "message": "Upstream checkout returned 504"}
+{"ts": "10:06:02", "service": "checkout", "level": "INFO", "trace_id": "4f42d353cfd9bd22f48151527d447616", "message": "Request completed"}
+{"ts": "10:06:11", "service": "checkout", "level": "INFO", "trace_id": "8b4eef788ab07c0edd28699815675cdd", "message": "Request completed"}
+{"ts": "10:06:14", "service": "inventory", "level": "INFO", "trace_id": "e932d78b36d50cf86e35dbd0656e4438", "message": "Request completed"}
+{"ts": "10:06:16", "service": "payment", "level": "INFO", "trace_id": "03e550ef28d6d180bd4adb32a8430711", "message": "Request completed"}
+{"ts": "10:06:32", "service": "frontend", "level": "INFO", "trace_id": "f0fddd6f8cd06e4ea39ad5466b9897d7", "message": "Request completed"}
+{"ts": "10:06:32", "service": "inventory", "level": "INFO", "trace_id": "ea090bb5ceb35f85ef8feb320f57f4a3", "message": "Request completed"}
+{"ts": "10:06:38", "service": "checkout", "level": "INFO", "trace_id": "42173c5e44af3c7d6c6684ad13616dd3", "message": "Request completed"}
+{"ts": "10:06:42", "service": "inventory", "level": "INFO", "trace_id": "d55bb41fd8e768a888a04411d26b2553", "message": "Request completed"}
+{"ts": "10:06:55", "service": "frontend", "level": "INFO", "trace_id": "b448f7598cf3158dc4e6f3c7b1a7b478", "message": "Request completed"}
+{"ts": "10:06:57", "service": "frontend", "level": "INFO", "trace_id": "350543d8dedf8fdef341ffb97387125a", "message": "Request completed"}
+{"ts": "10:06:57", "service": "payment", "level": "INFO", "trace_id": "a77911f79fde40931a219f99dae4b6f5", "message": "Request completed"}
+{"ts": "10:06:58", "service": "payment", "level": "INFO", "trace_id": "fe6c650609a4c348a7524929de671c48", "message": "Request completed"}
+{"ts": "10:07:05", "service": "payment", "level": "INFO", "trace_id": "e9bcf9c7031e9cc72e677232108a14da", "message": "Request completed"}
+{"ts": "10:07:05", "service": "checkout", "level": "INFO", "trace_id": "8a343a865f91a1ca8154cdf54e71a61a", "message": "Request completed"}
+{"ts": "10:07:11", "service": "inventory", "level": "INFO", "trace_id": "18dae9a795b109abb43ec02211d63cca", "message": "Request completed"}
+{"ts": "10:07:14", "service": "frontend", "level": "INFO", "trace_id": "65af1af3b8b1c81b1847c319f5dcb5c7", "message": "Request completed"}
+{"ts": "10:07:18", "service": "checkout", "level": "INFO", "trace_id": "55a72a9d13feed03bc5d7ffe2e1b984c", "message": "Request completed"}
+{"ts": "10:07:21", "service": "frontend", "level": "INFO", "trace_id": "c02e58b1571435deb311a8f03d166c15", "message": "Request completed"}
+{"ts": "10:07:25", "service": "checkout", "level": "INFO", "trace_id": "03e6dc369206ddd626672b668504b64b", "message": "Request completed"}
+{"ts": "10:07:26", "service": "payment", "level": "INFO", "trace_id": "ded42b6e56b0e0b16e27e962a09f0f5d", "message": "Request completed"}
+{"ts": "10:07:40", "service": "inventory", "level": "INFO", "trace_id": "bab91154d558a0420f947a184641d7a4", "message": "Request completed"}
+{"ts": "10:07:48", "service": "frontend", "level": "INFO", "trace_id": "2d264b3f9238b881d997815d90400ace", "message": "Request completed"}
+{"ts": "10:07:51", "service": "payment", "level": "INFO", "trace_id": "92ff075d48b8c432dfb4597b1b95154d", "message": "Request completed"}
+{"ts": "10:07:52", "service": "inventory", "level": "INFO", "trace_id": "83c79a8f7793561643574e6769073cee", "message": "Request completed"}
+{"ts": "10:08:03", "service": "payment", "level": "ERROR", "trace_id": "7e6b25eb24c0103fa5e61666a3d6a00c", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:04", "service": "payment", "level": "ERROR", "trace_id": "2d841462a76ae2606108fd76009b9251", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:04", "service": "payment", "level": "ERROR", "trace_id": "92042dd8b441fa38a2daff0d53b14998", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:04", "service": "payment", "level": "ERROR", "trace_id": "318e424cc3df257bc675965f9d516055", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:04", "service": "checkout", "level": "ERROR", "trace_id": "83e11aad1a5a0e7e83ffd2fb646e7104", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:05", "service": "inventory", "level": "INFO", "trace_id": "5bffa434a55f687431e7f78e0f8b4a75", "message": "Request completed"}
+{"ts": "10:08:05", "service": "checkout", "level": "ERROR", "trace_id": "926d1be79e96f8723403a007efcbbc38", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:06", "service": "payment", "level": "ERROR", "trace_id": "737ab1cc24d0b79ec0997e9146d05e6b", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:06", "service": "checkout", "level": "ERROR", "trace_id": "a1279aa332c098afd28dde913d934310", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:07", "service": "checkout", "level": "ERROR", "trace_id": "5b4f7ec637da3270ebace5f6f8a03a12", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:07", "service": "payment", "level": "ERROR", "trace_id": "00267469e29f4943c0b2b83b1b898314", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:07", "service": "frontend", "level": "ERROR", "trace_id": "e25cd267ae7156a537fe6df8dd50a4bb", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:07", "service": "checkout", "level": "ERROR", "trace_id": "392700fe296b48fcb6df8c7366a8078f", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:08", "service": "frontend", "level": "ERROR", "trace_id": "054956a4f9ce311b39dd16d9bf4c73f8", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:09", "service": "checkout", "level": "ERROR", "trace_id": "2419166e71e7183c6cd9b4141fc189e5", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:09", "service": "frontend", "level": "INFO", "trace_id": "f8aa2d45b8d3815971953656da0ff16a", "message": "Request completed"}
+{"ts": "10:08:09", "service": "payment", "level": "ERROR", "trace_id": "d150d97fd5eb8e59a7666c344c3fe1a3", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:09", "service": "checkout", "level": "INFO", "trace_id": "0c14f30278346f900e307145f6cf8bf8", "message": "Request completed"}
+{"ts": "10:08:10", "service": "frontend", "level": "ERROR", "trace_id": "6b82f2d7a2dc668a0733073332dac955", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:11", "service": "payment", "level": "ERROR", "trace_id": "5a8aa0d751dd36a9fefc11b16036f545", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:11", "service": "checkout", "level": "ERROR", "trace_id": "42d1a43bd297a3c443323b896c0e8d45", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:12", "service": "inventory", "level": "INFO", "trace_id": "8b9bd635ea9e970cd7b62d5bc5eef1a2", "message": "Request completed"}
+{"ts": "10:08:12", "service": "checkout", "level": "ERROR", "trace_id": "33f87806b25ea30c6130e5a48e961bdc", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:13", "service": "checkout", "level": "ERROR", "trace_id": "6b45ce27b37ac9e021356fa9a4048761", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:15", "service": "frontend", "level": "ERROR", "trace_id": "22c2ac1dc1e8ef0e3fc8eb6aa609b85d", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:15", "service": "frontend", "level": "ERROR", "trace_id": "f2f8413be636f585e2ef6d239e8a724e", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:16", "service": "frontend", "level": "ERROR", "trace_id": "6a69f71f1bedc3a83c3e2eb1e9101d43", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:17", "service": "payment", "level": "ERROR", "trace_id": "b5a0331b4c1106c336de6ae58ce05f93", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:17", "service": "checkout", "level": "ERROR", "trace_id": "f736b84016bb53dbd8665545f1f76d9b", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:17", "service": "payment", "level": "ERROR", "trace_id": "88c89a89070a6397b97fa47accca6feb", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:18", "service": "payment", "level": "ERROR", "trace_id": "2ce873d54dbffcfbeaa6f0124d17e8a5", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:18", "service": "checkout", "level": "ERROR", "trace_id": "c9ff230515f96e79da6c8d5c8fe2c586", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:19", "service": "frontend", "level": "ERROR", "trace_id": "32bfe029c53ce3fe9d2ec0acca67fbd6", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:19", "service": "payment", "level": "ERROR", "trace_id": "1f90c51b513ac6af919d74db6fcc00f6", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:21", "service": "checkout", "level": "ERROR", "trace_id": "81b25ef01af5ae7b2bb4a691ab9e7304", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:21", "service": "payment", "level": "ERROR", "trace_id": "b3d9ffc39ac31bfcff1b0c52d80c943e", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:23", "service": "payment", "level": "INFO", "trace_id": "1da1b26e6fe0ca4c324bebdea65a3022", "message": "Request completed"}
+{"ts": "10:08:24", "service": "checkout", "level": "ERROR", "trace_id": "63765e9cf58f33f02a3487280a488435", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:25", "service": "frontend", "level": "ERROR", "trace_id": "d259af57c6b594980fb0e061310430e6", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:25", "service": "checkout", "level": "ERROR", "trace_id": "6284b2af263ca7c2bd1bb62cefc9a8ee", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:25", "service": "checkout", "level": "ERROR", "trace_id": "ad8d153f8209cbfd154793eaa4b8f3bc", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:25", "service": "frontend", "level": "ERROR", "trace_id": "e95d657eb31e6fcca3f574c56a715692", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:26", "service": "payment", "level": "ERROR", "trace_id": "f6c8690c67057f1c3d68d2661c4f54e5", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:26", "service": "checkout", "level": "ERROR", "trace_id": "6eab5b95ee8854f05ff72f9d9130cdf3", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:26", "service": "checkout", "level": "ERROR", "trace_id": "6b98e38d6c00ff8ec54756a75126556c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:27", "service": "checkout", "level": "ERROR", "trace_id": "3245ba24b4ff63496d4ee6a21f0d30a2", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:27", "service": "frontend", "level": "ERROR", "trace_id": "fea208d0bbe65b945374c91a76cdf88a", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:28", "service": "checkout", "level": "INFO", "trace_id": "8422a6efb3c16dfff53f88a40ead9048", "message": "Request completed"}
+{"ts": "10:08:28", "service": "payment", "level": "ERROR", "trace_id": "f0ca0862c0db82cf35df654852965151", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:29", "service": "checkout", "level": "ERROR", "trace_id": "ef097b977750ce899d1f4e10e194dd8a", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:31", "service": "inventory", "level": "INFO", "trace_id": "1ec9add7a8d6edb72def72c52cbd99df", "message": "Request completed"}
+{"ts": "10:08:32", "service": "payment", "level": "INFO", "trace_id": "def321251729db20793c6d324c83b202", "message": "Request completed"}
+{"ts": "10:08:33", "service": "checkout", "level": "ERROR", "trace_id": "7df481af535b0df8c347eaecec0251b6", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:34", "service": "frontend", "level": "ERROR", "trace_id": "73f1648b6757e323ebecf69ade0da137", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:36", "service": "payment", "level": "ERROR", "trace_id": "db4d52ce46faab24418870ee135cb1e2", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:36", "service": "frontend", "level": "ERROR", "trace_id": "1f9284a956f96108b187117921c330f0", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:38", "service": "frontend", "level": "ERROR", "trace_id": "0d075f7a4b296b10ab45df98074e7b72", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:38", "service": "frontend", "level": "ERROR", "trace_id": "0bf747c9077ec653622e7cad28041912", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:39", "service": "frontend", "level": "INFO", "trace_id": "ef53eac65f4a5d399f677eca337ebb46", "message": "Request completed"}
+{"ts": "10:08:43", "service": "payment", "level": "ERROR", "trace_id": "7bb1c85561c8197c3a5d558ef1501299", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:45", "service": "frontend", "level": "ERROR", "trace_id": "b3d721af232b4b8a750989f561e74f4e", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:45", "service": "checkout", "level": "INFO", "trace_id": "39ffec8e160d4d17973e95e1e4cceecc", "message": "Request completed"}
+{"ts": "10:08:46", "service": "payment", "level": "ERROR", "trace_id": "521edc66e51fa293928717044b589ec5", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:46", "service": "frontend", "level": "ERROR", "trace_id": "a9fcc7004e14b1300646a028e6212fb8", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:46", "service": "payment", "level": "ERROR", "trace_id": "b3cf1111fc5c980fe279f5427ee380e4", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:46", "service": "payment", "level": "ERROR", "trace_id": "929c31cf50d7571f55ac857c1e4ac544", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:48", "service": "payment", "level": "ERROR", "trace_id": "f2fb43ade96d640b3157fbfe78a001f7", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:49", "service": "payment", "level": "ERROR", "trace_id": "49dd71be73bf9dd31e75ced0db05deb2", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:50", "service": "checkout", "level": "ERROR", "trace_id": "066f376eeb85de993157178cb9438321", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:51", "service": "payment", "level": "ERROR", "trace_id": "78faf39f6f96747f661dcb1cc73e77e3", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:51", "service": "frontend", "level": "ERROR", "trace_id": "2d647a258e35e06c4d7358cdc0670704", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:51", "service": "payment", "level": "ERROR", "trace_id": "1737be9b3b17ed8d9d8242b532568db4", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:52", "service": "checkout", "level": "ERROR", "trace_id": "e10a37f5bc2313cef8feb10809fd3bbe", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:52", "service": "frontend", "level": "ERROR", "trace_id": "efc617f9326a2aa0ab713e4e0e547f8b", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:53", "service": "payment", "level": "ERROR", "trace_id": "f7ee5d1f1ad632f2a080cfed8f04fd02", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:55", "service": "frontend", "level": "INFO", "trace_id": "23fb49598a9afc1bbfb3d4f8b9f928a0", "message": "Request completed"}
+{"ts": "10:08:55", "service": "payment", "level": "ERROR", "trace_id": "cc1a674312e5955a7522b3c88e30721a", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:08:56", "service": "checkout", "level": "ERROR", "trace_id": "5db9be5cd5aadb3ae2cc6956de046e51", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:08:57", "service": "payment", "level": "INFO", "trace_id": "6617d2a71f6916f5464938a75d1b1659", "message": "Request completed"}
+{"ts": "10:08:59", "service": "frontend", "level": "ERROR", "trace_id": "a3f8aa13757986395bd05460b8944054", "message": "Upstream checkout returned 504"}
+{"ts": "10:08:59", "service": "payment", "level": "ERROR", "trace_id": "3f3bec9df93a82cdf3fbda10afe38811", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:01", "service": "payment", "level": "ERROR", "trace_id": "dc5ff8e144610cecb0f8739e75fd440c", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:01", "service": "checkout", "level": "ERROR", "trace_id": "2a82d51c69b35578f0fbcfb262b534b4", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:02", "service": "checkout", "level": "ERROR", "trace_id": "99e8e33e45295367a77c032fe69f9f98", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:03", "service": "frontend", "level": "ERROR", "trace_id": "eea17982b1e245abd7393e030a224c1e", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:04", "service": "checkout", "level": "INFO", "trace_id": "a7278159449fab5f194965e70ec788ea", "message": "Request completed"}
+{"ts": "10:09:08", "service": "payment", "level": "INFO", "trace_id": "14186da5e9dddc6b98c73378c542dff0", "message": "Request completed"}
+{"ts": "10:09:10", "service": "payment", "level": "INFO", "trace_id": "1c0ee9c287f5253bc642736e4eded732", "message": "Request completed"}
+{"ts": "10:09:10", "service": "checkout", "level": "ERROR", "trace_id": "654129d3f4da6932563d011769b83352", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:10", "service": "payment", "level": "ERROR", "trace_id": "7e90343a030ca3dbbf89e2a9c9c876c6", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:11", "service": "checkout", "level": "ERROR", "trace_id": "67d9ad8f53f55706b6fd4e4772ad9dc7", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:11", "service": "checkout", "level": "ERROR", "trace_id": "894c190f746d7e57a86c2973f3311613", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:12", "service": "checkout", "level": "ERROR", "trace_id": "1a24bbe9b7b737f2918de791751aba0b", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:12", "service": "payment", "level": "ERROR", "trace_id": "b3200bc53056db72a076c1a3731098e8", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:13", "service": "payment", "level": "ERROR", "trace_id": "a7f7951c2a60d0a18e5d0d285566a62f", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:14", "service": "payment", "level": "ERROR", "trace_id": "ba0331cfa6d2a14b45da220fc5263d71", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:14", "service": "checkout", "level": "ERROR", "trace_id": "9eb0fe375cbddbf2d9acd5ac8670a920", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:15", "service": "frontend", "level": "ERROR", "trace_id": "2e67b20ed03dee144b501ea9d33bf40e", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:15", "service": "payment", "level": "ERROR", "trace_id": "c7a0d37f9c978c66c127a39bbf7abe57", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:16", "service": "payment", "level": "ERROR", "trace_id": "2ce1408557ffe282da6d222355b46c7f", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:16", "service": "frontend", "level": "ERROR", "trace_id": "7120464bcb15d9929820be60d55ab5ec", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:16", "service": "checkout", "level": "ERROR", "trace_id": "cc06479256507f841392eccca33977b6", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:17", "service": "frontend", "level": "INFO", "trace_id": "0372b5b0a1e151842fe88b70f31dc57c", "message": "Request completed"}
+{"ts": "10:09:18", "service": "frontend", "level": "ERROR", "trace_id": "f0ae37b4585ba4d0c7f300a41d03708c", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:18", "service": "checkout", "level": "ERROR", "trace_id": "ecd2df18e8b45a744e6f92c17fa41e0c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:19", "service": "frontend", "level": "ERROR", "trace_id": "4e1accddcd647a9a9464c588d536d87d", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:19", "service": "frontend", "level": "ERROR", "trace_id": "a21ba2cdcd1734bad506e4206bc31211", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:20", "service": "frontend", "level": "ERROR", "trace_id": "bed8c14d1c1259d56fcd042681346b28", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:22", "service": "checkout", "level": "ERROR", "trace_id": "9c9bfe6471c3bfa1440e250c1a262359", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:23", "service": "frontend", "level": "ERROR", "trace_id": "04f1dba92df3b3a008cdb995a4d0a7a4", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:24", "service": "checkout", "level": "INFO", "trace_id": "868db375796042975faae88a42322ab7", "message": "Request completed"}
+{"ts": "10:09:24", "service": "payment", "level": "ERROR", "trace_id": "65fc1a14c18b8fc058f5615c9a8ee58a", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:24", "service": "checkout", "level": "ERROR", "trace_id": "6398ecda670a3bf12e8cf070873a4add", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:25", "service": "checkout", "level": "ERROR", "trace_id": "54b38f6c9bf0e4a784c8a234dec86f4a", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:25", "service": "payment", "level": "ERROR", "trace_id": "9166c5a08d38734ff1ef326817acd70e", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:29", "service": "payment", "level": "ERROR", "trace_id": "714df772b44c3795c5f47799065d27e9", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:29", "service": "checkout", "level": "ERROR", "trace_id": "da0f169a0a22fd3587cf631c60af3516", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:31", "service": "payment", "level": "ERROR", "trace_id": "dce810efa7d2f31de0f6d99d8a8e1f94", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:32", "service": "payment", "level": "ERROR", "trace_id": "0ef5ec2a6717c522982e7efe4cfc6732", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:32", "service": "payment", "level": "ERROR", "trace_id": "8331a97bf0de0670c68f8f0b20b08742", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:32", "service": "inventory", "level": "INFO", "trace_id": "a4127f8af51b8542f77ace552cb4fb42", "message": "Request completed"}
+{"ts": "10:09:33", "service": "payment", "level": "ERROR", "trace_id": "e3304200fd0c681ad3c8534dddc38b61", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:33", "service": "payment", "level": "ERROR", "trace_id": "8fc6927f6611f72d32f151e0b0e71e00", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:34", "service": "payment", "level": "ERROR", "trace_id": "8fe78387a43f481b0076b76f3ee0dab5", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:34", "service": "checkout", "level": "ERROR", "trace_id": "f2a8224c5465c3631f9541838c60c756", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:35", "service": "frontend", "level": "ERROR", "trace_id": "fb5076a28236fe3093ea3e48c66f32f4", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:36", "service": "frontend", "level": "INFO", "trace_id": "f52d0ba6b653275eff8f9aec685544b4", "message": "Request completed"}
+{"ts": "10:09:36", "service": "payment", "level": "ERROR", "trace_id": "cafc1ff0e2b8a1c3d4343b4a73ae4205", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:36", "service": "checkout", "level": "ERROR", "trace_id": "fe307a3460af5d7b1739bbfd08aefecf", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:37", "service": "payment", "level": "ERROR", "trace_id": "4cb09575e334c80c2967009f8ebe9bde", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:37", "service": "payment", "level": "ERROR", "trace_id": "4873cb853cda8395bfdf9cf1ed0383d8", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:38", "service": "frontend", "level": "ERROR", "trace_id": "900381b480b5d7d203fea6153b945440", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:39", "service": "frontend", "level": "ERROR", "trace_id": "f0447f653515685c4351fa0194c3a1ad", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:39", "service": "frontend", "level": "INFO", "trace_id": "c8d2352e519ebb589a76978c2e7e4fc1", "message": "Request completed"}
+{"ts": "10:09:40", "service": "checkout", "level": "ERROR", "trace_id": "c52b15c072707717fa8b7149ee955d67", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:40", "service": "payment", "level": "ERROR", "trace_id": "f35dd44ef777cd7e08088444ccd0b976", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:41", "service": "frontend", "level": "ERROR", "trace_id": "7c3596a0226f793968c917d9e9bb3ec8", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:42", "service": "payment", "level": "ERROR", "trace_id": "d446028c0e2adce51860eab9dcf68de2", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:42", "service": "frontend", "level": "ERROR", "trace_id": "bb1d6470d94b99548a5d8a84a0b5d628", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:43", "service": "checkout", "level": "ERROR", "trace_id": "32776d824cd706e47fd291bbc6d7918c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:43", "service": "checkout", "level": "ERROR", "trace_id": "4dd1165db2351ec60012831ebc66c8e4", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:45", "service": "payment", "level": "ERROR", "trace_id": "db7e4eb1bfdd5866080d510e045c637b", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:45", "service": "payment", "level": "ERROR", "trace_id": "97ff312e142440c718fb403539a575c6", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:46", "service": "checkout", "level": "ERROR", "trace_id": "5daedcb12f91fe343f251a8bd230750e", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:46", "service": "checkout", "level": "ERROR", "trace_id": "0de8f3e127f1ef58dba09b6236c00009", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:48", "service": "payment", "level": "ERROR", "trace_id": "4be6a95bc6a2cc670e5bd1708c70ecac", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:49", "service": "checkout", "level": "ERROR", "trace_id": "6d0b30f7e30e5190cf9f2631b94e72be", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:49", "service": "checkout", "level": "ERROR", "trace_id": "64d9716b31b82276ba10775fbcb037c1", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:09:49", "service": "payment", "level": "ERROR", "trace_id": "4efa85e9e29ba8cae2b10870340a201e", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:50", "service": "checkout", "level": "INFO", "trace_id": "f3f33d4219f45d65a4853c8a44fa6dcd", "message": "Request completed"}
+{"ts": "10:09:50", "service": "payment", "level": "ERROR", "trace_id": "f6f5eca0697e5ed20c71437738109844", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:51", "service": "inventory", "level": "INFO", "trace_id": "daedbc989e6828b4e3fec06ba3e32adb", "message": "Request completed"}
+{"ts": "10:09:51", "service": "frontend", "level": "ERROR", "trace_id": "7b0895a58a2139ed16b925909471cda3", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:52", "service": "payment", "level": "ERROR", "trace_id": "a9712ba611f94d91938f40029bd2d725", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:55", "service": "inventory", "level": "INFO", "trace_id": "0aec74ce905d446210fa35141fb535c0", "message": "Request completed"}
+{"ts": "10:09:55", "service": "frontend", "level": "ERROR", "trace_id": "c18aecaa66bee521351bcad3008539bc", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:56", "service": "payment", "level": "ERROR", "trace_id": "4a33db2ced2339d94c99919040b95319", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:09:56", "service": "frontend", "level": "ERROR", "trace_id": "6b49aa6335623f788e506c29f3d8fade", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:56", "service": "payment", "level": "INFO", "trace_id": "981cdda7214bd1cf9b3767f745831d28", "message": "Request completed"}
+{"ts": "10:09:57", "service": "frontend", "level": "ERROR", "trace_id": "7aebb0a169d69fca6f95ca211e266e7e", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:57", "service": "frontend", "level": "ERROR", "trace_id": "548942195c16b958984232ca891bcaa2", "message": "Upstream checkout returned 504"}
+{"ts": "10:09:59", "service": "checkout", "level": "ERROR", "trace_id": "836fc8c80a1048849f3e21f6c34bb9ca", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:00", "service": "payment", "level": "ERROR", "trace_id": "2e708388f7b4a5604b9f23a41968dbb1", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:01", "service": "payment", "level": "ERROR", "trace_id": "ee53d70c81ed865e8eb895e6fcd156df", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:02", "service": "frontend", "level": "ERROR", "trace_id": "e2c97a9af234893ab75ab548e461e6cf", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:02", "service": "frontend", "level": "ERROR", "trace_id": "49fee3113dd6fa59093ac120285863f1", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:03", "service": "frontend", "level": "ERROR", "trace_id": "c7194c492aa6c44a657dbc85313ffb05", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:03", "service": "inventory", "level": "INFO", "trace_id": "e76a56f20dc305c81b766382ed25b5eb", "message": "Request completed"}
+{"ts": "10:10:04", "service": "payment", "level": "ERROR", "trace_id": "116edecadde9b92b3b289ca7a2fafa7f", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:05", "service": "checkout", "level": "ERROR", "trace_id": "96ad0a7adfefcc851cc0ecb98a95519a", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:06", "service": "checkout", "level": "ERROR", "trace_id": "e31d6c1ba17fafcaeab094fa71c75a3c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:06", "service": "payment", "level": "INFO", "trace_id": "df90c7cae14c63481ad88d7d9a405ea5", "message": "Request completed"}
+{"ts": "10:10:06", "service": "payment", "level": "INFO", "trace_id": "a96800d399650e417c08305b6a151728", "message": "Request completed"}
+{"ts": "10:10:07", "service": "frontend", "level": "ERROR", "trace_id": "88d21669c1f0f0e07c3436de3f640d3c", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:10", "service": "payment", "level": "ERROR", "trace_id": "3d7bb55ed40337789d67caf166c8f0f3", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:10", "service": "payment", "level": "ERROR", "trace_id": "740a0afcc04b6e0abd547adfd3dc8c1d", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:11", "service": "checkout", "level": "ERROR", "trace_id": "9da8886cd7779991cd4c87e574174339", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:12", "service": "frontend", "level": "ERROR", "trace_id": "faee0e70309fcc7f4256be16b69e7ebd", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:12", "service": "frontend", "level": "INFO", "trace_id": "01da3ec05c3bf4a26b58efe0de5f7f02", "message": "Request completed"}
+{"ts": "10:10:12", "service": "checkout", "level": "ERROR", "trace_id": "e834f9e388f8f2d5564a1b0eedef89d9", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:12", "service": "payment", "level": "ERROR", "trace_id": "3d185ec60e28c7c26b67bca898fb06ab", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:13", "service": "payment", "level": "ERROR", "trace_id": "beb5d84fe5891dde75bf2d94955ffe1b", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:14", "service": "payment", "level": "ERROR", "trace_id": "e67d0f2ef32f3d3da439c0f71d94c170", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:15", "service": "checkout", "level": "ERROR", "trace_id": "b037768f5e53774967f7481750b603ec", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:15", "service": "payment", "level": "ERROR", "trace_id": "652f640dda6bf5dfff4f73de1943628f", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:16", "service": "frontend", "level": "INFO", "trace_id": "4b312f023c36caad336012d813125a57", "message": "Request completed"}
+{"ts": "10:10:17", "service": "payment", "level": "ERROR", "trace_id": "6f736bad73069a12f371342ac2550e97", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:19", "service": "payment", "level": "ERROR", "trace_id": "2c512b424816fbbec691b9642b42bcc2", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:21", "service": "payment", "level": "INFO", "trace_id": "3fd2b44fd349d12a7145987c815f719e", "message": "Request completed"}
+{"ts": "10:10:22", "service": "checkout", "level": "ERROR", "trace_id": "808bf4eae727575005bf5760be2d61f3", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:22", "service": "checkout", "level": "ERROR", "trace_id": "3f8a1c4cd39a3caa32e99ff86511a216", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:22", "service": "checkout", "level": "ERROR", "trace_id": "f2f50fa1efc356ff9b205305d18b273d", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:23", "service": "payment", "level": "ERROR", "trace_id": "015d549ef17d7bae1b4d206057b53721", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:23", "service": "frontend", "level": "ERROR", "trace_id": "168fee8e28b1f904e2ca2b4e0f16b388", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:23", "service": "payment", "level": "ERROR", "trace_id": "c6b8fb20730d2a8ef0855558f94a5be3", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:24", "service": "payment", "level": "ERROR", "trace_id": "36e35dbe089a0145cddfe268facbad17", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:25", "service": "frontend", "level": "ERROR", "trace_id": "d51069c0a27cbe50d60f38be5d4165c7", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:25", "service": "inventory", "level": "INFO", "trace_id": "d0bb54f17f80ca7653cdc05df4970319", "message": "Request completed"}
+{"ts": "10:10:25", "service": "frontend", "level": "ERROR", "trace_id": "dca35394ccb229f9b27e87f14f0a5aab", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:26", "service": "frontend", "level": "ERROR", "trace_id": "aebd0651a4f4fd53379c7f0e1632d40e", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:26", "service": "frontend", "level": "ERROR", "trace_id": "a7ab513bc26fa2f0e48ad7b3fcc3e116", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:27", "service": "checkout", "level": "INFO", "trace_id": "0734adc5ec57e53262208b941a2e0eae", "message": "Request completed"}
+{"ts": "10:10:27", "service": "payment", "level": "ERROR", "trace_id": "f20673fb45a3f9ec75eb1def8aa90f59", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:28", "service": "frontend", "level": "ERROR", "trace_id": "d2727bffb0dc79900a96a9fbc244ccd2", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:29", "service": "payment", "level": "ERROR", "trace_id": "caeb2f6db1c3ee346417cb94973f8393", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:29", "service": "payment", "level": "ERROR", "trace_id": "e5b59455f680b8da5bcaec169b9c9034", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:30", "service": "frontend", "level": "ERROR", "trace_id": "a044b97ee57b1dda522c397e71dd2bb0", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:30", "service": "checkout", "level": "ERROR", "trace_id": "4713e7b2333d186511cce81c8093986b", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:31", "service": "frontend", "level": "ERROR", "trace_id": "875e5060338d300f09db8aff43da38ec", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:32", "service": "checkout", "level": "ERROR", "trace_id": "3b0b115c328701fc060b673fd03b666c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:32", "service": "checkout", "level": "INFO", "trace_id": "52922beeb78486770462a8fcaa9441d9", "message": "Request completed"}
+{"ts": "10:10:33", "service": "frontend", "level": "ERROR", "trace_id": "10d0e09f0082e344adeace4484375b1f", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:33", "service": "inventory", "level": "INFO", "trace_id": "67219e04dae5a3c3706e4e6c37d08d09", "message": "Request completed"}
+{"ts": "10:10:33", "service": "checkout", "level": "ERROR", "trace_id": "000ed112ca4a0fbfdda8a979700ca0e6", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:35", "service": "checkout", "level": "INFO", "trace_id": "310ee0477f4bd26e573ac8b590d59a4f", "message": "Request completed"}
+{"ts": "10:10:36", "service": "payment", "level": "ERROR", "trace_id": "ec92efd3cc0faac04b4dc98206680849", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:36", "service": "frontend", "level": "INFO", "trace_id": "2c62e21eb0e1ee07a7928908fd5131ec", "message": "Request completed"}
+{"ts": "10:10:37", "service": "payment", "level": "ERROR", "trace_id": "0297553ef16116e748ad9a5ae4bf1827", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:39", "service": "checkout", "level": "ERROR", "trace_id": "d2d09f69733612caf427311c2aa2b93f", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:39", "service": "frontend", "level": "ERROR", "trace_id": "64920cb861fbc2a6da02af69c04fd47c", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:39", "service": "checkout", "level": "ERROR", "trace_id": "ea4e95b37d79d2f898a331e2b5a91109", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:40", "service": "checkout", "level": "ERROR", "trace_id": "da9b2951e5c729a6c40917d5c77ca30c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:40", "service": "checkout", "level": "ERROR", "trace_id": "0b9c0b2b03319fc35f30651e158fce8d", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:40", "service": "payment", "level": "ERROR", "trace_id": "03917e92dd2a480647f6fec0e306818e", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:40", "service": "payment", "level": "ERROR", "trace_id": "0567f49c5150f09b99078a9895a4b07f", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:40", "service": "payment", "level": "ERROR", "trace_id": "f2abab68ddaa042bed32b7df90a01c10", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:40", "service": "checkout", "level": "ERROR", "trace_id": "a5fa8b87036529d2adb81eb093d4f593", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:41", "service": "checkout", "level": "ERROR", "trace_id": "ebbe76534a26033ca76c82572566af9b", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:41", "service": "checkout", "level": "ERROR", "trace_id": "aab0ebdafe54cc338cc6aaf7844d9891", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:43", "service": "checkout", "level": "ERROR", "trace_id": "123e39d8bc7b08c660a969282aa44840", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:44", "service": "frontend", "level": "ERROR", "trace_id": "d653f98d0a908e75ad3ea9c9f4feda9a", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:45", "service": "frontend", "level": "ERROR", "trace_id": "ecf78969d8ba24b93b3d395806cbed77", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:45", "service": "payment", "level": "ERROR", "trace_id": "bfe43bbc93739697895b941c3ddd3b15", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:46", "service": "checkout", "level": "ERROR", "trace_id": "3e24529763788aa92102a6c099b39c58", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:49", "service": "payment", "level": "ERROR", "trace_id": "0551288339e8d139cbafba487466c1cb", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:50", "service": "frontend", "level": "ERROR", "trace_id": "41111a05993f393742474ebd4a0bd9e5", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:51", "service": "frontend", "level": "ERROR", "trace_id": "d9eed1e59026ce44b02913895431f878", "message": "Upstream checkout returned 504"}
+{"ts": "10:10:51", "service": "checkout", "level": "ERROR", "trace_id": "8c189fc8770644db4e0265463399f0c0", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:51", "service": "payment", "level": "ERROR", "trace_id": "54a6353611c7781ca6531ea763b48956", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:51", "service": "payment", "level": "ERROR", "trace_id": "c9abef87728bdba7deefc1e51247f1c9", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:53", "service": "checkout", "level": "ERROR", "trace_id": "50d0e4852e4a5b9c1ed0a2b8f287fde0", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:54", "service": "payment", "level": "ERROR", "trace_id": "08716ce9da7f91575fb2e14678e47851", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:55", "service": "checkout", "level": "ERROR", "trace_id": "dd2c80104e4fc21f5172a0c25c5448f2", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:10:56", "service": "payment", "level": "ERROR", "trace_id": "8322c15911677928093cd26958a43c30", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:58", "service": "payment", "level": "ERROR", "trace_id": "6667c57275bed47b1aa1718ea69d7d5e", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:10:58", "service": "checkout", "level": "ERROR", "trace_id": "0d000c1341e61762f75a35cea2a5a896", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:00", "service": "frontend", "level": "ERROR", "trace_id": "be5c7acd8d87909748d8f53a549c7095", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:00", "service": "frontend", "level": "ERROR", "trace_id": "116b4cb1927f391f1a0d9a19c708c1a3", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:01", "service": "frontend", "level": "ERROR", "trace_id": "ad44e93208db0afa7408ab7de1b7f131", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:01", "service": "payment", "level": "ERROR", "trace_id": "40859ccf5c1364cebbdd481e681b5949", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:01", "service": "checkout", "level": "ERROR", "trace_id": "95aee7d60fd70392401dace1d66ac536", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:01", "service": "frontend", "level": "ERROR", "trace_id": "9da5433d75c9ab1cb9d16327a1b03175", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:02", "service": "checkout", "level": "ERROR", "trace_id": "5c28a7d9385f443b3383d0a38422958c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:02", "service": "payment", "level": "ERROR", "trace_id": "3acb84634389e194d0e30b777a9cbde2", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:02", "service": "frontend", "level": "ERROR", "trace_id": "face97610d6f18c18e45e22426f3792c", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:04", "service": "checkout", "level": "ERROR", "trace_id": "4357396386249faf9031b5384a289b58", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:04", "service": "checkout", "level": "ERROR", "trace_id": "fcfb2973f4a3114070db6949979ba794", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:04", "service": "inventory", "level": "INFO", "trace_id": "471aa0a3ad4d470f42a0db7344b00529", "message": "Request completed"}
+{"ts": "10:11:04", "service": "checkout", "level": "ERROR", "trace_id": "64bcb999c7ae20a66b538666c747eb5d", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:06", "service": "payment", "level": "ERROR", "trace_id": "7e2d2cc05b40168cf193e66ae5b92e40", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:07", "service": "inventory", "level": "INFO", "trace_id": "ccb6de0241ff29a3095a17a710fcdd4f", "message": "Request completed"}
+{"ts": "10:11:08", "service": "checkout", "level": "INFO", "trace_id": "a1edabd6addf6cb46f8b63e037b17743", "message": "Request completed"}
+{"ts": "10:11:10", "service": "payment", "level": "ERROR", "trace_id": "33f2e3ba0a3efca7eb7c0b7830b7c75f", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:12", "service": "frontend", "level": "ERROR", "trace_id": "74b26029b19fb2c38e82f55e96d8cefc", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:12", "service": "payment", "level": "ERROR", "trace_id": "1cc676134062fb8ee6d5d13d35791f51", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:13", "service": "checkout", "level": "ERROR", "trace_id": "801a5721f6d3bb6f31104a8f07ff9b19", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:13", "service": "payment", "level": "ERROR", "trace_id": "9b989b0f9d263de9f6717f9b8e7ff973", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:14", "service": "payment", "level": "ERROR", "trace_id": "f2170486c2ca61c657b746c44bfdc4a7", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:17", "service": "frontend", "level": "ERROR", "trace_id": "6fdce8354cf34499bcdce508b36cdc66", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:17", "service": "frontend", "level": "ERROR", "trace_id": "1d1203444e3566c38611812e4b00aa77", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:18", "service": "checkout", "level": "ERROR", "trace_id": "cfd915c2ea566ceff441fb3a962c0116", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:19", "service": "checkout", "level": "ERROR", "trace_id": "99a875237d42ec3c51276b67cca2851c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:20", "service": "payment", "level": "ERROR", "trace_id": "54b5375bdaa59df944eaa0f3bce47855", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:20", "service": "frontend", "level": "ERROR", "trace_id": "246fdd39c242cc35b20f0e94ab9fad0f", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:20", "service": "checkout", "level": "ERROR", "trace_id": "0a8a974fa29698569ccdf5379f33c505", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:20", "service": "payment", "level": "ERROR", "trace_id": "d52cea515369718069d75f13f875ba87", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:22", "service": "payment", "level": "ERROR", "trace_id": "f059a9a56ec1df53343f695b30a9db7b", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:23", "service": "checkout", "level": "ERROR", "trace_id": "2c93341992b3dec99126f0920f07b76c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:24", "service": "payment", "level": "ERROR", "trace_id": "08bb659ee3d8a7e3c36ca1bd21a7fb2c", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:24", "service": "inventory", "level": "INFO", "trace_id": "85bf1c7fd4422740912ce1883f2e827e", "message": "Request completed"}
+{"ts": "10:11:24", "service": "payment", "level": "ERROR", "trace_id": "d9d9f09ccd4164bf0030155ca4a2fcf7", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:24", "service": "payment", "level": "ERROR", "trace_id": "784054100a6590d8a9f21164358ec8f9", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:25", "service": "checkout", "level": "ERROR", "trace_id": "5afeb3b15f003e6c1be3ff340f0ce8f5", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:27", "service": "checkout", "level": "INFO", "trace_id": "f9aa4d668c2e43d54c1fa1e78bdb94f1", "message": "Request completed"}
+{"ts": "10:11:27", "service": "payment", "level": "INFO", "trace_id": "db217e804aacd16bba7cfc9af54bb0d6", "message": "Request completed"}
+{"ts": "10:11:28", "service": "frontend", "level": "ERROR", "trace_id": "c5b30f7075a3522cd65118eedfc9e395", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:28", "service": "frontend", "level": "ERROR", "trace_id": "0fa834ece0fe53276af529f378000b99", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:30", "service": "checkout", "level": "ERROR", "trace_id": "3db18635d11dee0dc70c361cd6b76590", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:30", "service": "checkout", "level": "ERROR", "trace_id": "fdf24035a6c8d484d98278512e6f6940", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:31", "service": "checkout", "level": "ERROR", "trace_id": "20259e71b60caa7f8147049096ce72f6", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:32", "service": "payment", "level": "ERROR", "trace_id": "29dbe1dabb202a66e3184397ffed0981", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:33", "service": "frontend", "level": "ERROR", "trace_id": "eddb16358e71360d0678b2df31c28064", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:33", "service": "payment", "level": "ERROR", "trace_id": "2abf0cfca58cf4992aab374f8fdd71bf", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:34", "service": "checkout", "level": "ERROR", "trace_id": "49b51c4f515a63ab650d14de34839741", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:34", "service": "frontend", "level": "ERROR", "trace_id": "b6e2462d6109503775512a68faa0ddf1", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:35", "service": "checkout", "level": "ERROR", "trace_id": "a912ab9de4a7e9fc9454446c13af4fb2", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:36", "service": "payment", "level": "ERROR", "trace_id": "e67417c4075f4b386bb46e5e826a76f1", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:36", "service": "payment", "level": "INFO", "trace_id": "db7b5b804dbf900234292f2c6d9a3dcc", "message": "Request completed"}
+{"ts": "10:11:37", "service": "checkout", "level": "ERROR", "trace_id": "c905b035d43c669f023c19b9fffa671c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:37", "service": "frontend", "level": "INFO", "trace_id": "4979e6ed7eeba7faf0a5018f7ea3b600", "message": "Request completed"}
+{"ts": "10:11:38", "service": "checkout", "level": "ERROR", "trace_id": "8be8d0b47ab779858aee0f99855a796b", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:38", "service": "frontend", "level": "ERROR", "trace_id": "5c6eb5e70d8d203a8b80fdde8fcdfa0c", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:38", "service": "frontend", "level": "ERROR", "trace_id": "b3f6ee9c1d6c39a390d12c88dabb6963", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:39", "service": "payment", "level": "ERROR", "trace_id": "b97f40f76d599db303ba61ea01263721", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:40", "service": "frontend", "level": "INFO", "trace_id": "66afae07bc0a139dc4436cad93f1eea5", "message": "Request completed"}
+{"ts": "10:11:41", "service": "checkout", "level": "INFO", "trace_id": "5d8eb4a8d0d8d28a52a7c79a9f14d9cb", "message": "Request completed"}
+{"ts": "10:11:42", "service": "payment", "level": "ERROR", "trace_id": "00ec2c293ca63c9a5f3fc0f86db72bfc", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:42", "service": "checkout", "level": "ERROR", "trace_id": "d09304a707e5ef6da4f45604fd08dd03", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:43", "service": "payment", "level": "INFO", "trace_id": "16b27e7134f54c986d936aff03efea56", "message": "Request completed"}
+{"ts": "10:11:44", "service": "frontend", "level": "ERROR", "trace_id": "2fedadb73ce014db2f46bb3dd19db43c", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:44", "service": "payment", "level": "ERROR", "trace_id": "d3e466f7703cc9d764601674d52baed5", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:44", "service": "payment", "level": "ERROR", "trace_id": "7cccbf716884c9fb172a61a491ae7d8c", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:44", "service": "frontend", "level": "ERROR", "trace_id": "8575b68af1e658ec2d423a19bc8b1109", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:45", "service": "payment", "level": "ERROR", "trace_id": "a351b29eda23226e519634f14363571a", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:45", "service": "checkout", "level": "ERROR", "trace_id": "c46ea38194148b23d5a73efddb6da846", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:45", "service": "payment", "level": "ERROR", "trace_id": "c7bebfe7dd6dc325c5dab0c9e92d6e19", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:46", "service": "frontend", "level": "ERROR", "trace_id": "52b1901b422c18f2fd5ec1f586dfdedc", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:47", "service": "checkout", "level": "ERROR", "trace_id": "4cd89bd2f26e02abbd0da6bf9f5f1bf8", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:47", "service": "payment", "level": "ERROR", "trace_id": "f5f4cf892a78942494823e9148270b32", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:50", "service": "payment", "level": "ERROR", "trace_id": "cab0906a46d4ed7771075edd27603774", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:50", "service": "payment", "level": "ERROR", "trace_id": "182b2c13c5cb6cc7c1c2a42b5f362e25", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:51", "service": "frontend", "level": "ERROR", "trace_id": "b5ce4b0f33b5a39683f181c6961ff8f0", "message": "Upstream checkout returned 504"}
+{"ts": "10:11:51", "service": "payment", "level": "ERROR", "trace_id": "9b8913a11967b6b30d1527f126bf6ee7", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:54", "service": "payment", "level": "ERROR", "trace_id": "b3447557607af451d15d9a6a84c80aa2", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:54", "service": "frontend", "level": "INFO", "trace_id": "e6e5b700c2ba79d21c9c58fb6a37847b", "message": "Request completed"}
+{"ts": "10:11:54", "service": "checkout", "level": "ERROR", "trace_id": "ab952a4f3b97cbea4e4772fc2c0a4220", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:56", "service": "checkout", "level": "ERROR", "trace_id": "c283a8a9348b3bde0b0f9df59cb9a86d", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:56", "service": "payment", "level": "ERROR", "trace_id": "a79563079959e42423c0b4351da3f243", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:11:57", "service": "checkout", "level": "ERROR", "trace_id": "19e14c9b3ed452c245306f7177cbf188", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:11:58", "service": "payment", "level": "ERROR", "trace_id": "24d2572b39c9bfdff693de5c2eff0ab5", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:00", "service": "checkout", "level": "ERROR", "trace_id": "a281da7f565136ec7fb6160936f776ce", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:00", "service": "frontend", "level": "ERROR", "trace_id": "2db1deaed03cf288d45c7d202b9a2edc", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:00", "service": "checkout", "level": "ERROR", "trace_id": "9abb3967dbb1a69ace03557297964ee1", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:02", "service": "checkout", "level": "INFO", "trace_id": "8f1e1c3b5263b23b4c0a4f48235fbfa4", "message": "Request completed"}
+{"ts": "10:12:03", "service": "payment", "level": "ERROR", "trace_id": "716d1525f07947ccc93f19a5b431fc55", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:04", "service": "checkout", "level": "ERROR", "trace_id": "6b28ef36497bf0fc513771e9099af6d8", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:05", "service": "payment", "level": "ERROR", "trace_id": "97807aee2f8fd62bc794b61c9f3440ca", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:06", "service": "frontend", "level": "ERROR", "trace_id": "143ea1c779671bb5826e17c1c1869b7c", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:06", "service": "checkout", "level": "ERROR", "trace_id": "b81a43c4217d44c7c57e82e53aa62c17", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:07", "service": "checkout", "level": "ERROR", "trace_id": "6189d54a4de1f873218d84f27a2ec1ce", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:08", "service": "payment", "level": "ERROR", "trace_id": "f2850dddcb68035c94969a2c6f7026f0", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:09", "service": "checkout", "level": "ERROR", "trace_id": "d527aa312e68cf63ea50c5679a048a7e", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:09", "service": "frontend", "level": "ERROR", "trace_id": "5c323501bd796b71d64ee56fc15339e9", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:10", "service": "payment", "level": "ERROR", "trace_id": "0b5d79327ecbe13959ceaa1ebe96bedc", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:10", "service": "frontend", "level": "ERROR", "trace_id": "5104730b4d10f1429a1b42665b072514", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:11", "service": "payment", "level": "ERROR", "trace_id": "8f7e4bb5f1ebf280126edf755863a052", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:11", "service": "payment", "level": "ERROR", "trace_id": "e016a714409897a3f0dadc7a93694de2", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:12", "service": "checkout", "level": "ERROR", "trace_id": "05e2b6e81f5b0a5af896ff67eef8b8d8", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:12", "service": "payment", "level": "ERROR", "trace_id": "df72d82968d1f030d4c63719d95c1825", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:13", "service": "frontend", "level": "ERROR", "trace_id": "92c87e1b25f96efb18db41758cdaedfd", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:13", "service": "payment", "level": "ERROR", "trace_id": "e3cf1699a793739261ec35ccc38544e4", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:14", "service": "payment", "level": "ERROR", "trace_id": "9993473466785a542ebbc7042cd7fee0", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:15", "service": "frontend", "level": "ERROR", "trace_id": "c397e03d4bd291814c9b361d1899d086", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:15", "service": "payment", "level": "ERROR", "trace_id": "5113eff1b4e110621505c1207fd907df", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:16", "service": "payment", "level": "ERROR", "trace_id": "a1c0a965d8ece6a64768f5e5dac1c415", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:18", "service": "payment", "level": "ERROR", "trace_id": "8698ced4522ffcd3f93742bc2fcb62b7", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:18", "service": "inventory", "level": "INFO", "trace_id": "298f9e168d9db0e7b665f9bd56ca6705", "message": "Request completed"}
+{"ts": "10:12:18", "service": "frontend", "level": "ERROR", "trace_id": "a295269ce617d8522b2e2e7039bfa2da", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:19", "service": "frontend", "level": "ERROR", "trace_id": "b5a67dc274d8237df0bff076d0ca492b", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:19", "service": "payment", "level": "ERROR", "trace_id": "6b4e1033c4e39fa54a03e704bb418a82", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:19", "service": "payment", "level": "ERROR", "trace_id": "7229110bb5aa547d57369da06976f64f", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:20", "service": "payment", "level": "ERROR", "trace_id": "3dce59e7331fe63ed8f0ec1be8eafada", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:20", "service": "frontend", "level": "ERROR", "trace_id": "4e0f55eaa6b3bfe828a2ae2c31963756", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:20", "service": "payment", "level": "ERROR", "trace_id": "e25ae2757a4a4146762031d5885f3253", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:21", "service": "checkout", "level": "ERROR", "trace_id": "bac746e556fd2d14496a9031dfda7c7c", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:21", "service": "frontend", "level": "INFO", "trace_id": "877c68cce1d3e159ec7bdba703797548", "message": "Request completed"}
+{"ts": "10:12:22", "service": "payment", "level": "ERROR", "trace_id": "9513f66761f681fe7766f911a1631837", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:23", "service": "frontend", "level": "ERROR", "trace_id": "131864c2ce045cb80cd8c284f898dbed", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:24", "service": "frontend", "level": "ERROR", "trace_id": "9c10d0ecb3dcb77b49f934cdb9351864", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:24", "service": "checkout", "level": "ERROR", "trace_id": "f844ff308b823672c3641555507468d4", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:25", "service": "inventory", "level": "INFO", "trace_id": "7255580680ff1441470a21ce0fdc7769", "message": "Request completed"}
+{"ts": "10:12:26", "service": "frontend", "level": "ERROR", "trace_id": "3e52007b55ca7d34df4a146ae122a543", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:26", "service": "payment", "level": "ERROR", "trace_id": "42450424666ae4b27947b4c80e0d9f93", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:26", "service": "checkout", "level": "ERROR", "trace_id": "110534df9e3910d04097d454df583429", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:26", "service": "checkout", "level": "ERROR", "trace_id": "e1ee334012c03c7f016d156420e1de06", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:26", "service": "frontend", "level": "ERROR", "trace_id": "0144327a323a3da41de85f267cd0712d", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:28", "service": "payment", "level": "INFO", "trace_id": "10a8bf7887da374f4cdc4f68b6536ba8", "message": "Request completed"}
+{"ts": "10:12:28", "service": "payment", "level": "ERROR", "trace_id": "266bb14a5126d3d56d27377333a0129c", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:30", "service": "payment", "level": "ERROR", "trace_id": "11309cb3bf3c7a3f0c4ff7dcd51d2cec", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:31", "service": "frontend", "level": "ERROR", "trace_id": "599258f3ac14e3fc27b5c5e08d46344b", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:31", "service": "frontend", "level": "ERROR", "trace_id": "1d97d833a2b002ed05b2069bf2cdaf18", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:31", "service": "checkout", "level": "ERROR", "trace_id": "bc295182d619c7d8d3bbc2135841e294", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:31", "service": "checkout", "level": "INFO", "trace_id": "eef69415233fcf00fb57665ad709077d", "message": "Request completed"}
+{"ts": "10:12:32", "service": "payment", "level": "ERROR", "trace_id": "922127a010e23623f1ad0db53d356109", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:33", "service": "inventory", "level": "INFO", "trace_id": "734beeae3cbd60a2890f47a0efd70ef7", "message": "Request completed"}
+{"ts": "10:12:34", "service": "frontend", "level": "ERROR", "trace_id": "de3cda2bba92a3508b31eb6fa45a10b6", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:35", "service": "checkout", "level": "ERROR", "trace_id": "ea4badd1f0fae18d8786f56e4560922b", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:36", "service": "checkout", "level": "ERROR", "trace_id": "1aa9d7ff8a6fe0509cc8fca3e598a229", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:36", "service": "checkout", "level": "ERROR", "trace_id": "711b3456322267fa1a72b34dd164f9ba", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:36", "service": "payment", "level": "INFO", "trace_id": "2a2379de9984769328771e8e674f5ca7", "message": "Request completed"}
+{"ts": "10:12:37", "service": "checkout", "level": "ERROR", "trace_id": "8358090fcb741dd3741505891ed8e81b", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:38", "service": "payment", "level": "ERROR", "trace_id": "1fec680183c555ae5c5fe4598fa13913", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:40", "service": "frontend", "level": "ERROR", "trace_id": "03e9c101e408ee459211a66a77b7c700", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:41", "service": "frontend", "level": "ERROR", "trace_id": "dadc679998b07b7f0d241628be645745", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:41", "service": "frontend", "level": "ERROR", "trace_id": "8e209fee83ca2875e7d4ce70d3178738", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:42", "service": "checkout", "level": "ERROR", "trace_id": "cfeba95e17170a824ecc8aacd6d7ecb9", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:44", "service": "checkout", "level": "ERROR", "trace_id": "51253d8ec458df129ce1b343c25bfd16", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:45", "service": "payment", "level": "ERROR", "trace_id": "9619881156eff464df2b41e5b2d456a1", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:46", "service": "frontend", "level": "INFO", "trace_id": "55e0d75463d451817b6249e2a09a0834", "message": "Request completed"}
+{"ts": "10:12:47", "service": "checkout", "level": "ERROR", "trace_id": "c818f2ad67c988c76b74fc2329cc839e", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:48", "service": "payment", "level": "ERROR", "trace_id": "54b4efc0314b3ea7075dfb0f9d15a1d6", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:48", "service": "payment", "level": "INFO", "trace_id": "a02e27c74d469ed25b09be564d4fb5c2", "message": "Request completed"}
+{"ts": "10:12:48", "service": "checkout", "level": "ERROR", "trace_id": "308e3d182fca335712047f96a1410709", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:48", "service": "frontend", "level": "INFO", "trace_id": "8b0146f4b6ec4c7258d53db6c635638f", "message": "Request completed"}
+{"ts": "10:12:49", "service": "checkout", "level": "ERROR", "trace_id": "e4b0eeb99abc6d2d4ca094898b40a07a", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:50", "service": "checkout", "level": "ERROR", "trace_id": "a09d0a96c22cd76999bfd41bd55fe948", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:12:53", "service": "payment", "level": "ERROR", "trace_id": "64d7c677e82dc18ec3215456d3e0845a", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:53", "service": "checkout", "level": "INFO", "trace_id": "095e0e312d54069543172da2462a8b5e", "message": "Request completed"}
+{"ts": "10:12:54", "service": "frontend", "level": "ERROR", "trace_id": "4501cddb6b328f5252ee71ce29e400da", "message": "Upstream checkout returned 504"}
+{"ts": "10:12:56", "service": "payment", "level": "ERROR", "trace_id": "349fd1148368dea2ce7e6ce7dbefad0f", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:57", "service": "payment", "level": "ERROR", "trace_id": "dce73dbd25ada0920f694c41c6cedd01", "message": "PSP call exceeded timeout after 3000ms"}
+{"ts": "10:12:58", "service": "checkout", "level": "ERROR", "trace_id": "934d969f07d0ce9f3c67cc11ceb740f6", "message": "Checkout failed: payment gateway timeout (504)"}
+{"ts": "10:13:00", "service": "inventory", "level": "INFO", "trace_id": "3f4aef3b210def031ce486656156c506", "message": "Request completed"}
+{"ts": "10:13:06", "service": "inventory", "level": "INFO", "trace_id": "512c00ed6145ff6d8b5a82e4d6e7f6e2", "message": "Request completed"}
+{"ts": "10:13:06", "service": "frontend", "level": "INFO", "trace_id": "33f62df22b5eb1710859c8c5c3bf1eff", "message": "Request completed"}
+{"ts": "10:13:08", "service": "frontend", "level": "INFO", "trace_id": "4c3d970f894ee0389a315d75d9be98e3", "message": "Request completed"}
+{"ts": "10:13:15", "service": "inventory", "level": "INFO", "trace_id": "ebaf73bc5f73c9078d2cc93bbdd0a665", "message": "Request completed"}
+{"ts": "10:13:31", "service": "checkout", "level": "INFO", "trace_id": "81bb87d5c810398daa482bac79075b03", "message": "Request completed"}
+{"ts": "10:13:32", "service": "checkout", "level": "INFO", "trace_id": "a467623d2aa401dcce3414a7f060466a", "message": "Request completed"}
+{"ts": "10:13:36", "service": "frontend", "level": "INFO", "trace_id": "38e4c995191a3e55370dcb601b1d5a70", "message": "Request completed"}
+{"ts": "10:13:36", "service": "checkout", "level": "INFO", "trace_id": "7f9d449c599d312f784d97f54bc43ff4", "message": "Request completed"}
+{"ts": "10:13:38", "service": "payment", "level": "INFO", "trace_id": "875f87944fb86408270f80b12a618faf", "message": "Request completed"}
+{"ts": "10:13:40", "service": "frontend", "level": "ERROR", "trace_id": "78a645ab3434dc86a1a08257690601c7", "message": "Upstream checkout returned 504"}
+{"ts": "10:13:46", "service": "payment", "level": "INFO", "trace_id": "e4737cae74075f71abe09bb0ba776993", "message": "Request completed"}
+{"ts": "10:13:52", "service": "payment", "level": "INFO", "trace_id": "bb9cb1ed2d724a6097d82caf7678b6d0", "message": "Request completed"}
+{"ts": "10:14:04", "service": "inventory", "level": "INFO", "trace_id": "7f9bc2709be2b74203b66079e1ea9d46", "message": "Request completed"}
+{"ts": "10:14:08", "service": "checkout", "level": "INFO", "trace_id": "4032f3b560143562ab2a85dc70a0a96f", "message": "Request completed"}
+{"ts": "10:14:14", "service": "frontend", "level": "INFO", "trace_id": "edc6abfb04e472bfa608d2f1338f4661", "message": "Request completed"}
+{"ts": "10:14:20", "service": "inventory", "level": "INFO", "trace_id": "8671fab9dfd576182749853896982d98", "message": "Request completed"}
+{"ts": "10:14:25", "service": "payment", "level": "INFO", "trace_id": "c1708d6fbac7974e8fed7cc6fe266197", "message": "Request completed"}
+{"ts": "10:14:28", "service": "frontend", "level": "INFO", "trace_id": "5c6ea54ed56f71dd474f6bc65d156389", "message": "Request completed"}
+{"ts": "10:14:40", "service": "checkout", "level": "INFO", "trace_id": "d7388f458082f591c65e082d2e5b6c00", "message": "Request completed"}
+{"ts": "10:14:41", "service": "frontend", "level": "INFO", "trace_id": "d10257d788cc265fe7969139c36cc313", "message": "Request completed"}
+{"ts": "10:14:41", "service": "checkout", "level": "INFO", "trace_id": "a02f479ac063a3014a224011eb6cf72f", "message": "Request completed"}
+{"ts": "10:14:47", "service": "payment", "level": "INFO", "trace_id": "cdaa5d645b8b232d5a8c1d5af194162c", "message": "Request completed"}
+{"ts": "10:14:48", "service": "payment", "level": "INFO", "trace_id": "e606c5774e1b6a072cf0948a3c9eefa1", "message": "Request completed"}
+{"ts": "10:14:58", "service": "inventory", "level": "INFO", "trace_id": "a89d5e1d1e2287452c5253b52d5bc272", "message": "Request completed"}
+{"ts": "10:15:01", "service": "payment", "level": "INFO", "trace_id": "eb48c73844c6ec09f5d7d5b1cf16de59", "message": "Request completed"}
+{"ts": "10:15:05", "service": "inventory", "level": "INFO", "trace_id": "577fb7f9bae134ef04b37b6d13ec6ad6", "message": "Request completed"}
+{"ts": "10:15:16", "service": "payment", "level": "INFO", "trace_id": "dba77f942db508dbe972b81364befd7f", "message": "Request completed"}
+{"ts": "10:15:22", "service": "checkout", "level": "INFO", "trace_id": "72abdeb668a362af1f363d547f06f7ea", "message": "Request completed"}
+{"ts": "10:15:23", "service": "checkout", "level": "INFO", "trace_id": "da9f41219a39887669f41d709097eac0", "message": "Request completed"}
+{"ts": "10:15:33", "service": "frontend", "level": "INFO", "trace_id": "5c63436f915a38edacd7bfaed8f0531c", "message": "Request completed"}
+{"ts": "10:15:41", "service": "frontend", "level": "INFO", "trace_id": "16f5ca354a66b8f144a05578d11452c5", "message": "Request completed"}
+{"ts": "10:15:42", "service": "frontend", "level": "INFO", "trace_id": "736cffd8c157bb48cae48ca42f757f0e", "message": "Request completed"}
+{"ts": "10:15:45", "service": "inventory", "level": "INFO", "trace_id": "011d8249a6b4ed27a35afc5357625a9c", "message": "Request completed"}
+{"ts": "10:15:46", "service": "inventory", "level": "INFO", "trace_id": "5d4e0e09efef3b08e257c695fcca559b", "message": "Request completed"}
+{"ts": "10:15:47", "service": "checkout", "level": "INFO", "trace_id": "dee9b6aef696becf96dfe17ae71c61d8", "message": "Request completed"}
+{"ts": "10:15:51", "service": "payment", "level": "INFO", "trace_id": "c1907e501e642b2376980e0168044666", "message": "Request completed"}
+{"ts": "10:16:08", "service": "payment", "level": "INFO", "trace_id": "d7f9e149791c2e1508d15bdc1fd2d098", "message": "Request completed"}
+{"ts": "10:16:12", "service": "checkout", "level": "INFO", "trace_id": "f04f3529fd0acce1182db709c6df9afa", "message": "Request completed"}
+{"ts": "10:16:24", "service": "payment", "level": "INFO", "trace_id": "614204cc5daa8ffa8a4fd190945eedc7", "message": "Request completed"}
+{"ts": "10:16:24", "service": "inventory", "level": "INFO", "trace_id": "886f179d85e6674ed082c57385e1df51", "message": "Request completed"}
+{"ts": "10:16:25", "service": "checkout", "level": "INFO", "trace_id": "c8e1cca96d2f09d8b14496b2107251c5", "message": "Request completed"}
+{"ts": "10:16:25", "service": "inventory", "level": "INFO", "trace_id": "bef2418163c75808350bcd865299f0cd", "message": "Request completed"}
+{"ts": "10:16:31", "service": "frontend", "level": "INFO", "trace_id": "e13c84eadb477a4cb25cf7395c4e83ed", "message": "Request completed"}
+{"ts": "10:16:32", "service": "frontend", "level": "INFO", "trace_id": "97beac624ee6eafd9e9dea0d4d3ded63", "message": "Request completed"}
+{"ts": "10:16:35", "service": "frontend", "level": "INFO", "trace_id": "73672742bd66eea9fda7b43d689981eb", "message": "Request completed"}
+{"ts": "10:16:36", "service": "inventory", "level": "INFO", "trace_id": "728bcb3555e0771a6f6ed945dc533f8d", "message": "Request completed"}
+{"ts": "10:16:41", "service": "checkout", "level": "INFO", "trace_id": "3e5a09ae592d4c81d256ea3a3fb1389d", "message": "Request completed"}
+{"ts": "10:16:53", "service": "payment", "level": "INFO", "trace_id": "54eb4ae0236f3f435abd90cea37d885d", "message": "Request completed"}
+{"ts": "10:17:01", "service": "inventory", "level": "INFO", "trace_id": "e4675e3544d3eb6ffdc6eb57a47cbb7e", "message": "Request completed"}
+{"ts": "10:17:03", "service": "checkout", "level": "INFO", "trace_id": "4f0e185c02e3dbe4c45abfc34b6ca50f", "message": "Request completed"}
+{"ts": "10:17:03", "service": "inventory", "level": "INFO", "trace_id": "8e4bd8745f1529c963440bcc0e7397d4", "message": "Request completed"}
+{"ts": "10:17:10", "service": "frontend", "level": "INFO", "trace_id": "9975913e19a0404febf75fa121f3e2b5", "message": "Request completed"}
+{"ts": "10:17:11", "service": "inventory", "level": "INFO", "trace_id": "73bc58411a57b5f4f195d2bd95ac39af", "message": "Request completed"}
+{"ts": "10:17:19", "service": "checkout", "level": "INFO", "trace_id": "9022971f9ace175a8ffbfb61f890f14f", "message": "Request completed"}
+{"ts": "10:17:23", "service": "payment", "level": "INFO", "trace_id": "b1001d623e480b3f39d0d319bbdf3951", "message": "Request completed"}
+{"ts": "10:17:25", "service": "frontend", "level": "ERROR", "trace_id": "29a63a73e166173a442839b0fc407e55", "message": "Upstream checkout returned 504"}
+{"ts": "10:17:25", "service": "frontend", "level": "INFO", "trace_id": "bcfc2a26f13e3778d3f7f0bd188feefb", "message": "Request completed"}
+{"ts": "10:17:29", "service": "payment", "level": "INFO", "trace_id": "11a7cb686d6f9a2793676ede21f9af7e", "message": "Request completed"}
+{"ts": "10:17:31", "service": "frontend", "level": "INFO", "trace_id": "36624a261ab9501480512c26c7c63504", "message": "Request completed"}
+{"ts": "10:17:39", "service": "payment", "level": "INFO", "trace_id": "2a2fd7189129ffa427432224520481c9", "message": "Request completed"}
+{"ts": "10:17:58", "service": "checkout", "level": "INFO", "trace_id": "50141652b141a6f8670bb48b0cc95f70", "message": "Request completed"}
+{"ts": "10:18:02", "service": "checkout", "level": "INFO", "trace_id": "0b6c98a3103cba1936c2962f923b0ebf", "message": "Request completed"}
+{"ts": "10:18:02", "service": "inventory", "level": "INFO", "trace_id": "713611d632353411842dd0e9a3992ace", "message": "Request completed"}
+{"ts": "10:18:15", "service": "frontend", "level": "INFO", "trace_id": "8afd7b07427793eb8687398176ca7633", "message": "Request completed"}
+{"ts": "10:18:16", "service": "inventory", "level": "INFO", "trace_id": "154b2b8eff4f16ef610629d82a2e7da0", "message": "Request completed"}
+{"ts": "10:18:21", "service": "frontend", "level": "INFO", "trace_id": "587e5d3b2e8c6dc78a2a8b2e38e0cda3", "message": "Request completed"}
+{"ts": "10:18:23", "service": "payment", "level": "INFO", "trace_id": "2ddba1a21d9de25b9f9c57659162efca", "message": "Request completed"}
+{"ts": "10:18:25", "service": "payment", "level": "INFO", "trace_id": "752f6d59704493fd61aca27a052384de", "message": "Request completed"}
+{"ts": "10:18:36", "service": "checkout", "level": "INFO", "trace_id": "6502cb39a99aee74500207f41c92fb48", "message": "Request completed"}
+{"ts": "10:18:38", "service": "inventory", "level": "INFO", "trace_id": "b4d41e18b0e7ecc5617c529a19f13bd9", "message": "Request completed"}
+{"ts": "10:18:43", "service": "payment", "level": "INFO", "trace_id": "7bb72decc63cada69a1961266923f0aa", "message": "Request completed"}
+{"ts": "10:18:52", "service": "checkout", "level": "INFO", "trace_id": "31329cd96a305f0d75f0fc524ba98020", "message": "Request completed"}
+{"ts": "10:18:59", "service": "frontend", "level": "INFO", "trace_id": "3f33fdd2107f0196e8dd6a32df88de9c", "message": "Request completed"}
+{"ts": "10:19:10", "service": "frontend", "level": "INFO", "trace_id": "82862e6cffaf8eb5b27e76f0418b4a4d", "message": "Request completed"}
+{"ts": "10:19:15", "service": "checkout", "level": "INFO", "trace_id": "f11e4ae3da99535dc40a584256ce732e", "message": "Request completed"}
+{"ts": "10:19:16", "service": "payment", "level": "INFO", "trace_id": "aa1a687abf433e18a1d10f6df536bef5", "message": "Request completed"}
+{"ts": "10:19:21", "service": "checkout", "level": "INFO", "trace_id": "6e1e34546167d66b0b895fe2ef2f1b8c", "message": "Request completed"}
+{"ts": "10:19:25", "service": "inventory", "level": "INFO", "trace_id": "da9a01bec0743e145014ced19aab82d2", "message": "Request completed"}
+{"ts": "10:19:26", "service": "payment", "level": "INFO", "trace_id": "1e1bc74e94bf7dd5a79ef7f65d03988a", "message": "Request completed"}
+{"ts": "10:19:29", "service": "inventory", "level": "INFO", "trace_id": "a093bd10f942faa7a0cabe7f0330a92a", "message": "Request completed"}
+{"ts": "10:19:31", "service": "frontend", "level": "INFO", "trace_id": "e85c231212eee64c9fd8bf14e80facd2", "message": "Request completed"}
+{"ts": "10:19:46", "service": "inventory", "level": "INFO", "trace_id": "ea9911e8d3cb69b672663e573f0d1cf7", "message": "Request completed"}
+{"ts": "10:19:46", "service": "payment", "level": "INFO", "trace_id": "5a13fa7917a34433358c29db0b26a663", "message": "Request completed"}
+{"ts": "10:19:49", "service": "frontend", "level": "INFO", "trace_id": "88a1907c920de4a70a1bdf60031fa1fa", "message": "Request completed"}
+{"ts": "10:19:57", "service": "checkout", "level": "INFO", "trace_id": "abf0a4f04edd07ac641012d7541f5ffe", "message": "Request completed"}
+{"ts": "10:20:04", "service": "frontend", "level": "INFO", "trace_id": "3eb6b823413743e83612b2e072a1ad44", "message": "Request completed"}
+{"ts": "10:20:04", "service": "payment", "level": "INFO", "trace_id": "bc3cd384998f080b4ac381af75dbf223", "message": "Request completed"}
+{"ts": "10:20:09", "service": "inventory", "level": "INFO", "trace_id": "7ef694448d50469b0accf708273d5010", "message": "Request completed"}
+{"ts": "10:20:11", "service": "payment", "level": "INFO", "trace_id": "8c31cf32f3cefb1c9a2c198dc8cc471c", "message": "Request completed"}
+{"ts": "10:20:13", "service": "inventory", "level": "INFO", "trace_id": "cdd20ee7a9b78c24955a75cdfb489e62", "message": "Request completed"}
+{"ts": "10:20:14", "service": "payment", "level": "INFO", "trace_id": "bb964d597f8b0cb1b4ee2192ecda8c69", "message": "Request completed"}
+{"ts": "10:20:27", "service": "inventory", "level": "INFO", "trace_id": "53e4eac67bbc3629b2561c78ae5818ef", "message": "Request completed"}
+{"ts": "10:20:28", "service": "frontend", "level": "INFO", "trace_id": "068eee36a234cd0ae873c5835a874104", "message": "Request completed"}
+{"ts": "10:20:32", "service": "checkout", "level": "INFO", "trace_id": "a701f2bf80f34c17903a81f0516307cc", "message": "Request completed"}
+{"ts": "10:20:33", "service": "checkout", "level": "INFO", "trace_id": "0b28fd483a11cfe581fbbba6f0844574", "message": "Request completed"}
+{"ts": "10:20:34", "service": "frontend", "level": "ERROR", "trace_id": "bb30a3b854031c4228b219aa94133819", "message": "Upstream checkout returned 504"}
+{"ts": "10:20:34", "service": "checkout", "level": "INFO", "trace_id": "e17d27349557193a66de730adfed979d", "message": "Request completed"}
+{"ts": "10:20:53", "service": "frontend", "level": "INFO", "trace_id": "935b96d934de087a171b6c0afa04f575", "message": "Request completed"}
+{"ts": "10:21:12", "service": "payment", "level": "INFO", "trace_id": "dd6a752cf1b86e64f42df6307fc81707", "message": "Request completed"}
+{"ts": "10:21:15", "service": "frontend", "level": "INFO", "trace_id": "0fb7d9f5382e2936cabd4adf8767931d", "message": "Request completed"}
+{"ts": "10:21:15", "service": "frontend", "level": "INFO", "trace_id": "f900acf91ca1a7510cd52de2581ec024", "message": "Request completed"}
+{"ts": "10:21:24", "service": "checkout", "level": "INFO", "trace_id": "3404130f9dffd36f5c5810e40dcc9c91", "message": "Request completed"}
+{"ts": "10:21:36", "service": "inventory", "level": "INFO", "trace_id": "af9b5c84dd74d53d1672770418a0f20d", "message": "Request completed"}
+{"ts": "10:21:38", "service": "checkout", "level": "INFO", "trace_id": "35eb956c0d068ae2018ce335237c50c8", "message": "Request completed"}
+{"ts": "10:21:41", "service": "checkout", "level": "INFO", "trace_id": "897a2864aaef60a64f54b075f4e36519", "message": "Request completed"}
+{"ts": "10:21:46", "service": "payment", "level": "INFO", "trace_id": "90c832e823368098e115577f3401526f", "message": "Request completed"}
+{"ts": "10:21:47", "service": "inventory", "level": "INFO", "trace_id": "5bb37d031e1dbc5cdbc4f934fec4e45a", "message": "Request completed"}
+{"ts": "10:21:48", "service": "frontend", "level": "ERROR", "trace_id": "a6a8ee937904a493400b437406206348", "message": "Upstream checkout returned 504"}
+{"ts": "10:21:52", "service": "frontend", "level": "INFO", "trace_id": "4f4c3592a96ed603cb695e59f3e6ab6e", "message": "Request completed"}
+{"ts": "10:21:57", "service": "inventory", "level": "INFO", "trace_id": "186cf37cb0ba5ecd23bca0c9c94e9d3d", "message": "Request completed"}
+{"ts": "10:21:58", "service": "payment", "level": "INFO", "trace_id": "09389934c8f8dde39522077bd23db21f", "message": "Request completed"}
+{"ts": "10:22:09", "service": "checkout", "level": "INFO", "trace_id": "85a13c3c6da7acdea6e93aa407f0ebc7", "message": "Request completed"}
+{"ts": "10:22:11", "service": "frontend", "level": "INFO", "trace_id": "fd1f24fd6e79d8d711db34c9f796c68f", "message": "Request completed"}
+{"ts": "10:22:14", "service": "payment", "level": "INFO", "trace_id": "4fc7a65abfad07f26257af930df6aba5", "message": "Request completed"}
+{"ts": "10:22:29", "service": "payment", "level": "INFO", "trace_id": "a26c3a044a12414124d1417067d6d468", "message": "Request completed"}
+{"ts": "10:22:30", "service": "frontend", "level": "ERROR", "trace_id": "a692d49dac03b097fd88fb268f089e98", "message": "Upstream checkout returned 504"}
+{"ts": "10:22:32", "service": "frontend", "level": "INFO", "trace_id": "7e141e10e7074322b98974a6e7d96c68", "message": "Request completed"}
+{"ts": "10:22:38", "service": "payment", "level": "INFO", "trace_id": "ac58954fd067f8159df72784360bafeb", "message": "Request completed"}
+{"ts": "10:22:45", "service": "checkout", "level": "INFO", "trace_id": "601c7982d53f09fb4180bb5f4bfc7005", "message": "Request completed"}
+{"ts": "10:22:47", "service": "frontend", "level": "INFO", "trace_id": "18697bb68b6e2663da986a25b22e8494", "message": "Request completed"}
+{"ts": "10:22:48", "service": "checkout", "level": "INFO", "trace_id": "e7a5794d22476ef8d59e98737f143bf0", "message": "Request completed"}
+{"ts": "10:22:50", "service": "inventory", "level": "INFO", "trace_id": "4594194d7061e10e46f0c2d4ef416cd1", "message": "Request completed"}
+{"ts": "10:22:56", "service": "inventory", "level": "INFO", "trace_id": "34ba49aa5680054d85687943169ba523", "message": "Request completed"}
+{"ts": "10:22:59", "service": "inventory", "level": "INFO", "trace_id": "2d967891e21e5b66a10c21400ff5a230", "message": "Request completed"}
+{"ts": "10:23:02", "service": "checkout", "level": "INFO", "trace_id": "b85638c0e2bf70b4425eaeefa5e6beca", "message": "Request completed"}
+{"ts": "10:23:05", "service": "inventory", "level": "INFO", "trace_id": "74f0c726a435bb06921671e5e5e24b5a", "message": "Request completed"}
+{"ts": "10:23:15", "service": "frontend", "level": "INFO", "trace_id": "0776aaf982d305bbb47c7670840de101", "message": "Request completed"}
+{"ts": "10:23:25", "service": "inventory", "level": "INFO", "trace_id": "7a15309ca205fc5c214b9588b9739a27", "message": "Request completed"}
+{"ts": "10:23:30", "service": "inventory", "level": "INFO", "trace_id": "3086d8e1174ae48ca9567463c1a2b598", "message": "Request completed"}
+{"ts": "10:23:35", "service": "payment", "level": "INFO", "trace_id": "4671cc241cabfe1c1e7fd4ca3848da09", "message": "Request completed"}
+{"ts": "10:23:42", "service": "payment", "level": "INFO", "trace_id": "d54890e2129c46a510ce640f3b242523", "message": "Request completed"}
+{"ts": "10:23:43", "service": "checkout", "level": "INFO", "trace_id": "37db77e9ba740ea5d0a7fce2bccd1074", "message": "Request completed"}
+{"ts": "10:23:48", "service": "checkout", "level": "INFO", "trace_id": "44a9dc4ce1b51ab14549d45141163023", "message": "Request completed"}
+{"ts": "10:23:54", "service": "frontend", "level": "INFO", "trace_id": "91bc99b81b3ff93539905468cbd9d486", "message": "Request completed"}
+{"ts": "10:23:54", "service": "payment", "level": "INFO", "trace_id": "cd546df8dff73da9b22ce161edcd8257", "message": "Request completed"}
+{"ts": "10:23:55", "service": "frontend", "level": "INFO", "trace_id": "d3ef4b9026487782275b78e66defb55a", "message": "Request completed"}
+{"ts": "10:24:14", "service": "payment", "level": "INFO", "trace_id": "773478fdd98ad67c6a3c5c3a083547df", "message": "Request completed"}
+{"ts": "10:24:17", "service": "payment", "level": "INFO", "trace_id": "32012a7177216956c17371c436a837b3", "message": "Request completed"}
+{"ts": "10:24:18", "service": "frontend", "level": "INFO", "trace_id": "21730145b9f9ce64e6dcfef8b278d17a", "message": "Request completed"}
+{"ts": "10:24:23", "service": "inventory", "level": "INFO", "trace_id": "36b8b17e598ded9d53c09c2897733d10", "message": "Request completed"}
+{"ts": "10:24:29", "service": "frontend", "level": "INFO", "trace_id": "b17d36ff1152a852643b4cdb07277381", "message": "Request completed"}
+{"ts": "10:24:30", "service": "checkout", "level": "INFO", "trace_id": "171afeacb746628081983c8a9a12d605", "message": "Request completed"}
+{"ts": "10:24:34", "service": "payment", "level": "INFO", "trace_id": "6e79fd0d423fc2531dc59bc83bfdb701", "message": "Request completed"}
+{"ts": "10:24:37", "service": "inventory", "level": "INFO", "trace_id": "4e35a02b922a162afb8adac1c192c4a9", "message": "Request completed"}
+{"ts": "10:24:39", "service": "inventory", "level": "INFO", "trace_id": "b80d996f877c8f6f6a8a5975b5d772b7", "message": "Request completed"}
+{"ts": "10:24:40", "service": "frontend", "level": "INFO", "trace_id": "49bc6013cca851030d42fb40a1264bba", "message": "Request completed"}
+{"ts": "10:24:41", "service": "checkout", "level": "INFO", "trace_id": "de8b3bb553a0c62af8beeab4866cb476", "message": "Request completed"}
+{"ts": "10:24:48", "service": "checkout", "level": "INFO", "trace_id": "ded88484f12c949d495f853fbd215b32", "message": "Request completed"}
+{"ts": "10:25:01", "service": "inventory", "level": "INFO", "trace_id": "d2d506122f07c510fdff7bd9c7cf6fb8", "message": "Request completed"}
+{"ts": "10:25:03", "service": "frontend", "level": "INFO", "trace_id": "1376dcf554e68b7e4fd00b7791d092b0", "message": "Request completed"}
+{"ts": "10:25:11", "service": "inventory", "level": "INFO", "trace_id": "9d6543efc4b8b31a53141ffefa7ab5a1", "message": "Request completed"}
+{"ts": "10:25:13", "service": "checkout", "level": "INFO", "trace_id": "25403d4f00a3759b7b9843a40d3fa4f5", "message": "Request completed"}
+{"ts": "10:25:14", "service": "frontend", "level": "ERROR", "trace_id": "4f9627d4d5f88070fe991076bb14c5f0", "message": "Upstream checkout returned 504"}
+{"ts": "10:25:15", "service": "payment", "level": "INFO", "trace_id": "13d21676505bece99b63f3a0251600f0", "message": "Request completed"}
+{"ts": "10:25:16", "service": "payment", "level": "INFO", "trace_id": "6d559bc52eb5c64b7f7cb0656d604ad8", "message": "Request completed"}
+{"ts": "10:25:16", "service": "frontend", "level": "INFO", "trace_id": "a0e104cce48f29243673d7b223263775", "message": "Request completed"}
+{"ts": "10:25:21", "service": "payment", "level": "INFO", "trace_id": "a743c56e3c3f5c6c3553c6abfed44808", "message": "Request completed"}
+{"ts": "10:25:26", "service": "checkout", "level": "INFO", "trace_id": "7ff9775cf9c5a205ce3d1db0ca2a3b04", "message": "Request completed"}
+{"ts": "10:25:27", "service": "inventory", "level": "INFO", "trace_id": "4766baf4ac049d20266ace5ea1db206a", "message": "Request completed"}
+{"ts": "10:25:56", "service": "checkout", "level": "INFO", "trace_id": "756527980732e34bafec7479c90d4837", "message": "Request completed"}
+{"ts": "10:25:57", "service": "frontend", "level": "INFO", "trace_id": "0ae2c4ee1554eb46185d47dc35860db6", "message": "Request completed"}
+{"ts": "10:26:04", "service": "inventory", "level": "INFO", "trace_id": "711b07e49cabe43eb1c07aa0e8a0d07c", "message": "Request completed"}
+{"ts": "10:26:13", "service": "payment", "level": "INFO", "trace_id": "7333f6c289a5734488502b373fa956b3", "message": "Request completed"}
+{"ts": "10:26:17", "service": "checkout", "level": "INFO", "trace_id": "4faa6d76f56708ad4d48cc209359b389", "message": "Request completed"}
+{"ts": "10:26:20", "service": "checkout", "level": "INFO", "trace_id": "6c0e11413688322a12868aa36ba54239", "message": "Request completed"}
+{"ts": "10:26:26", "service": "inventory", "level": "INFO", "trace_id": "94e4a32f28d6e6a8f9d4f2b669384a39", "message": "Request completed"}
+{"ts": "10:26:27", "service": "frontend", "level": "INFO", "trace_id": "d2c2c3cde376a818b8feaaa784959837", "message": "Request completed"}
+{"ts": "10:26:32", "service": "inventory", "level": "INFO", "trace_id": "cbd4e585656bd73a584d16c18ecc4bd0", "message": "Request completed"}
+{"ts": "10:26:36", "service": "frontend", "level": "INFO", "trace_id": "b818fba77f8e5bede594b4e50f657bf1", "message": "Request completed"}
+{"ts": "10:26:37", "service": "payment", "level": "INFO", "trace_id": "2bbe59412189804be09e01e44433ac8c", "message": "Request completed"}
+{"ts": "10:26:43", "service": "payment", "level": "INFO", "trace_id": "e28114e3ac7fa78c6a36a190cc97f8f8", "message": "Request completed"}
+{"ts": "10:26:54", "service": "checkout", "level": "INFO", "trace_id": "61e8d802ff2e8510020d92590c989570", "message": "Request completed"}
+{"ts": "10:26:58", "service": "frontend", "level": "INFO", "trace_id": "005aa58ae2ef2794f23711b4028e2831", "message": "Request completed"}
+{"ts": "10:27:00", "service": "frontend", "level": "INFO", "trace_id": "57f91a9c690e91957f92923cfa1866ef", "message": "Request completed"}
+{"ts": "10:27:04", "service": "payment", "level": "INFO", "trace_id": "c07989239c4ea19ff2e3b0433a717679", "message": "Request completed"}
+{"ts": "10:27:05", "service": "checkout", "level": "INFO", "trace_id": "01fc33f98e2f2f3bec1dba1e17e172ac", "message": "Request completed"}
+{"ts": "10:27:17", "service": "inventory", "level": "INFO", "trace_id": "e61cdba8e2411ed6b7d917b15c7bfd8b", "message": "Request completed"}
+{"ts": "10:27:23", "service": "frontend", "level": "INFO", "trace_id": "783025eb0fc20cbefcde021826f0637c", "message": "Request completed"}
+{"ts": "10:27:25", "service": "payment", "level": "INFO", "trace_id": "9b87a6347bf94c8c4bb48d4ca5640284", "message": "Request completed"}
+{"ts": "10:27:30", "service": "frontend", "level": "INFO", "trace_id": "9ca77542ad7fd6c00cdc41940dd5c603", "message": "Request completed"}
+{"ts": "10:27:35", "service": "inventory", "level": "INFO", "trace_id": "67763c1b9b30cc511878bfeaaba408e4", "message": "Request completed"}
+{"ts": "10:27:40", "service": "payment", "level": "INFO", "trace_id": "fc75676be6feafb6c3d393d876e0fea4", "message": "Request completed"}
+{"ts": "10:27:46", "service": "checkout", "level": "INFO", "trace_id": "1388fb25f4af40a57d93b42431eea86f", "message": "Request completed"}
+{"ts": "10:27:56", "service": "inventory", "level": "INFO", "trace_id": "6ba746eba8abe619e9d58cf63e257143", "message": "Request completed"}
+{"ts": "10:27:59", "service": "checkout", "level": "INFO", "trace_id": "492337722454548a642b96fb2fb5b491", "message": "Request completed"}
+{"ts": "10:28:03", "service": "payment", "level": "INFO", "trace_id": "ca4ce50d967f8b6f25792d5bb2f9b0b9", "message": "Request completed"}
+{"ts": "10:28:11", "service": "payment", "level": "INFO", "trace_id": "9a1210a7cc61fdd9df3b2aecf491ce11", "message": "Request completed"}
+{"ts": "10:28:13", "service": "payment", "level": "INFO", "trace_id": "205d34b2c3ceb012a6b3e7678298acfa", "message": "Request completed"}
+{"ts": "10:28:22", "service": "checkout", "level": "INFO", "trace_id": "51ea3b763ab7210bc18d36ad953ee589", "message": "Request completed"}
+{"ts": "10:28:28", "service": "inventory", "level": "INFO", "trace_id": "9ce3b247773eeff7feed904a1f8afba3", "message": "Request completed"}
+{"ts": "10:28:30", "service": "checkout", "level": "INFO", "trace_id": "341d7a10a9bbe264c68b3972b3c55839", "message": "Request completed"}
+{"ts": "10:28:32", "service": "frontend", "level": "INFO", "trace_id": "90c9469dcc424ec8c51833698ef0cad9", "message": "Request completed"}
+{"ts": "10:28:37", "service": "inventory", "level": "INFO", "trace_id": "879572a55f8e9640c667c6404d5af353", "message": "Request completed"}
+{"ts": "10:28:39", "service": "inventory", "level": "INFO", "trace_id": "aac14f0efe9812fd4c1adbacf2d58bb3", "message": "Request completed"}
+{"ts": "10:28:44", "service": "checkout", "level": "INFO", "trace_id": "389ccf8d778f782658893ed4d23652c8", "message": "Request completed"}
+{"ts": "10:28:46", "service": "frontend", "level": "ERROR", "trace_id": "d23787507b3e9ee2a5aa7962bd0cc8be", "message": "Upstream checkout returned 504"}
+{"ts": "10:28:49", "service": "frontend", "level": "INFO", "trace_id": "df7f8bb54d35d7fa3b76277059330e8a", "message": "Request completed"}
+{"ts": "10:28:53", "service": "frontend", "level": "INFO", "trace_id": "f11ed6838ee1fc2c7642fa0fc00c9b97", "message": "Request completed"}
+{"ts": "10:29:05", "service": "checkout", "level": "INFO", "trace_id": "4131f3ff7c764f8255efeb0598bcbde4", "message": "Request completed"}
+{"ts": "10:29:08", "service": "payment", "level": "INFO", "trace_id": "023c5c5b1226e24f0e4f6ed26ab52ddd", "message": "Request completed"}
+{"ts": "10:29:11", "service": "inventory", "level": "INFO", "trace_id": "cf01debbf496c3e592714237f04ab928", "message": "Request completed"}
+{"ts": "10:29:19", "service": "frontend", "level": "INFO", "trace_id": "09fb6c407a2ec852bca5567c09b975c7", "message": "Request completed"}
+{"ts": "10:29:30", "service": "frontend", "level": "INFO", "trace_id": "7092bc3d26831c3e7c7ff463d3644f5b", "message": "Request completed"}
+{"ts": "10:29:35", "service": "checkout", "level": "INFO", "trace_id": "3acad3a121901e818f122a49c3240b08", "message": "Request completed"}
+{"ts": "10:29:35", "service": "inventory", "level": "INFO", "trace_id": "b41dfc732bb1063848f5f9237ef76749", "message": "Request completed"}
+{"ts": "10:29:39", "service": "payment", "level": "INFO", "trace_id": "35146ba4080ac521dbbb857d810ee1b9", "message": "Request completed"}
+{"ts": "10:29:40", "service": "checkout", "level": "INFO", "trace_id": "10dc6b34c282a1eac6a09a860cce6202", "message": "Request completed"}
+{"ts": "10:29:41", "service": "frontend", "level": "ERROR", "trace_id": "02cf85e03a39c9edf81fbde3f3a638cc", "message": "Upstream checkout returned 504"}
+{"ts": "10:29:45", "service": "inventory", "level": "INFO", "trace_id": "2c57f74fcda520b794fb4400194add3c", "message": "Request completed"}
+{"ts": "10:29:46", "service": "frontend", "level": "INFO", "trace_id": "77d8ea486fa5030b674ec555983a23e0", "message": "Request completed"}
+{"ts": "10:29:52", "service": "payment", "level": "INFO", "trace_id": "6c988d0c4b3a565c4b242d78383f510a", "message": "Request completed"}
+{"ts": "10:30:00", "service": "payment", "level": "INFO", "trace_id": "1e19225f52a3035905a096415680fdea", "message": "Request completed"}
+{"ts": "10:30:02", "service": "frontend", "level": "INFO", "trace_id": "f91796d71a8db3cd48b408de684e4057", "message": "Request completed"}
+{"ts": "10:30:06", "service": "frontend", "level": "INFO", "trace_id": "a05b20adbb030a9b2387960ffda43a8e", "message": "Request completed"}
+{"ts": "10:30:10", "service": "inventory", "level": "INFO", "trace_id": "d3b0ccb4af38a173538b4748f3c4dc2c", "message": "Request completed"}
+{"ts": "10:30:13", "service": "payment", "level": "INFO", "trace_id": "38ab17def1324f6f96f466b0bfb061cb", "message": "Request completed"}
+{"ts": "10:30:15", "service": "inventory", "level": "INFO", "trace_id": "8a094ad04eebe2b48d57c453256cb29b", "message": "Request completed"}
+{"ts": "10:30:19", "service": "frontend", "level": "ERROR", "trace_id": "e70040b32a64002132b3d18f17b434f1", "message": "Upstream checkout returned 504"}
+{"ts": "10:30:28", "service": "checkout", "level": "INFO", "trace_id": "9529d65a8fbd2e7c9cf8f3e52923429e", "message": "Request completed"}
+{"ts": "10:30:34", "service": "checkout", "level": "INFO", "trace_id": "e0b4b954b38e5f464ed4761526593ae3", "message": "Request completed"}
+{"ts": "10:30:40", "service": "frontend", "level": "INFO", "trace_id": "243937d341b9307f6c4eab6dc246003c", "message": "Request completed"}
+{"ts": "10:30:43", "service": "checkout", "level": "INFO", "trace_id": "a6ac7e6b4eb0634beaa021db4998fced", "message": "Request completed"}
+{"ts": "10:30:50", "service": "payment", "level": "INFO", "trace_id": "c27cc2f0af1f8ec2c8397e601638c690", "message": "Request completed"}
+{"ts": "10:30:55", "service": "inventory", "level": "INFO", "trace_id": "4fee47fcd0b7b11d03500aa83744e1da", "message": "Request completed"}
+{"ts": "10:31:02", "service": "payment", "level": "INFO", "trace_id": "8ae76510daa1d41e6e0ba989fee63fee", "message": "Request completed"}
+{"ts": "10:31:09", "service": "inventory", "level": "INFO", "trace_id": "2385d87f5bc0e99dc651efbc003d167f", "message": "Request completed"}
+{"ts": "10:31:10", "service": "inventory", "level": "INFO", "trace_id": "8d74ee44abe765905868a92b0b3b45d3", "message": "Request completed"}
+{"ts": "10:31:11", "service": "payment", "level": "INFO", "trace_id": "d2a9999a41218d40d7e9a695b4ef6a3b", "message": "Request completed"}
+{"ts": "10:31:14", "service": "payment", "level": "INFO", "trace_id": "ff4258f55e12d635b2194154acc968c2", "message": "Request completed"}
+{"ts": "10:31:19", "service": "checkout", "level": "INFO", "trace_id": "f530a65ad54ed682ce2c624c4b0b43dd", "message": "Request completed"}
+{"ts": "10:31:20", "service": "frontend", "level": "INFO", "trace_id": "a07f6361c0ca1d75acbd797fc3e73f43", "message": "Request completed"}
+{"ts": "10:31:23", "service": "checkout", "level": "INFO", "trace_id": "f91b38b8d3afa1a45e651091bf843ad0", "message": "Request completed"}
+{"ts": "10:31:42", "service": "inventory", "level": "INFO", "trace_id": "d073c13dbd63fe958507d0b87bf197f5", "message": "Request completed"}
+{"ts": "10:31:44", "service": "frontend", "level": "INFO", "trace_id": "699b864dfdd16ea237c003c9bdfe7f69", "message": "Request completed"}
+{"ts": "10:31:50", "service": "frontend", "level": "INFO", "trace_id": "2d035ca5d2c9096ac123fe4280d90491", "message": "Request completed"}
+{"ts": "10:31:50", "service": "checkout", "level": "INFO", "trace_id": "6b6f25b049bec8d833e2fdd1941e2701", "message": "Request completed"}
+{"ts": "10:32:07", "service": "frontend", "level": "ERROR", "trace_id": "db58a83ff0eeb30fd1ef1758ae204a5c", "message": "Upstream checkout returned 504"}
+{"ts": "10:32:13", "service": "checkout", "level": "INFO", "trace_id": "aa8e639102f1f443621bb01082bdf245", "message": "Request completed"}
+{"ts": "10:32:15", "service": "checkout", "level": "INFO", "trace_id": "c81a9c83a911334f1088a86bf5a27b80", "message": "Request completed"}
+{"ts": "10:32:17", "service": "checkout", "level": "INFO", "trace_id": "e09f242746780d932ce3dd17f7c38990", "message": "Request completed"}
+{"ts": "10:32:21", "service": "inventory", "level": "INFO", "trace_id": "77a1bba54a8a413f6cb348cc551791fd", "message": "Request completed"}
+{"ts": "10:32:25", "service": "payment", "level": "INFO", "trace_id": "93269e5ca709a7af1d6e0584a9e6bdce", "message": "Request completed"}
+{"ts": "10:32:38", "service": "inventory", "level": "INFO", "trace_id": "b410da05956ee5d36c43a86bc564b918", "message": "Request completed"}
+{"ts": "10:32:39", "service": "payment", "level": "INFO", "trace_id": "acc844f2f58af3f7f0259325ea77e312", "message": "Request completed"}
+{"ts": "10:32:39", "service": "frontend", "level": "INFO", "trace_id": "e3bc50825ce28d04ef8c4921fbfaf7cc", "message": "Request completed"}
+{"ts": "10:32:44", "service": "inventory", "level": "INFO", "trace_id": "8c078e077a2c1fda01fc2addd3c45951", "message": "Request completed"}
+{"ts": "10:32:47", "service": "frontend", "level": "INFO", "trace_id": "21492c726ecc7b6573159f3d3024b14d", "message": "Request completed"}
+{"ts": "10:32:50", "service": "frontend", "level": "INFO", "trace_id": "4350294a832cde2eb93bb93a3f987a0c", "message": "Request completed"}
+{"ts": "10:32:50", "service": "payment", "level": "INFO", "trace_id": "6efab0a23896d47edb756f828e553296", "message": "Request completed"}
+{"ts": "10:33:07", "service": "payment", "level": "INFO", "trace_id": "2f018d5296539718ce9bcb602f08b442", "message": "Request completed"}
+{"ts": "10:33:16", "service": "payment", "level": "INFO", "trace_id": "63fc5ede586a92f7403c21e0b7344e7b", "message": "Request completed"}
+{"ts": "10:33:24", "service": "checkout", "level": "INFO", "trace_id": "ca198670f4ec4ca9085866990ced03cd", "message": "Request completed"}
+{"ts": "10:33:26", "service": "inventory", "level": "INFO", "trace_id": "f08b9b07106939824378bd7c13eebf93", "message": "Request completed"}
+{"ts": "10:33:30", "service": "frontend", "level": "ERROR", "trace_id": "e356120ae0d8a188b8b0b129332dff11", "message": "Upstream checkout returned 504"}
+{"ts": "10:33:35", "service": "inventory", "level": "INFO", "trace_id": "58d62f818b3ff437069a5677d6dca810", "message": "Request completed"}
+{"ts": "10:33:37", "service": "checkout", "level": "INFO", "trace_id": "3ed46e80081dc1e92fc55da48a789bb1", "message": "Request completed"}
+{"ts": "10:33:41", "service": "frontend", "level": "INFO", "trace_id": "19c2ccbe8c6c63bb3951ffe1902af874", "message": "Request completed"}
+{"ts": "10:33:44", "service": "frontend", "level": "INFO", "trace_id": "e14cc132487e4ff31570ac1d5b9ab8b7", "message": "Request completed"}
+{"ts": "10:33:45", "service": "inventory", "level": "INFO", "trace_id": "2bace0e9f24fc1d071e14dd507018295", "message": "Request completed"}
+{"ts": "10:33:55", "service": "checkout", "level": "INFO", "trace_id": "0e6e3dc928a4bc6055709ba3b3db708d", "message": "Request completed"}
+{"ts": "10:33:55", "service": "frontend", "level": "INFO", "trace_id": "497e8251fab348d05e46fa7673f07f95", "message": "Request completed"}
+{"ts": "10:33:57", "service": "payment", "level": "INFO", "trace_id": "5240cc5688a21125c117c4c027fc7339", "message": "Request completed"}
+{"ts": "10:34:00", "service": "payment", "level": "INFO", "trace_id": "58537e44ea7a31adafbd7c2d2323cfb9", "message": "Request completed"}
+{"ts": "10:34:09", "service": "checkout", "level": "INFO", "trace_id": "fe0a2aa3a121cf2b67a3e1795be5324d", "message": "Request completed"}
+{"ts": "10:34:11", "service": "checkout", "level": "INFO", "trace_id": "93d543e88737f2db737036b50a418350", "message": "Request completed"}
+{"ts": "10:34:11", "service": "inventory", "level": "INFO", "trace_id": "15d4a5906bfc59cabd0ea93f745e652d", "message": "Request completed"}
+{"ts": "10:34:15", "service": "frontend", "level": "INFO", "trace_id": "872396e6c1fe03e00c82f822e9b619eb", "message": "Request completed"}
+{"ts": "10:34:19", "service": "checkout", "level": "INFO", "trace_id": "2f21615be8c9b2c84c949fad72e48c6d", "message": "Request completed"}
+{"ts": "10:34:23", "service": "frontend", "level": "INFO", "trace_id": "8f761ced50646d4cef47649a87e21e35", "message": "Request completed"}
+{"ts": "10:34:30", "service": "payment", "level": "INFO", "trace_id": "720129642fce41220e88b26ad5fe49d0", "message": "Request completed"}
+{"ts": "10:34:35", "service": "payment", "level": "INFO", "trace_id": "784a7ed6ad2f7bcf19e458c6edd179b8", "message": "Request completed"}
+{"ts": "10:34:40", "service": "inventory", "level": "INFO", "trace_id": "ed72fd7d5dc51493b7396b476ddd0352", "message": "Request completed"}
+{"ts": "10:34:45", "service": "inventory", "level": "INFO", "trace_id": "df42c1362be2c8aec6cc564f634eb9b0", "message": "Request completed"}
+{"ts": "10:34:48", "service": "frontend", "level": "INFO", "trace_id": "a11d801ec704db0778740037392625e6", "message": "Request completed"}
+{"ts": "10:35:01", "service": "checkout", "level": "INFO", "trace_id": "b6bc92c3719d50cb047b25a67ffef297", "message": "Request completed"}
+{"ts": "10:35:03", "service": "payment", "level": "INFO", "trace_id": "10927950bd7c08455703c6b6e84b8b2b", "message": "Request completed"}
+{"ts": "10:35:05", "service": "frontend", "level": "INFO", "trace_id": "e931e23628902c31177048a3873fc646", "message": "Request completed"}
+{"ts": "10:35:08", "service": "inventory", "level": "INFO", "trace_id": "0f9e7fc256745805414210208c55cb95", "message": "Request completed"}
+{"ts": "10:35:25", "service": "frontend", "level": "INFO", "trace_id": "ae848607a383397e8c07b783971ad2d3", "message": "Request completed"}
+{"ts": "10:35:33", "service": "frontend", "level": "INFO", "trace_id": "bf0cc07f94d020261e87c1d8b0711c8e", "message": "Request completed"}
+{"ts": "10:35:33", "service": "checkout", "level": "INFO", "trace_id": "f645e2c5ff6bf51c88b941a1efc39c3c", "message": "Request completed"}
+{"ts": "10:35:33", "service": "payment", "level": "INFO", "trace_id": "f045baa00feaab0b8163f15271be9d28", "message": "Request completed"}
+{"ts": "10:35:37", "service": "frontend", "level": "ERROR", "trace_id": "a55b2edca9f1df818cd62cf8fab3a5f8", "message": "Upstream checkout returned 504"}
+{"ts": "10:35:39", "service": "checkout", "level": "INFO", "trace_id": "52b8f0f797d99ae8f43227ac59edbe81", "message": "Request completed"}
+{"ts": "10:35:42", "service": "payment", "level": "INFO", "trace_id": "f7f2ed752fd182a182998bbb545e467a", "message": "Request completed"}
+{"ts": "10:35:45", "service": "inventory", "level": "INFO", "trace_id": "90cb44e241ae42d0f06340756dc8812b", "message": "Request completed"}
+{"ts": "10:35:49", "service": "inventory", "level": "INFO", "trace_id": "ffdd2dabbf47242d48b87c0d5329c73c", "message": "Request completed"}
+{"ts": "10:36:03", "service": "frontend", "level": "ERROR", "trace_id": "bb13e49ad6dad1a189ee12449800e99f", "message": "Upstream checkout returned 504"}
+{"ts": "10:36:09", "service": "checkout", "level": "INFO", "trace_id": "b92a2ed2b62e89ee7fe15d7fc8644fc3", "message": "Request completed"}
+{"ts": "10:36:13", "service": "checkout", "level": "INFO", "trace_id": "1574212bb94f1d945004ea470730f436", "message": "Request completed"}
+{"ts": "10:36:14", "service": "payment", "level": "INFO", "trace_id": "fa79a427b7135036d049a4d95c97d194", "message": "Request completed"}
+{"ts": "10:36:26", "service": "inventory", "level": "INFO", "trace_id": "f44622d391df0ae7c1b94dbce42907bf", "message": "Request completed"}
+{"ts": "10:36:27", "service": "payment", "level": "INFO", "trace_id": "19aae316e74a4fea7ccc1a3473e8b581", "message": "Request completed"}
+{"ts": "10:36:35", "service": "frontend", "level": "INFO", "trace_id": "f3edf70cbd9e9e345fca53d59f732f16", "message": "Request completed"}
+{"ts": "10:36:37", "service": "frontend", "level": "INFO", "trace_id": "1f5f0e6383becd34797559205684a6a6", "message": "Request completed"}
+{"ts": "10:36:40", "service": "frontend", "level": "INFO", "trace_id": "1e994db6a77d3d23fbca0d5290310903", "message": "Request completed"}
+{"ts": "10:36:46", "service": "checkout", "level": "INFO", "trace_id": "63214e4609646cb636198035a5996568", "message": "Request completed"}
+{"ts": "10:36:50", "service": "inventory", "level": "INFO", "trace_id": "e1ce3785849ec901e3331a5b27c491e2", "message": "Request completed"}
+{"ts": "10:36:53", "service": "inventory", "level": "INFO", "trace_id": "6f4b56405240f7ff6f28444b241d8cae", "message": "Request completed"}
+{"ts": "10:36:55", "service": "payment", "level": "INFO", "trace_id": "914b347a081269df48c2911fc1c4f831", "message": "Request completed"}
+{"ts": "10:37:00", "service": "payment", "level": "INFO", "trace_id": "adf69e99c382713d19ea16b8ebd4f658", "message": "Request completed"}
+{"ts": "10:37:05", "service": "frontend", "level": "INFO", "trace_id": "b6fa24fef091f0cf3bcfaf681a401222", "message": "Request completed"}
+{"ts": "10:37:10", "service": "inventory", "level": "INFO", "trace_id": "449e43cfa5a490c00edc5cd3b61b9a78", "message": "Request completed"}
+{"ts": "10:37:12", "service": "checkout", "level": "INFO", "trace_id": "8758f0ce723f7abf66dfd10729ed0537", "message": "Request completed"}
+{"ts": "10:37:34", "service": "frontend", "level": "INFO", "trace_id": "3818a33fd9fc051659ce6218ff7f066a", "message": "Request completed"}
+{"ts": "10:37:36", "service": "payment", "level": "INFO", "trace_id": "50371be8915ae3b43c41570bbe26a7ba", "message": "Request completed"}
+{"ts": "10:37:42", "service": "payment", "level": "INFO", "trace_id": "13ea0ba855536b3e706bddea4518ffd5", "message": "Request completed"}
+{"ts": "10:37:47", "service": "checkout", "level": "INFO", "trace_id": "c06eadfd35f079823165e67ade711dd6", "message": "Request completed"}
+{"ts": "10:37:49", "service": "inventory", "level": "INFO", "trace_id": "93916218ff825a128a20d62d34113966", "message": "Request completed"}
+{"ts": "10:37:51", "service": "inventory", "level": "INFO", "trace_id": "0a8bc701ef2b294688ebf1063a74ea51", "message": "Request completed"}
+{"ts": "10:37:51", "service": "frontend", "level": "INFO", "trace_id": "2302aa39d4a6ec826574ea8c8db674c2", "message": "Request completed"}
+{"ts": "10:37:53", "service": "checkout", "level": "INFO", "trace_id": "9d93481d2b8a75a159a04433e738368e", "message": "Request completed"}
+{"ts": "10:38:02", "service": "frontend", "level": "INFO", "trace_id": "d108002d272ec3bcd98584aafaf6a332", "message": "Request completed"}
+{"ts": "10:38:13", "service": "frontend", "level": "INFO", "trace_id": "0c8d1d4cd7c51ea8a710b907078d5920", "message": "Request completed"}
+{"ts": "10:38:13", "service": "frontend", "level": "INFO", "trace_id": "7646b05c47fd9d9a865a9b0dbc73247b", "message": "Request completed"}
+{"ts": "10:38:18", "service": "payment", "level": "INFO", "trace_id": "36ff85b27af8df72bab6bf32d817b215", "message": "Request completed"}
+{"ts": "10:38:27", "service": "inventory", "level": "INFO", "trace_id": "76f5efa25c381fcba74f0ccdbe42005d", "message": "Request completed"}
+{"ts": "10:38:29", "service": "checkout", "level": "INFO", "trace_id": "1e89501d8df95f87f63a156ab9c506ce", "message": "Request completed"}
+{"ts": "10:38:37", "service": "frontend", "level": "ERROR", "trace_id": "4479fab957bbac4817cfdcb88aefa5b2", "message": "Upstream checkout returned 504"}
+{"ts": "10:38:41", "service": "payment", "level": "INFO", "trace_id": "a88f27084fd57f1a46fd5306a6371c90", "message": "Request completed"}
+{"ts": "10:38:41", "service": "checkout", "level": "INFO", "trace_id": "6426bf2f2b8cdba807058bb922ea91b0", "message": "Request completed"}
+{"ts": "10:38:43", "service": "checkout", "level": "INFO", "trace_id": "a204349c91903b0ad6c3c775f4503aa5", "message": "Request completed"}
+{"ts": "10:38:45", "service": "payment", "level": "INFO", "trace_id": "d058cf870053c8965f55efbf4b14b9a3", "message": "Request completed"}
+{"ts": "10:38:46", "service": "inventory", "level": "INFO", "trace_id": "072b390c16e2dca1ee1f936753479c95", "message": "Request completed"}
+{"ts": "10:38:55", "service": "inventory", "level": "INFO", "trace_id": "280251a58134722f6287d2dbbad14503", "message": "Request completed"}
+{"ts": "10:39:03", "service": "payment", "level": "INFO", "trace_id": "810dceaa5099bdbab484c2c9c399c7f8", "message": "Request completed"}
+{"ts": "10:39:11", "service": "inventory", "level": "INFO", "trace_id": "1222efa75b15e709fbf5238fe8072560", "message": "Request completed"}
+{"ts": "10:39:12", "service": "checkout", "level": "INFO", "trace_id": "2ceac9432fd6eb7c1f01ee9f80c96085", "message": "Request completed"}
+{"ts": "10:39:12", "service": "frontend", "level": "INFO", "trace_id": "c5996157d96469770ab9731161deea32", "message": "Request completed"}
+{"ts": "10:39:13", "service": "inventory", "level": "INFO", "trace_id": "759af765d38a603d17332a30d116ac2d", "message": "Request completed"}
+{"ts": "10:39:15", "service": "frontend", "level": "ERROR", "trace_id": "9a79edf1f98cd27dfff3e7abfbf90ef7", "message": "Upstream checkout returned 504"}
+{"ts": "10:39:21", "service": "frontend", "level": "INFO", "trace_id": "b6fca9edcbba76a6982bafb3ca5028ea", "message": "Request completed"}
+{"ts": "10:39:22", "service": "payment", "level": "INFO", "trace_id": "842cee787ea3c7399f6b51d96d1f888d", "message": "Request completed"}
+{"ts": "10:39:32", "service": "frontend", "level": "INFO", "trace_id": "aff8cddc7459f09b48f06321d372482e", "message": "Request completed"}
+{"ts": "10:39:39", "service": "inventory", "level": "INFO", "trace_id": "d0b40163d230958205414a49a01dce99", "message": "Request completed"}
+{"ts": "10:39:52", "service": "checkout", "level": "INFO", "trace_id": "fcefda809572056949560eb724329fc5", "message": "Request completed"}
+{"ts": "10:39:57", "service": "payment", "level": "INFO", "trace_id": "9638aa84e58acee18c2fd20c6d419d45", "message": "Request completed"}
+{"ts": "10:39:58", "service": "checkout", "level": "INFO", "trace_id": "8328d2c24e59087361324e40e7b6e9d3", "message": "Request completed"}

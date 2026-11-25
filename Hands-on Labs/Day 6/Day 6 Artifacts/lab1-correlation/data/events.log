@@ -1,0 +1,3 @@
+09:40 DEP-4410 frontend  deployment    frontend 4.1.2 rolled out (CSS and banner change)
+10:06 CHG-2201 payment   config-change payment client timeout 1000 ms -> 3000 ms
+# times are UTC, 2026-11-23
